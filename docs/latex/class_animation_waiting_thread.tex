@@ -1,0 +1,93 @@
+\hypertarget{class_animation_waiting_thread}{\section{Dokumentacja klasy Animation\-Waiting\-Thread}
+\label{class_animation_waiting_thread}\index{Animation\-Waiting\-Thread@{Animation\-Waiting\-Thread}}
+}
+
+
+Klasa wątków obliczeniowych (dla Pojazdów i Pieszych). Po każdym cyklu run czeka na wybudzenie po odświerzeniu widoku.  
+
+
+
+
+{\ttfamily \#include $<$Animation\-Waiting\-Thread.\-h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_animation_waiting_thread_a09dc2720a50b0db3b18b278de850ff55}{Animation\-Waiting\-Thread} (\hyperlink{_types_8h_afaef7be4497cef01f6bda50ac57e44cb}{function\-Ptr}, Q\-Wait\-Condition $\ast$, Q\-Mutex $\ast$)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_waiting_thread_a8fd07e8c8fbdc3e577a0816cee4dafde}{run} ()
+\item 
+void \hyperlink{class_animation_waiting_thread_a2855e25b20c91a51c5e8263c73b30e06}{stop\-Thread} ()
+\begin{DoxyCompactList}\small\item\em Zatrzymuje dzialanie wątku poprzez wyjście z pętli w metodzie run. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_afaef7be4497cef01f6bda50ac57e44cb}{function\-Ptr} \hyperlink{class_animation_waiting_thread_a63562f5dea2e199512e37979f3d5ccae}{f}
+\item 
+Q\-Wait\-Condition $\ast$ \hyperlink{class_animation_waiting_thread_aa9a37309d858623088bec9599fbcf135}{wait\-Condition}
+\item 
+Q\-Mutex $\ast$ \hyperlink{class_animation_waiting_thread_ad6c84d789d5d43eed9729e7d4a2d26e4}{mutex}
+\item 
+volatile bool \hyperlink{class_animation_waiting_thread_a51ffa401c81a925e068af99919940994}{go}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa wątków obliczeniowych (dla Pojazdów i Pieszych). Po każdym cyklu run czeka na wybudzenie po odświerzeniu widoku. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_animation_waiting_thread_a09dc2720a50b0db3b18b278de850ff55}{\index{Animation\-Waiting\-Thread@{Animation\-Waiting\-Thread}!Animation\-Waiting\-Thread@{Animation\-Waiting\-Thread}}
+\index{Animation\-Waiting\-Thread@{Animation\-Waiting\-Thread}!AnimationWaitingThread@{Animation\-Waiting\-Thread}}
+\subsubsection[{Animation\-Waiting\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}Animation\-Waiting\-Thread\-::\-Animation\-Waiting\-Thread (
+\begin{DoxyParamCaption}
+\item[{{\bf function\-Ptr}}]{f\-\_\-, }
+\item[{Q\-Wait\-Condition $\ast$}]{wait\-Condition\-\_\-, }
+\item[{Q\-Mutex $\ast$}]{mutex\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_animation_waiting_thread_a09dc2720a50b0db3b18b278de850ff55}
+
+
+Konstruktor. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_animation_waiting_thread_a8fd07e8c8fbdc3e577a0816cee4dafde}{\index{Animation\-Waiting\-Thread@{Animation\-Waiting\-Thread}!run@{run}}
+\index{run@{run}!AnimationWaitingThread@{Animation\-Waiting\-Thread}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-Waiting\-Thread\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_waiting_thread_a8fd07e8c8fbdc3e577a0816cee4dafde}
+To jest metoda przeciążona, udostępniona dla wygody. Różni się od powyższej metody tylko zestawem akceptowanych argumentów. \hypertarget{class_animation_waiting_thread_a2855e25b20c91a51c5e8263c73b30e06}{\index{Animation\-Waiting\-Thread@{Animation\-Waiting\-Thread}!stop\-Thread@{stop\-Thread}}
+\index{stop\-Thread@{stop\-Thread}!AnimationWaitingThread@{Animation\-Waiting\-Thread}}
+\subsubsection[{stop\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-Waiting\-Thread\-::stop\-Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_waiting_thread_a2855e25b20c91a51c5e8263c73b30e06}
+
+
+Zatrzymuje dzialanie wątku poprzez wyjście z pętli w metodzie run. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_animation_waiting_thread_a63562f5dea2e199512e37979f3d5ccae}{\index{Animation\-Waiting\-Thread@{Animation\-Waiting\-Thread}!f@{f}}
+\index{f@{f}!AnimationWaitingThread@{Animation\-Waiting\-Thread}}
+\subsubsection[{f}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function\-Ptr} Animation\-Waiting\-Thread\-::f\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_waiting_thread_a63562f5dea2e199512e37979f3d5ccae}
+\hypertarget{class_animation_waiting_thread_a51ffa401c81a925e068af99919940994}{\index{Animation\-Waiting\-Thread@{Animation\-Waiting\-Thread}!go@{go}}
+\index{go@{go}!AnimationWaitingThread@{Animation\-Waiting\-Thread}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}volatile bool Animation\-Waiting\-Thread\-::go\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_waiting_thread_a51ffa401c81a925e068af99919940994}
+\hypertarget{class_animation_waiting_thread_ad6c84d789d5d43eed9729e7d4a2d26e4}{\index{Animation\-Waiting\-Thread@{Animation\-Waiting\-Thread}!mutex@{mutex}}
+\index{mutex@{mutex}!AnimationWaitingThread@{Animation\-Waiting\-Thread}}
+\subsubsection[{mutex}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Mutex$\ast$ Animation\-Waiting\-Thread\-::mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_waiting_thread_ad6c84d789d5d43eed9729e7d4a2d26e4}
+\hypertarget{class_animation_waiting_thread_aa9a37309d858623088bec9599fbcf135}{\index{Animation\-Waiting\-Thread@{Animation\-Waiting\-Thread}!wait\-Condition@{wait\-Condition}}
+\index{wait\-Condition@{wait\-Condition}!AnimationWaitingThread@{Animation\-Waiting\-Thread}}
+\subsubsection[{wait\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Wait\-Condition$\ast$ Animation\-Waiting\-Thread\-::wait\-Condition\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_waiting_thread_aa9a37309d858623088bec9599fbcf135}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_animation_waiting_thread_8h}{Animation\-Waiting\-Thread.\-h}\item 
+src/\hyperlink{_animation_waiting_thread_8cpp}{Animation\-Waiting\-Thread.\-cpp}\end{DoxyCompactItemize}

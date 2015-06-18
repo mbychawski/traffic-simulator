@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Dokumentacja klasy Spawn</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-static-methods">Statyczne metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_spawn-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Spawn</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszych.  
+ <a href="class_spawn.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_spawn_8h_source.html">Spawn.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla Spawn</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_spawn.png" usemap="#Spawn_map" alt=""/>
+  <map id="Spawn_map" name="Spawn_map">
+<area href="class_map_element.html" title="Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów." alt="MapElement" shape="rect" coords="0,56,81,80"/>
+<area href="class_drawable.html" title="Klasa bazowa dla obiektów, które będą wyświetlane na scenie." alt="Drawable" shape="rect" coords="0,0,81,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a972290baedf94f776541be6039ee7d75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#a972290baedf94f776541be6039ee7d75">Spawn</a> (int, <a class="el" href="struct_position.html">Position</a>, <a class="el" href="struct_position.html">Position</a>)</td></tr>
+<tr class="memdesc:a972290baedf94f776541be6039ee7d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a972290baedf94f776541be6039ee7d75"></a><br/></td></tr>
+<tr class="memitem:a54ab1e49c79ee947204f920046164829"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#a54ab1e49c79ee947204f920046164829">Spawn</a> (int, double, double, <a class="el" href="struct_position.html">Position</a>)</td></tr>
+<tr class="memdesc:a54ab1e49c79ee947204f920046164829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a54ab1e49c79ee947204f920046164829"></a><br/></td></tr>
+<tr class="memitem:afce802a99344be2869d5723f930cb3f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#afce802a99344be2869d5723f930cb3f4">addVehicle</a> (<a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>)</td></tr>
+<tr class="memdesc:afce802a99344be2869d5723f930cb3f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodawanie pojazdu do kolejki oczekujących na start.  <a href="#afce802a99344be2869d5723f930cb3f4"></a><br/></td></tr>
+<tr class="memitem:af9f3e004e311973f4c8983aa586869f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#af9f3e004e311973f4c8983aa586869f4">startVehicle</a> ()</td></tr>
+<tr class="memdesc:af9f3e004e311973f4c8983aa586869f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyświetla pojazdy na mapie.  <a href="#af9f3e004e311973f4c8983aa586869f4"></a><br/></td></tr>
+<tr class="memitem:a343f21c11732fad395e1b9f5bf1a227e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#a343f21c11732fad395e1b9f5bf1a227e">hasVehiclesToStart</a> ()</td></tr>
+<tr class="memdesc:a343f21c11732fad395e1b9f5bf1a227e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca informację, czy <a class="el" href="class_spawn.html" title="Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszyc...">Spawn</a> posiada jeszcze elementy do wystartowania.  <a href="#a343f21c11732fad395e1b9f5bf1a227e"></a><br/></td></tr>
+<tr class="memitem:a725ac9cb33aff1b26b19ed3affecf692"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#a725ac9cb33aff1b26b19ed3affecf692">draw</a> (<a class="el" href="class_scene.html">Scene</a> *)</td></tr>
+<tr class="memdesc:a725ac9cb33aff1b26b19ed3affecf692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda odpowiadająca za rysowanie elementu.  <a href="#a725ac9cb33aff1b26b19ed3affecf692"></a><br/></td></tr>
+<tr class="memitem:a4a8907eb45fc0a0168d75063b51456a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#a4a8907eb45fc0a0168d75063b51456a1">getDirection</a> () const </td></tr>
+<tr class="memdesc:a4a8907eb45fc0a0168d75063b51456a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pobieranie kierunku, w którym skierowany jest <a class="el" href="class_spawn.html" title="Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszyc...">Spawn</a>.  <a href="#a4a8907eb45fc0a0168d75063b51456a1"></a><br/></td></tr>
+<tr class="memitem:aea08036b23acdb06fd47eba35dc2a8cf"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#aea08036b23acdb06fd47eba35dc2a8cf">~Spawn</a> ()</td></tr>
+<tr class="inherit_header pub_methods_class_map_element"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_map_element')"><img src="closed.png" alt="-"/>&nbsp;Metody publiczne dziedziczone z <a class="el" href="class_map_element.html">MapElement</a></td></tr>
+<tr class="memitem:a1e6c2dadb01e42de3980f1cb9a5e316c inherit pub_methods_class_map_element"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_element.html#a1e6c2dadb01e42de3980f1cb9a5e316c">MapElement</a> ()</td></tr>
+<tr class="memdesc:a1e6c2dadb01e42de3980f1cb9a5e316c inherit pub_methods_class_map_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a1e6c2dadb01e42de3980f1cb9a5e316c"></a><br/></td></tr>
+<tr class="memitem:abb9461a82f67bd340559879d305d3c43 inherit pub_methods_class_map_element"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_element.html#abb9461a82f67bd340559879d305d3c43">MapElement</a> (double x_, double y_, int id_)</td></tr>
+<tr class="memdesc:abb9461a82f67bd340559879d305d3c43 inherit pub_methods_class_map_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#abb9461a82f67bd340559879d305d3c43"></a><br/></td></tr>
+<tr class="memitem:a6eb24cff5179f6919b426ad3654545f1 inherit pub_methods_class_map_element"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_element.html#a6eb24cff5179f6919b426ad3654545f1">MapElement</a> (<a class="el" href="struct_position.html">Position</a> position_, int id_)</td></tr>
+<tr class="memdesc:a6eb24cff5179f6919b426ad3654545f1 inherit pub_methods_class_map_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a6eb24cff5179f6919b426ad3654545f1"></a><br/></td></tr>
+<tr class="memitem:a4e692e2575a667c25213e59d9ac893f7 inherit pub_methods_class_map_element"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_element.html#a4e692e2575a667c25213e59d9ac893f7">MapElement</a> (const <a class="el" href="class_map_element.html">MapElement</a> &amp;mapElement)</td></tr>
+<tr class="memdesc:a4e692e2575a667c25213e59d9ac893f7 inherit pub_methods_class_map_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a4e692e2575a667c25213e59d9ac893f7"></a><br/></td></tr>
+<tr class="memitem:a4b0a0465fb8859aa91ddb888857167bb inherit pub_methods_class_map_element"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_element.html#a4b0a0465fb8859aa91ddb888857167bb">getID</a> () const </td></tr>
+<tr class="memdesc:a4b0a0465fb8859aa91ddb888857167bb inherit pub_methods_class_map_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwraca id elementu mapy.  <a href="#a4b0a0465fb8859aa91ddb888857167bb"></a><br/></td></tr>
+<tr class="memitem:a616d51f35aba2279c6df5415f8ee29d9 inherit pub_methods_class_map_element"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_element.html#a616d51f35aba2279c6df5415f8ee29d9">setID</a> (const int id_)</td></tr>
+<tr class="memdesc:a616d51f35aba2279c6df5415f8ee29d9 inherit pub_methods_class_map_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda ustawia id.  <a href="#a616d51f35aba2279c6df5415f8ee29d9"></a><br/></td></tr>
+<tr class="inherit_header pub_methods_class_drawable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_drawable')"><img src="closed.png" alt="-"/>&nbsp;Metody publiczne dziedziczone z <a class="el" href="class_drawable.html">Drawable</a></td></tr>
+<tr class="memitem:acdf5ee89ba1c083f4162cfd892c1989c inherit pub_methods_class_drawable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawable.html#acdf5ee89ba1c083f4162cfd892c1989c">Drawable</a> (<a class="el" href="struct_position.html">Position</a> position_)</td></tr>
+<tr class="memdesc:acdf5ee89ba1c083f4162cfd892c1989c inherit pub_methods_class_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#acdf5ee89ba1c083f4162cfd892c1989c"></a><br/></td></tr>
+<tr class="memitem:a7799a0919cf41e051ef48f2467a8686f inherit pub_methods_class_drawable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawable.html#a7799a0919cf41e051ef48f2467a8686f">Drawable</a> (double x_, double y_, double z_=0)</td></tr>
+<tr class="memdesc:a7799a0919cf41e051ef48f2467a8686f inherit pub_methods_class_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a7799a0919cf41e051ef48f2467a8686f"></a><br/></td></tr>
+<tr class="memitem:ae9383e020b150097521c248763c071fa inherit pub_methods_class_drawable"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawable.html#ae9383e020b150097521c248763c071fa">getPosition</a> () const </td></tr>
+<tr class="memdesc:ae9383e020b150097521c248763c071fa inherit pub_methods_class_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca pozycję obiektu.  <a href="#ae9383e020b150097521c248763c071fa"></a><br/></td></tr>
+<tr class="memitem:ab4a98a7b3e4fd76a2d14b9f1d51c3a41 inherit pub_methods_class_drawable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawable.html#ab4a98a7b3e4fd76a2d14b9f1d51c3a41">setPosition</a> (const double x_, const double y_)</td></tr>
+<tr class="memdesc:ab4a98a7b3e4fd76a2d14b9f1d51c3a41 inherit pub_methods_class_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia pozycję obiektu.  <a href="#ab4a98a7b3e4fd76a2d14b9f1d51c3a41"></a><br/></td></tr>
+<tr class="memitem:afa4dae6843185ee5a2cdaf79325099a5 inherit pub_methods_class_drawable"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawable.html#afa4dae6843185ee5a2cdaf79325099a5">setPosition</a> (const <a class="el" href="struct_position.html">Position</a> position_)</td></tr>
+<tr class="memdesc:afa4dae6843185ee5a2cdaf79325099a5 inherit pub_methods_class_drawable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia pozycję obiektu.  <a href="#afa4dae6843185ee5a2cdaf79325099a5"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:abe804575f38e55324e413283898b5d57"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#abe804575f38e55324e413283898b5d57">isNotSpawn</a> (const <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a> el)</td></tr>
+<tr class="memitem:a488b20e9deeebe095670804599a3ddc9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#a488b20e9deeebe095670804599a3ddc9">spawnHasVehiclesToStart</a> (const <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a> el)</td></tr>
+<tr class="memdesc:a488b20e9deeebe095670804599a3ddc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda sprawdza czy dany <a class="el" href="class_spawn.html" title="Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszyc...">Spawn</a> ma jeszcze pojazdy do wystartowania.  <a href="#a488b20e9deeebe095670804599a3ddc9"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:aece1dda8039ac307dd9bfdf9c47fb1c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#aece1dda8039ac307dd9bfdf9c47fb1c0">calculateDirection</a> (<a class="el" href="struct_position.html">Position</a>)</td></tr>
+<tr class="memitem:a9dd0bae055d82dba2d95c0fab52d14f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#a9dd0bae055d82dba2d95c0fab52d14f7">calculateStartPosition</a> (int)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a9796373f175f911096daa7ffda1186ea"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#a9796373f175f911096daa7ffda1186ea">vehiclesToStart</a></td></tr>
+<tr class="memitem:a593c6fb8ae012980751c4364b8ebb5b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spawn.html#a593c6fb8ae012980751c4364b8ebb5b5">direction</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
+Dodatkowe Dziedziczone Składowe</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_map_element"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_map_element')"><img src="closed.png" alt="-"/>&nbsp;Atrybuty chronione dziedziczone z <a class="el" href="class_map_element.html">MapElement</a></td></tr>
+<tr class="memitem:a65ac80f170032e03dca2d2b751cbe688 inherit pro_attribs_class_map_element"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_element.html#a65ac80f170032e03dca2d2b751cbe688">id</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszych. </p>
+</div><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a972290baedf94f776541be6039ee7d75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Spawn::Spawn </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_position.html">Position</a>&#160;</td>
+          <td class="paramname"><em>position_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_position.html">Position</a>&#160;</td>
+          <td class="paramname"><em>neighborPos_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor. </p>
+
+</div>
+</div>
+<a class="anchor" id="a54ab1e49c79ee947204f920046164829"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Spawn::Spawn </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_position.html">Position</a>&#160;</td>
+          <td class="paramname"><em>neighborPos_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor. </p>
+
+</div>
+</div>
+<a class="anchor" id="aea08036b23acdb06fd47eba35dc2a8cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Spawn::~Spawn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="afce802a99344be2869d5723f930cb3f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spawn::addVehicle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>&#160;</td>
+          <td class="paramname"><em>v_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodawanie pojazdu do kolejki oczekujących na start. </p>
+
+</div>
+</div>
+<a class="anchor" id="aece1dda8039ac307dd9bfdf9c47fb1c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spawn::calculateDirection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_position.html">Position</a>&#160;</td>
+          <td class="paramname"><em>neighborPos_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9dd0bae055d82dba2d95c0fab52d14f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_position.html">Position</a> Spawn::calculateStartPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lane_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a725ac9cb33aff1b26b19ed3affecf692"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Spawn::draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda odpowiadająca za rysowanie elementu. </p>
+
+<p>Implementuje <a class="el" href="class_map_element.html#aa76ca7443c4f6a6683f68f44909b90d3">MapElement</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a8907eb45fc0a0168d75063b51456a1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> Spawn::getDirection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pobieranie kierunku, w którym skierowany jest <a class="el" href="class_spawn.html" title="Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszyc...">Spawn</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a343f21c11732fad395e1b9f5bf1a227e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Spawn::hasVehiclesToStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwraca informację, czy <a class="el" href="class_spawn.html" title="Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszyc...">Spawn</a> posiada jeszcze elementy do wystartowania. </p>
+
+</div>
+</div>
+<a class="anchor" id="abe804575f38e55324e413283898b5d57"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Spawn::isNotSpawn </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a>&#160;</td>
+          <td class="paramname"><em>el</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a488b20e9deeebe095670804599a3ddc9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Spawn::spawnHasVehiclesToStart </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a>&#160;</td>
+          <td class="paramname"><em>el</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metoda sprawdza czy dany <a class="el" href="class_spawn.html" title="Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszyc...">Spawn</a> ma jeszcze pojazdy do wystartowania. </p>
+
+</div>
+</div>
+<a class="anchor" id="af9f3e004e311973f4c8983aa586869f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a> Spawn::startVehicle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wyświetla pojazdy na mapie. </p>
+
+</div>
+</div>
+<h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a593c6fb8ae012980751c4364b8ebb5b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> Spawn::direction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9796373f175f911096daa7ffda1186ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>&gt; Spawn::vehiclesToStart</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/<a class="el" href="_spawn_8h_source.html">Spawn.h</a></li>
+<li>src/<a class="el" href="_spawn_8cpp.html">Spawn.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:31 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

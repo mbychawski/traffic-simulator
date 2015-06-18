@@ -1,0 +1,54 @@
+{
+	"0" : {
+		"type": "normal",
+		"id": 0,
+		"startID" : 19,	
+		"driveMode" : "destination",
+        "destinationID": 20,
+		"color": "red",
+		"maxSpeed": 120,
+		"acceleration": 15,
+		"reflex": 1
+    },
+    "1" : {
+        "type": "truck",
+        "id": 1,
+        "startID": 18,
+        "driveMode": "random",
+        "color": "blue",
+        "maxSpeed": 100,
+        "acceleration": 10,
+        "reflex": 2
+    },
+    "2" : {
+        "type": "normal",
+        "id": 2,
+        "startID": 18,
+        "driveMode": "random",
+        "color": "yellow",
+        "maxSpeed": 110,
+        "acceleration": 20,
+        "reflex": 2
+    },
+    "4" : {
+        "type": "truck",
+        "id": 4,
+        "startID": 19,
+        "driveMode": "destination",
+        "destinationID": 3,
+        "color": "green",
+        "maxSpeed": 90,
+        "acceleration": 10,
+        "reflex": 1
+    },
+    "5" : {
+        "type": "normal",
+        "id": 5,
+        "startID": 20,
+        "driveMode": "random",
+        "color": "pink",
+        "maxSpeed": 100,
+        "acceleration": 20,
+        "reflex": 1
+    }
+}

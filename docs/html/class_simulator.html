@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Dokumentacja klasy Simulator</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#signals">Sygnały</a> &#124;
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_simulator-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Simulator</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Jedna z głównych klas aplikacji, odpowiada za zarządzanie wątkami oraz sterowanie animacją.  
+ <a href="class_simulator.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_simulator_8h_source.html">Simulator.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="signals"></a>
+Sygnały</h2></td></tr>
+<tr class="memitem:a4c5b5d48f4f40984cdd5e540ade4d776"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a4c5b5d48f4f40984cdd5e540ade4d776">addVehicleToAnimate</a> (<a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>, <a class="el" href="class_animation.html">Animation</a> *, QMutex *)</td></tr>
+<tr class="memdesc:a4c5b5d48f4f40984cdd5e540ade4d776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sygnał potrzebny do dodawania pojazdu do animacji (ponieważ jest to oddzielny wątek)  <a href="#a4c5b5d48f4f40984cdd5e540ade4d776"></a><br/></td></tr>
+<tr class="memitem:a2553d83940167fe5ecc36fb19e382126"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a2553d83940167fe5ecc36fb19e382126">addPedestrianToAnimate</a> (<a class="el" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>, <a class="el" href="class_animation.html">Animation</a> *, QMutex *)</td></tr>
+<tr class="memdesc:a2553d83940167fe5ecc36fb19e382126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analogicznie jak addVehicleToAnimate, ale dla pieszego.  <a href="#a2553d83940167fe5ecc36fb19e382126"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a777790f7422ca543634ed4ac80862f6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a777790f7422ca543634ed4ac80862f6a">Simulator</a> (<a class="el" href="class_scene.html">Scene</a> *, QObject *=0)</td></tr>
+<tr class="memdesc:a777790f7422ca543634ed4ac80862f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a777790f7422ca543634ed4ac80862f6a"></a><br/></td></tr>
+<tr class="memitem:a0f49aa04f42060a785adf77346b9de9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a0f49aa04f42060a785adf77346b9de9f">~Simulator</a> ()</td></tr>
+<tr class="memitem:a7c1fedfeee2955be5805acb2f9ad74a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a7c1fedfeee2955be5805acb2f9ad74a4">startSimulation</a> ()</td></tr>
+<tr class="memdesc:a7c1fedfeee2955be5805acb2f9ad74a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rozpoczynanie symulacji.  <a href="#a7c1fedfeee2955be5805acb2f9ad74a4"></a><br/></td></tr>
+<tr class="memitem:a2a296c0672d3093a491fd0c399fa1e44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a2a296c0672d3093a491fd0c399fa1e44">stopSimulation</a> ()</td></tr>
+<tr class="memdesc:a2a296c0672d3093a491fd0c399fa1e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zatrzymywanie symulacji.  <a href="#a2a296c0672d3093a491fd0c399fa1e44"></a><br/></td></tr>
+<tr class="memitem:ac3c8dfab9bf1ccbc61bad82e369851bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#ac3c8dfab9bf1ccbc61bad82e369851bc">addVehicle</a> (<a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>)</td></tr>
+<tr class="memdesc:ac3c8dfab9bf1ccbc61bad82e369851bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodawanie pojazdu do symulacji.  <a href="#ac3c8dfab9bf1ccbc61bad82e369851bc"></a><br/></td></tr>
+<tr class="memitem:a63e6b1e0b6cde8d6430fa4a4c1c35308"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a63e6b1e0b6cde8d6430fa4a4c1c35308">addPedestrian</a> (<a class="el" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>)</td></tr>
+<tr class="memdesc:a63e6b1e0b6cde8d6430fa4a4c1c35308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodawanie pieszego do symulacji.  <a href="#a63e6b1e0b6cde8d6430fa4a4c1c35308"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:afa279a763fb0f744606c7d343ee9843d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_animation.html">Animation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#afa279a763fb0f744606c7d343ee9843d">animation</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:abdd826ea1db1c69cc087d24fe69ca272"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#abdd826ea1db1c69cc087d24fe69ca272">scene</a></td></tr>
+<tr class="memitem:a131c2140d1870c403c4b9618ee376007"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spawning_vehicles_runnable.html">SpawningVehiclesRunnable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a131c2140d1870c403c4b9618ee376007">vRunnable</a></td></tr>
+<tr class="memitem:a81dbad2542cad2e24995c90e01df4563"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spawning_pedestrians_runnable.html">SpawningPedestriansRunnable</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a81dbad2542cad2e24995c90e01df4563">pRunnable</a></td></tr>
+<tr class="memitem:adc7182b7aa6d573820b41cebab938518"><td class="memItemLeft" align="right" valign="top">QMutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#adc7182b7aa6d573820b41cebab938518">vMutex</a></td></tr>
+<tr class="memitem:a9b12b4ecb21b9fa0a6e8b43de0683b6c"><td class="memItemLeft" align="right" valign="top">QMutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_simulator.html#a9b12b4ecb21b9fa0a6e8b43de0683b6c">pMutex</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Jedna z głównych klas aplikacji, odpowiada za zarządzanie wątkami oraz sterowanie animacją. </p>
+</div><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a777790f7422ca543634ed4ac80862f6a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Simulator::Simulator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent_</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0f49aa04f42060a785adf77346b9de9f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Simulator::~Simulator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a63e6b1e0b6cde8d6430fa4a4c1c35308"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::addPedestrian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>&#160;</td>
+          <td class="paramname"><em>p_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodawanie pieszego do symulacji. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2553d83940167fe5ecc36fb19e382126"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::addPedestrianToAnimate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_animation.html">Animation</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QMutex *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Analogicznie jak addVehicleToAnimate, ale dla pieszego. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac3c8dfab9bf1ccbc61bad82e369851bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::addVehicle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>&#160;</td>
+          <td class="paramname"><em>v_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodawanie pojazdu do symulacji. </p>
+
+</div>
+</div>
+<a class="anchor" id="a4c5b5d48f4f40984cdd5e540ade4d776"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::addVehicleToAnimate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_animation.html">Animation</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QMutex *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sygnał potrzebny do dodawania pojazdu do animacji (ponieważ jest to oddzielny wątek) </p>
+
+</div>
+</div>
+<a class="anchor" id="a7c1fedfeee2955be5805acb2f9ad74a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::startSimulation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rozpoczynanie symulacji. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2a296c0672d3093a491fd0c399fa1e44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Simulator::stopSimulation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zatrzymywanie symulacji. </p>
+
+</div>
+</div>
+<h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="afa279a763fb0f744606c7d343ee9843d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_animation.html">Animation</a>* Simulator::animation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9b12b4ecb21b9fa0a6e8b43de0683b6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMutex Simulator::pMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a81dbad2542cad2e24995c90e01df4563"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spawning_pedestrians_runnable.html">SpawningPedestriansRunnable</a>* Simulator::pRunnable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abdd826ea1db1c69cc087d24fe69ca272"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene.html">Scene</a>* Simulator::scene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adc7182b7aa6d573820b41cebab938518"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMutex Simulator::vMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a131c2140d1870c403c4b9618ee376007"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_spawning_vehicles_runnable.html">SpawningVehiclesRunnable</a>* Simulator::vRunnable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/<a class="el" href="_simulator_8h_source.html">Simulator.h</a></li>
+<li>src/<a class="el" href="_simulator_8cpp.html">Simulator.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:31 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

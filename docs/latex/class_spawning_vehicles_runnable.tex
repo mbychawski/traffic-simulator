@@ -1,0 +1,87 @@
+\hypertarget{class_spawning_vehicles_runnable}{\section{Dokumentacja klasy Spawning\-Vehicles\-Runnable}
+\label{class_spawning_vehicles_runnable}\index{Spawning\-Vehicles\-Runnable@{Spawning\-Vehicles\-Runnable}}
+}
+
+
+Klasa obsługujaca powstawanie pojazdów na planszy w odpowiednich punktach \hyperlink{class_spawn}{Spawn}.  
+
+
+
+
+{\ttfamily \#include $<$Spawning\-Vehicles\-Runnable.\-h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_spawning_vehicles_runnable_a368400e286ab2536c4fd5a27251d8d2d}{Spawning\-Vehicles\-Runnable} (std\-::vector$<$ \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} $>$, \hyperlink{class_simulator}{Simulator} $\ast$)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{class_spawning_vehicles_runnable_a3987c607c9c315ec9e66552d1cb0f799}{run} ()
+\item 
+void \hyperlink{class_spawning_vehicles_runnable_aa50e5fafaf1050a72658b0364c0bf88a}{stop\-Thread} ()
+\begin{DoxyCompactList}\small\item\em Metoda służąca do zatrzymywania wątku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} $>$ \hyperlink{class_spawning_vehicles_runnable_a1a9c575abd9e800d8b95a429b70be951}{spawns}
+\item 
+\hyperlink{class_simulator}{Simulator} $\ast$ \hyperlink{class_spawning_vehicles_runnable_a42bd4b9c441492b4206941856e140e3f}{simulator}
+\item 
+volatile bool \hyperlink{class_spawning_vehicles_runnable_ab868348a67a2995fc163b2155bfccb66}{go}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa obsługujaca powstawanie pojazdów na planszy w odpowiednich punktach \hyperlink{class_spawn}{Spawn}. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_spawning_vehicles_runnable_a368400e286ab2536c4fd5a27251d8d2d}{\index{Spawning\-Vehicles\-Runnable@{Spawning\-Vehicles\-Runnable}!Spawning\-Vehicles\-Runnable@{Spawning\-Vehicles\-Runnable}}
+\index{Spawning\-Vehicles\-Runnable@{Spawning\-Vehicles\-Runnable}!SpawningVehiclesRunnable@{Spawning\-Vehicles\-Runnable}}
+\subsubsection[{Spawning\-Vehicles\-Runnable}]{\setlength{\rightskip}{0pt plus 5cm}Spawning\-Vehicles\-Runnable\-::\-Spawning\-Vehicles\-Runnable (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf P\-Map\-Element} $>$}]{spawns\-\_\-, }
+\item[{{\bf Simulator} $\ast$}]{simulator\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_spawning_vehicles_runnable_a368400e286ab2536c4fd5a27251d8d2d}
+
+
+Konstruktor. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_spawning_vehicles_runnable_a3987c607c9c315ec9e66552d1cb0f799}{\index{Spawning\-Vehicles\-Runnable@{Spawning\-Vehicles\-Runnable}!run@{run}}
+\index{run@{run}!SpawningVehiclesRunnable@{Spawning\-Vehicles\-Runnable}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Spawning\-Vehicles\-Runnable\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spawning_vehicles_runnable_a3987c607c9c315ec9e66552d1cb0f799}
+To jest metoda przeciążona, udostępniona dla wygody. Różni się od powyższej metody tylko zestawem akceptowanych argumentów. \hypertarget{class_spawning_vehicles_runnable_aa50e5fafaf1050a72658b0364c0bf88a}{\index{Spawning\-Vehicles\-Runnable@{Spawning\-Vehicles\-Runnable}!stop\-Thread@{stop\-Thread}}
+\index{stop\-Thread@{stop\-Thread}!SpawningVehiclesRunnable@{Spawning\-Vehicles\-Runnable}}
+\subsubsection[{stop\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}void Spawning\-Vehicles\-Runnable\-::stop\-Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spawning_vehicles_runnable_aa50e5fafaf1050a72658b0364c0bf88a}
+
+
+Metoda służąca do zatrzymywania wątku. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_spawning_vehicles_runnable_ab868348a67a2995fc163b2155bfccb66}{\index{Spawning\-Vehicles\-Runnable@{Spawning\-Vehicles\-Runnable}!go@{go}}
+\index{go@{go}!SpawningVehiclesRunnable@{Spawning\-Vehicles\-Runnable}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}volatile bool Spawning\-Vehicles\-Runnable\-::go\hspace{0.3cm}{\ttfamily [private]}}}\label{class_spawning_vehicles_runnable_ab868348a67a2995fc163b2155bfccb66}
+\hypertarget{class_spawning_vehicles_runnable_a42bd4b9c441492b4206941856e140e3f}{\index{Spawning\-Vehicles\-Runnable@{Spawning\-Vehicles\-Runnable}!simulator@{simulator}}
+\index{simulator@{simulator}!SpawningVehiclesRunnable@{Spawning\-Vehicles\-Runnable}}
+\subsubsection[{simulator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Simulator}$\ast$ Spawning\-Vehicles\-Runnable\-::simulator\hspace{0.3cm}{\ttfamily [private]}}}\label{class_spawning_vehicles_runnable_a42bd4b9c441492b4206941856e140e3f}
+\hypertarget{class_spawning_vehicles_runnable_a1a9c575abd9e800d8b95a429b70be951}{\index{Spawning\-Vehicles\-Runnable@{Spawning\-Vehicles\-Runnable}!spawns@{spawns}}
+\index{spawns@{spawns}!SpawningVehiclesRunnable@{Spawning\-Vehicles\-Runnable}}
+\subsubsection[{spawns}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf P\-Map\-Element}$>$ Spawning\-Vehicles\-Runnable\-::spawns\hspace{0.3cm}{\ttfamily [private]}}}\label{class_spawning_vehicles_runnable_a1a9c575abd9e800d8b95a429b70be951}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_spawning_vehicles_runnable_8h}{Spawning\-Vehicles\-Runnable.\-h}\item 
+src/\hyperlink{_spawning_vehicles_runnable_8cpp}{Spawning\-Vehicles\-Runnable.\-cpp}\end{DoxyCompactItemize}

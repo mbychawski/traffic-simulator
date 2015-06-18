@@ -1,0 +1,40 @@
+/* 
+ * Spawny powinny byæ zapisywane na koñcu.
+ * Ka¿dy element musi mieæ unikalne ID. ID powinno byæ wiêksze lub równe zero
+ * Nale¿y przestrzegaæ struktury pliku (pamiêtaæ o przecinkach i cudzys³owach)
+ * Nale¿y do³¹czaæ poprawnie do siebie skrzy¿owania
+ * Skrzy¿owania powinny byæ od siebie w odleg³oœci co najmniej 6 np. C1(0, 0) C2(10, 0)
+ */
+
+{
+	"1" : {
+		"type": "cross",	// typ (cross | spawn)
+		"id": 1,			// nr ID
+		"x" : 0,			// pozycja X
+		"y" : 0,			// pozycja Y
+		"N" : -1,			// s¹siad z pó³nocy	(-1 | ID) - -1 brak s¹siada
+		"E" : 2,			// s¹siad ze wschodu
+		"S" : 7,			// s¹siad z po³udnia
+		"W" : -1,			// s¹siad z zachodu
+		"crossType" : "trafficlights"	// se œwiat³ami
+	},
+	"2" : {
+		"type": "cross",
+		"id": 2,
+		"x" : 33,			
+		"y" : 0,			
+		"N" : -1,	
+		"E" : 3,
+		"S" : 5,
+		"W" : 1,
+		"crossType" : "rules",	// z pierwszeñstwem
+		"subordinate" : "NE"	// kierunki podporz¹dkowane
+	},
+	"3" : {
+		"type": "spawn",	// typ spawn
+		"id": 3,
+		"x" : 33,			
+		"y" : 20,			
+		"next" : 15		// do³¹czony tylko z jednej strony, podajemy tylko jednego s¹siada
+	}
+}

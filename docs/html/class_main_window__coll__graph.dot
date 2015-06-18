@@ -1,0 +1,18 @@
+digraph "MainWindow"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="MainWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" scene" ,fontname="Helvetica"];
+  Node2 [label="Scene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_scene.html",tooltip="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze..."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" shortestPath" ,fontname="Helvetica"];
+  Node3 [label="ShortestPath",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_shortest_path.html",tooltip="Klasa odpowiadająca za wyznaczanie najkrótszej ścieżki pomiędzy elementami o podanych ID..."];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mapElements" ,fontname="Helvetica"];
+  Node4 [label="vector\< PMapElement \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cameraController" ,fontname="Helvetica"];
+  Node5 [label="CameraController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_camera_controller.html",tooltip="Klasa odpowiadająca za tworzenie kamer."];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" simulator" ,fontname="Helvetica"];
+  Node6 [label="Simulator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_simulator.html",tooltip="Jedna z głównych klas aplikacji, odpowiada za zarządzanie wątkami oraz sterowanie animacją..."];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" animation" ,fontname="Helvetica"];
+  Node7 [label="Animation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_animation.html",tooltip="Klasa odpowiadająca za trzy podstawowe wątki animacji: aktualizacja położenia pojazdów i pieszych..."];
+}

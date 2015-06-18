@@ -1,0 +1,156 @@
+\documentclass{book}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage{amssymb}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large Traffic Simulator }\\
+\vspace*{1cm}
+{\large Wygenerowano przez Doxygen 1.8.1.2}\\
+\vspace*{0.5cm}
+{\small Wt, 15 sty 2013 23:50:32}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{Indeks klas}
+\input{hierarchy}
+\chapter{Indeks klas}
+\input{annotated}
+\chapter{Indeks plików}
+\input{files}
+\chapter{Dokumentacja klas}
+\input{class_animation}
+\input{class_animation_timer_thread}
+\input{class_animation_waiting_thread}
+\input{class_camera}
+\input{class_camera_controller}
+\input{class_cross}
+\input{class_cross_rules}
+\input{class_drawable}
+\input{class_main_window}
+\input{class_map_element}
+\input{class_map_exception}
+\input{class_map_factory}
+\input{class_moveable}
+\input{class_my_exception}
+\input{class_pedestrian}
+\input{struct_position}
+\input{class_priority_rules}
+\input{class_road}
+\input{class_scene}
+\input{class_shortest_path}
+\input{class_simulator}
+\input{class_spawn}
+\input{class_spawning_pedestrians_runnable}
+\input{class_spawning_vehicles_runnable}
+\input{class_vehicle}
+\input{class_vehicle_creator}
+\input{class_vehicle_exception}
+\input{struct_vertex_info}
+\chapter{Dokumentacja plików}
+\input{_animation_8cpp}
+\input{_animation_8h}
+\input{_animation_timer_thread_8cpp}
+\input{_animation_timer_thread_8h}
+\input{_animation_waiting_thread_8cpp}
+\input{_animation_waiting_thread_8h}
+\input{_camera_8cpp}
+\input{_camera_8h}
+\input{_camera_controller_8cpp}
+\input{_camera_controller_8h}
+\input{_constants_8h}
+\input{_cross_8cpp}
+\input{_cross_8h}
+\input{_cross_rules_8cpp}
+\input{_cross_rules_8h}
+\input{_direction_8h}
+\input{_drawable_8h}
+\input{_exceptions_8h}
+\input{main_8cpp}
+\input{_main_window_8cpp}
+\input{_main_window_8h}
+\input{_map_element_8h}
+\input{_map_factory_8cpp}
+\input{_map_factory_8h}
+\input{_moveable_8h}
+\input{_pedestrian_8cpp}
+\input{_pedestrian_8h}
+\input{_position_8h}
+\input{_priority_rules_8h}
+\input{_road_8cpp}
+\input{_road_8h}
+\input{_scene_8cpp}
+\input{_scene_8h}
+\input{_shortest_path_8cpp}
+\input{_shortest_path_8h}
+\input{_simulator_8cpp}
+\input{_simulator_8h}
+\input{_spawn_8cpp}
+\input{_spawn_8h}
+\input{_spawning_pedestrians_runnable_8cpp}
+\input{_spawning_pedestrians_runnable_8h}
+\input{_spawning_vehicles_runnable_8cpp}
+\input{_spawning_vehicles_runnable_8h}
+\input{test_8cpp}
+\input{_types_8h}
+\input{_vehicle_8cpp}
+\input{_vehicle_8h}
+\input{_vehicle_creator_8cpp}
+\input{_vehicle_creator_8h}
+\input{_vehicle_state_8h}
+\printindex
+\end{document}

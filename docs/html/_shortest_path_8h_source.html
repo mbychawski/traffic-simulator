@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Plik źródłowy src/ShortestPath.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ShortestPath.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_shortest_path_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SHORTESTPATH_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SHORTESTPATH_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_types_8h.html">Types.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="_shortest_path_8h.html#ae6603b1d73e6c4cf70f33b356e8d591c">    8</a></span>&#160;<span class="keyword">typedef</span> boost::graph_traits&lt;Graph&gt;::vertex_iterator <a class="code" href="_map_factory_8cpp.html#ae6603b1d73e6c4cf70f33b356e8d591c">VertexIterator</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="_shortest_path_8h.html#a60e573ea64bc6383ce20314f49c90c8c">    9</a></span>&#160;<span class="keyword">typedef</span> boost::property_map &lt;Graph, boost::vertex_index_t &gt;::type <a class="code" href="_map_factory_8cpp.html#a60e573ea64bc6383ce20314f49c90c8c">IndexMap</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="_shortest_path_8h.html#ae20d582e38f0013afe10a82c1a12cb4f">   11</a></span>&#160;<span class="keyword">typedef</span> boost::iterator_property_map &lt; Vertex*, IndexMap, Vertex, Vertex&amp; &gt; <a class="code" href="_shortest_path_8h.html#ae20d582e38f0013afe10a82c1a12cb4f">PredecessorMap</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="_shortest_path_8h.html#acab893c91ba1c4e4415b652ccebeea6a">   12</a></span>&#160;<span class="keyword">typedef</span> boost::iterator_property_map &lt; Weight*, IndexMap, Weight, Weight&amp; &gt; <a class="code" href="_shortest_path_8h.html#acab893c91ba1c4e4415b652ccebeea6a">DistanceMap</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="class_shortest_path.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_shortest_path.html" title="Klasa odpowiadająca za wyznaczanie najkrótszej ścieżki pomiędzy elementami o podanych ID...">ShortestPath</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="class_shortest_path.html#a368d0008b535477ef2831958c8338bf1">   21</a></span>&#160;    <a class="code" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">Graph</a>* <a class="code" href="class_shortest_path.html#a368d0008b535477ef2831958c8338bf1">g</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_shortest_path.html#a4b137fbbd761ff28873a1b00c6b5055e">getId</a>(<a class="code" href="_map_factory_8cpp.html#ae6603b1d73e6c4cf70f33b356e8d591c">VertexIterator</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_shortest_path.html#a4b137fbbd761ff28873a1b00c6b5055e">getId</a>(<a class="code" href="_types_8h.html#a8c93f604acf57e6a9bae1f91c379ac98">Vertex</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="_types_8h.html#a8c93f604acf57e6a9bae1f91c379ac98">Vertex</a> <a class="code" href="class_shortest_path.html#a80f9815e7c4e13f7b125d93955c0538c">findVertex</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_shortest_path.html#a25347cb0bbdb5caaad9f3ca9e0ef0d25">ShortestPath</a>(<a class="code" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">Graph</a>*);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    vector&lt;int&gt; <a class="code" href="class_shortest_path.html#ad9c6dccde6b27fa1d7c1db57d9e67bfd" title="Zwraca wektor z numerami ID kolejnych skrzyżowań na najkrótszej ścieżce.">getPath</a>(<span class="keywordtype">int</span> from_, <span class="keywordtype">int</span> to_);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_shortest_path.html#a5538d38c856b9836b4ab6b6881b2fca7">~ShortestPath</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif // SHORTESTPATH_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:29 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

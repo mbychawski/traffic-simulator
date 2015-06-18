@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Dokumentacja klasy AnimationWaitingThread</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_animation_waiting_thread-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy AnimationWaitingThread</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa wątków obliczeniowych (dla Pojazdów i Pieszych). Po każdym cyklu run czeka na wybudzenie po odświerzeniu widoku.  
+ <a href="class_animation_waiting_thread.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_animation_waiting_thread_8h_source.html">AnimationWaitingThread.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a09dc2720a50b0db3b18b278de850ff55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation_waiting_thread.html#a09dc2720a50b0db3b18b278de850ff55">AnimationWaitingThread</a> (<a class="el" href="_types_8h.html#afaef7be4497cef01f6bda50ac57e44cb">functionPtr</a>, QWaitCondition *, QMutex *)</td></tr>
+<tr class="memdesc:a09dc2720a50b0db3b18b278de850ff55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor.  <a href="#a09dc2720a50b0db3b18b278de850ff55"></a><br/></td></tr>
+<tr class="memitem:a8fd07e8c8fbdc3e577a0816cee4dafde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation_waiting_thread.html#a8fd07e8c8fbdc3e577a0816cee4dafde">run</a> ()</td></tr>
+<tr class="memitem:a2855e25b20c91a51c5e8263c73b30e06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation_waiting_thread.html#a2855e25b20c91a51c5e8263c73b30e06">stopThread</a> ()</td></tr>
+<tr class="memdesc:a2855e25b20c91a51c5e8263c73b30e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zatrzymuje dzialanie wątku poprzez wyjście z pętli w metodzie run.  <a href="#a2855e25b20c91a51c5e8263c73b30e06"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a63562f5dea2e199512e37979f3d5ccae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8h.html#afaef7be4497cef01f6bda50ac57e44cb">functionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation_waiting_thread.html#a63562f5dea2e199512e37979f3d5ccae">f</a></td></tr>
+<tr class="memitem:aa9a37309d858623088bec9599fbcf135"><td class="memItemLeft" align="right" valign="top">QWaitCondition *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation_waiting_thread.html#aa9a37309d858623088bec9599fbcf135">waitCondition</a></td></tr>
+<tr class="memitem:ad6c84d789d5d43eed9729e7d4a2d26e4"><td class="memItemLeft" align="right" valign="top">QMutex *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation_waiting_thread.html#ad6c84d789d5d43eed9729e7d4a2d26e4">mutex</a></td></tr>
+<tr class="memitem:a51ffa401c81a925e068af99919940994"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation_waiting_thread.html#a51ffa401c81a925e068af99919940994">go</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa wątków obliczeniowych (dla Pojazdów i Pieszych). Po każdym cyklu run czeka na wybudzenie po odświerzeniu widoku. </p>
+</div><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a09dc2720a50b0db3b18b278de850ff55"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationWaitingThread::AnimationWaitingThread </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#afaef7be4497cef01f6bda50ac57e44cb">functionPtr</a>&#160;</td>
+          <td class="paramname"><em>f_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWaitCondition *&#160;</td>
+          <td class="paramname"><em>waitCondition_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QMutex *&#160;</td>
+          <td class="paramname"><em>mutex_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor. </p>
+
+</div>
+</div>
+<h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a8fd07e8c8fbdc3e577a0816cee4dafde"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnimationWaitingThread::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>To jest metoda przeciążona, udostępniona dla wygody. Różni się od powyższej metody tylko zestawem akceptowanych argumentów. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2855e25b20c91a51c5e8263c73b30e06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnimationWaitingThread::stopThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zatrzymuje dzialanie wątku poprzez wyjście z pętli w metodzie run. </p>
+
+</div>
+</div>
+<h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a63562f5dea2e199512e37979f3d5ccae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8h.html#afaef7be4497cef01f6bda50ac57e44cb">functionPtr</a> AnimationWaitingThread::f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a51ffa401c81a925e068af99919940994"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool AnimationWaitingThread::go</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad6c84d789d5d43eed9729e7d4a2d26e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMutex* AnimationWaitingThread::mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa9a37309d858623088bec9599fbcf135"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QWaitCondition* AnimationWaitingThread::waitCondition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/<a class="el" href="_animation_waiting_thread_8h_source.html">AnimationWaitingThread.h</a></li>
+<li>src/<a class="el" href="_animation_waiting_thread_8cpp.html">AnimationWaitingThread.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:29 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

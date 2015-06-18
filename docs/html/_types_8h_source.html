@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Plik źródłowy src/Types.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Types.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_types_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TYPES_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define TYPES_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef Q_MOC_RUN</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">    #include &lt;boost/smart_ptr/shared_ptr.hpp&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">    #include &lt;boost/graph/adjacency_list.hpp&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">    #include &lt;boost/graph/graph_traits.hpp&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">    #include &lt;boost/function.hpp&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif // Q_MOC_RUN</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">class </span><a class="code" href="class_map_element.html" title="Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów.">MapElement</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="class_vehicle.html" title="Klasa odpowiadająca za pojazdy, ich poruszanie się po planszy, komunikację ze skrzyżowaniami, Spawnami, trasę przejazdu.">Vehicle</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span><a class="code" href="class_camera.html" title="Klasa reprezentująca pojedyńczą kamerę. Odpowiada za jej rysowanie i wykrywanie obiektów.">Camera</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pedestrian.html" title="Klasa reprezentująca pieszego.">Pedestrian</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;MapElement&gt; <a class="code" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">   17</a></span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;Vehicle&gt; <a class="code" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="_types_8h.html#afe843f318b77c769d92d3858a28dfd9f">   18</a></span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;Camera&gt; <a class="code" href="_types_8h.html#afe843f318b77c769d92d3858a28dfd9f">PCamera</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">   19</a></span>&#160;<span class="keyword">typedef</span> boost::shared_ptr&lt;Pedestrian&gt; <a class="code" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="_types_8h.html#aa4dd30204ac53d8c88cfd0cab7b81789">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="_types_8h.html#aa4dd30204ac53d8c88cfd0cab7b81789">Weight</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="_types_8h.html#adafd959ae5e10fee25f0d54353dc5714">   22</a></span>&#160;<span class="keyword">typedef</span> boost::property&lt;boost::edge_weight_t, Weight&gt; <a class="code" href="_types_8h.html#adafd959ae5e10fee25f0d54353dc5714">WeightProperty</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="struct_vertex_info.html">   24</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_vertex_info.html">VertexInfo</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="struct_vertex_info.html#a9592379da7b30ae95cdc1f587bccd420">   25</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_vertex_info.html#a9592379da7b30ae95cdc1f587bccd420">id</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">   28</a></span>&#160;<span class="keyword">typedef</span> boost::adjacency_list&lt;boost::listS, boost::vecS, boost::undirectedS, VertexInfo, WeightProperty&gt; <a class="code" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">Graph</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="_types_8h.html#a8c93f604acf57e6a9bae1f91c379ac98">   29</a></span>&#160;<span class="keyword">typedef</span> boost::graph_traits&lt;Graph&gt;::vertex_descriptor <a class="code" href="_types_8h.html#a8c93f604acf57e6a9bae1f91c379ac98">Vertex</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="_types_8h.html#a937736e62dd4d4c5fe8bc7b9de4c8833">   30</a></span>&#160;<span class="keyword">typedef</span> boost::graph_traits&lt;Graph&gt;::edge_descriptor <a class="code" href="_types_8h.html#a937736e62dd4d4c5fe8bc7b9de4c8833">Edge</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="_types_8h.html#afaef7be4497cef01f6bda50ac57e44cb">   32</a></span>&#160;<span class="keyword">typedef</span> boost::function&lt;void(void)&gt; <a class="code" href="_types_8h.html#afaef7be4497cef01f6bda50ac57e44cb">functionPtr</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif // TYPES_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:29 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

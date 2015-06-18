@@ -1,0 +1,207 @@
+\hypertarget{class_pedestrian}{\section{Dokumentacja klasy Pedestrian}
+\label{class_pedestrian}\index{Pedestrian@{Pedestrian}}
+}
+
+
+Klasa reprezentująca pieszego.  
+
+
+
+
+{\ttfamily \#include $<$Pedestrian.\-h$>$}
+
+Diagram dziedziczenia dla Pedestrian\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pedestrian}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pedestrian_acfccb3ad264cab78cf0efe3b2f1f9fc2}{Pedestrian} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_pedestrian_a51d926e2af8c607afef85f5e4d169a7a}{draw} (\hyperlink{class_scene}{Scene} $\ast$)
+\item 
+virtual void \hyperlink{class_pedestrian_aa7a2be507acde572507e185dc27eb6ec}{calculate\-Position} ()
+\item 
+void \hyperlink{class_pedestrian_ac53bd29d69fbe51c1d51064311ef36cc}{init} (\hyperlink{class_scene}{Scene} $\ast$)
+\begin{DoxyCompactList}\small\item\em Metoda ustawia wszystkie początkowe wartości dla pieszego i dodaje Q\-Graphics\-Item do scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_pedestrian_a6244722d6aab61d21e2d1d9cd9152bd9}{update\-Q\-Item\-On\-Scene} ()
+\begin{DoxyCompactList}\small\item\em Aktualizuje położenie q\-Item na scenie. \end{DoxyCompactList}\item 
+void \hyperlink{class_pedestrian_a746a42831de03e17e5a15ab8066d14cf}{check\-Collisions} (\hyperlink{class_scene}{Scene} $\ast$)
+\begin{DoxyCompactList}\small\item\em Sprawdza czy nastapiły kolizje z elementami mapy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_pedestrian_a74387251ec5d3eae4a14e5e87478282d}{is\-Not\-Active} () const 
+\begin{DoxyCompactList}\small\item\em Zwraca true gdy pieszy jest niekatywny. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_pedestrian_af942446f2f37420c967fff3158e81e21}{$\sim$\-Pedestrian} ()
+\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_pedestrian_a3bdcdf87b8e1d416fbe07285a6ff3687}{check\-Collisions} ()
+\item 
+void \hyperlink{class_pedestrian_a3bbcc69a388edc3f89d3f4d81cde9707}{calculate\-Start\-Position} (\hyperlink{class_scene}{Scene} $\ast$)
+\item 
+void \hyperlink{class_pedestrian_adb3421e8cc94f890ef63d2c21f243241}{calculate\-Side} ()
+\item 
+bool \hyperlink{class_pedestrian_a6f9ed72743c2026b611dbdd2f9b519fb}{check\-Turn\-Position} ()
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Graphics\-Ellipse\-Item \hyperlink{class_pedestrian_a4f4897cab46bae56b3d4217167241ece}{q\-Item}
+\item 
+\hyperlink{class_cross}{Cross} $\ast$ \hyperlink{class_pedestrian_aaf596166aee518f9610d0b4ef724ff98}{cross}
+\item 
+int \hyperlink{class_pedestrian_a8b84bca49170ed2945b300e2cb430c27}{street\-Side}
+\item 
+Q\-Color \hyperlink{class_pedestrian_a4afcf22801bb0182dbdb30a9deb17247}{color}
+\item 
+vector$<$ \hyperlink{class_map_element}{Map\-Element} $\ast$ $>$ \hyperlink{class_pedestrian_a48bacc3e03bc81dde872f5673981a9cb}{collides\-Map\-Elements}
+\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa reprezentująca pieszego. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_pedestrian_acfccb3ad264cab78cf0efe3b2f1f9fc2}{\index{Pedestrian@{Pedestrian}!Pedestrian@{Pedestrian}}
+\index{Pedestrian@{Pedestrian}!Pedestrian@{Pedestrian}}
+\subsubsection[{Pedestrian}]{\setlength{\rightskip}{0pt plus 5cm}Pedestrian\-::\-Pedestrian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_pedestrian_acfccb3ad264cab78cf0efe3b2f1f9fc2}
+
+
+Konstruktor. 
+
+\hypertarget{class_pedestrian_af942446f2f37420c967fff3158e81e21}{\index{Pedestrian@{Pedestrian}!$\sim$\-Pedestrian@{$\sim$\-Pedestrian}}
+\index{$\sim$\-Pedestrian@{$\sim$\-Pedestrian}!Pedestrian@{Pedestrian}}
+\subsubsection[{$\sim$\-Pedestrian}]{\setlength{\rightskip}{0pt plus 5cm}Pedestrian\-::$\sim$\-Pedestrian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_pedestrian_af942446f2f37420c967fff3158e81e21}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_pedestrian_aa7a2be507acde572507e185dc27eb6ec}{\index{Pedestrian@{Pedestrian}!calculate\-Position@{calculate\-Position}}
+\index{calculate\-Position@{calculate\-Position}!Pedestrian@{Pedestrian}}
+\subsubsection[{calculate\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Pedestrian\-::calculate\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_pedestrian_aa7a2be507acde572507e185dc27eb6ec}
+To jest metoda przeciążona, udostępniona dla wygody. Różni się od powyższej metody tylko zestawem akceptowanych argumentów. 
+
+Implementuje \hyperlink{class_moveable_a3e42cec7b55d6320553b1c40e2392cb9}{Moveable}.
+
+\hypertarget{class_pedestrian_adb3421e8cc94f890ef63d2c21f243241}{\index{Pedestrian@{Pedestrian}!calculate\-Side@{calculate\-Side}}
+\index{calculate\-Side@{calculate\-Side}!Pedestrian@{Pedestrian}}
+\subsubsection[{calculate\-Side}]{\setlength{\rightskip}{0pt plus 5cm}void Pedestrian\-::calculate\-Side (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_pedestrian_adb3421e8cc94f890ef63d2c21f243241}
+\hypertarget{class_pedestrian_a3bbcc69a388edc3f89d3f4d81cde9707}{\index{Pedestrian@{Pedestrian}!calculate\-Start\-Position@{calculate\-Start\-Position}}
+\index{calculate\-Start\-Position@{calculate\-Start\-Position}!Pedestrian@{Pedestrian}}
+\subsubsection[{calculate\-Start\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Pedestrian\-::calculate\-Start\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_pedestrian_a3bbcc69a388edc3f89d3f4d81cde9707}
+\hypertarget{class_pedestrian_a3bdcdf87b8e1d416fbe07285a6ff3687}{\index{Pedestrian@{Pedestrian}!check\-Collisions@{check\-Collisions}}
+\index{check\-Collisions@{check\-Collisions}!Pedestrian@{Pedestrian}}
+\subsubsection[{check\-Collisions}]{\setlength{\rightskip}{0pt plus 5cm}void Pedestrian\-::check\-Collisions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_pedestrian_a3bdcdf87b8e1d416fbe07285a6ff3687}
+\hypertarget{class_pedestrian_a746a42831de03e17e5a15ab8066d14cf}{\index{Pedestrian@{Pedestrian}!check\-Collisions@{check\-Collisions}}
+\index{check\-Collisions@{check\-Collisions}!Pedestrian@{Pedestrian}}
+\subsubsection[{check\-Collisions}]{\setlength{\rightskip}{0pt plus 5cm}void Pedestrian\-::check\-Collisions (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_pedestrian_a746a42831de03e17e5a15ab8066d14cf}
+
+
+Sprawdza czy nastapiły kolizje z elementami mapy. 
+
+\hypertarget{class_pedestrian_a6f9ed72743c2026b611dbdd2f9b519fb}{\index{Pedestrian@{Pedestrian}!check\-Turn\-Position@{check\-Turn\-Position}}
+\index{check\-Turn\-Position@{check\-Turn\-Position}!Pedestrian@{Pedestrian}}
+\subsubsection[{check\-Turn\-Position}]{\setlength{\rightskip}{0pt plus 5cm}bool Pedestrian\-::check\-Turn\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_pedestrian_a6f9ed72743c2026b611dbdd2f9b519fb}
+\hypertarget{class_pedestrian_a51d926e2af8c607afef85f5e4d169a7a}{\index{Pedestrian@{Pedestrian}!draw@{draw}}
+\index{draw@{draw}!Pedestrian@{Pedestrian}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Pedestrian\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_pedestrian_a51d926e2af8c607afef85f5e4d169a7a}
+To jest metoda przeciążona, udostępniona dla wygody. Różni się od powyższej metody tylko zestawem akceptowanych argumentów. 
+
+Implementuje \hyperlink{class_drawable_a1e24b799e5b5f5494b25a42e2624692c}{Drawable}.
+
+\hypertarget{class_pedestrian_ac53bd29d69fbe51c1d51064311ef36cc}{\index{Pedestrian@{Pedestrian}!init@{init}}
+\index{init@{init}!Pedestrian@{Pedestrian}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Pedestrian\-::init (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_pedestrian_ac53bd29d69fbe51c1d51064311ef36cc}
+
+
+Metoda ustawia wszystkie początkowe wartości dla pieszego i dodaje Q\-Graphics\-Item do scene. 
+
+\hypertarget{class_pedestrian_a74387251ec5d3eae4a14e5e87478282d}{\index{Pedestrian@{Pedestrian}!is\-Not\-Active@{is\-Not\-Active}}
+\index{is\-Not\-Active@{is\-Not\-Active}!Pedestrian@{Pedestrian}}
+\subsubsection[{is\-Not\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Pedestrian\-::is\-Not\-Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_pedestrian_a74387251ec5d3eae4a14e5e87478282d}
+
+
+Zwraca true gdy pieszy jest niekatywny. 
+
+\hypertarget{class_pedestrian_a6244722d6aab61d21e2d1d9cd9152bd9}{\index{Pedestrian@{Pedestrian}!update\-Q\-Item\-On\-Scene@{update\-Q\-Item\-On\-Scene}}
+\index{update\-Q\-Item\-On\-Scene@{update\-Q\-Item\-On\-Scene}!Pedestrian@{Pedestrian}}
+\subsubsection[{update\-Q\-Item\-On\-Scene}]{\setlength{\rightskip}{0pt plus 5cm}void Pedestrian\-::update\-Q\-Item\-On\-Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_pedestrian_a6244722d6aab61d21e2d1d9cd9152bd9}
+
+
+Aktualizuje położenie q\-Item na scenie. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_pedestrian_a48bacc3e03bc81dde872f5673981a9cb}{\index{Pedestrian@{Pedestrian}!collides\-Map\-Elements@{collides\-Map\-Elements}}
+\index{collides\-Map\-Elements@{collides\-Map\-Elements}!Pedestrian@{Pedestrian}}
+\subsubsection[{collides\-Map\-Elements}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Map\-Element}$\ast$$>$ Pedestrian\-::collides\-Map\-Elements\hspace{0.3cm}{\ttfamily [private]}}}\label{class_pedestrian_a48bacc3e03bc81dde872f5673981a9cb}
+\hypertarget{class_pedestrian_a4afcf22801bb0182dbdb30a9deb17247}{\index{Pedestrian@{Pedestrian}!color@{color}}
+\index{color@{color}!Pedestrian@{Pedestrian}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Color Pedestrian\-::color\hspace{0.3cm}{\ttfamily [private]}}}\label{class_pedestrian_a4afcf22801bb0182dbdb30a9deb17247}
+\hypertarget{class_pedestrian_aaf596166aee518f9610d0b4ef724ff98}{\index{Pedestrian@{Pedestrian}!cross@{cross}}
+\index{cross@{cross}!Pedestrian@{Pedestrian}}
+\subsubsection[{cross}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cross}$\ast$ Pedestrian\-::cross\hspace{0.3cm}{\ttfamily [private]}}}\label{class_pedestrian_aaf596166aee518f9610d0b4ef724ff98}
+\hypertarget{class_pedestrian_a4f4897cab46bae56b3d4217167241ece}{\index{Pedestrian@{Pedestrian}!q\-Item@{q\-Item}}
+\index{q\-Item@{q\-Item}!Pedestrian@{Pedestrian}}
+\subsubsection[{q\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Graphics\-Ellipse\-Item Pedestrian\-::q\-Item\hspace{0.3cm}{\ttfamily [private]}}}\label{class_pedestrian_a4f4897cab46bae56b3d4217167241ece}
+\hypertarget{class_pedestrian_a8b84bca49170ed2945b300e2cb430c27}{\index{Pedestrian@{Pedestrian}!street\-Side@{street\-Side}}
+\index{street\-Side@{street\-Side}!Pedestrian@{Pedestrian}}
+\subsubsection[{street\-Side}]{\setlength{\rightskip}{0pt plus 5cm}int Pedestrian\-::street\-Side\hspace{0.3cm}{\ttfamily [private]}}}\label{class_pedestrian_a8b84bca49170ed2945b300e2cb430c27}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_pedestrian_8h}{Pedestrian.\-h}\item 
+src/\hyperlink{_pedestrian_8cpp}{Pedestrian.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,122 @@
+\hypertarget{class_moveable}{\section{Dokumentacja klasy Moveable}
+\label{class_moveable}\index{Moveable@{Moveable}}
+}
+
+
+Klasa bazowa dla klas, które będą animowane.  
+
+
+
+
+{\ttfamily \#include $<$Moveable.\-h$>$}
+
+Diagram dziedziczenia dla Moveable\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_moveable}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_moveable_ac76fdea840225276961ac42ba23e096e}{Moveable} (float max\-Speed\-\_\-, float acceleration\-\_\-)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_moveable_a3e42cec7b55d6320553b1c40e2392cb9}{calculate\-Position} ()=0
+\begin{DoxyCompactList}\small\item\em Metoda obliczająca następną pozycję \end{DoxyCompactList}\item 
+void \hyperlink{class_moveable_aa34a08ea960f6a48e1239861ba1442a1}{set\-Direction} (\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} d\-\_\-)
+\begin{DoxyCompactList}\small\item\em Metoda ustawiająca kierunek ruchu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_moveable_ab36dcef1bdc2dfdf662df044a61f7ba1}{max\-Speed}
+\item 
+float \hyperlink{class_moveable_a66d7998654c97643c5f95fdf26e886cf}{acceleration}
+\item 
+float \hyperlink{class_moveable_acbdd4bee0a3e3e9edffa29bb95d692fd}{current\-Speed}
+\item 
+double \hyperlink{class_moveable_ae84e95afddc19665f9fda53bfcd1c3a3}{dx}
+\item 
+double \hyperlink{class_moveable_ab110147d19762b3e03c9421a2232ae82}{dy}
+\item 
+\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \hyperlink{class_moveable_a1bcc6c440945c5204b2819fe040e8396}{direction}
+\item 
+\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \hyperlink{class_moveable_af654ea303b092f0e89a9bd81fd3c3ac0}{next\-Direction}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa bazowa dla klas, które będą animowane. 
+
+\hyperlink{_moveable_8h}{Moveable.\-h} Author\-: Wookie 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_moveable_ac76fdea840225276961ac42ba23e096e}{\index{Moveable@{Moveable}!Moveable@{Moveable}}
+\index{Moveable@{Moveable}!Moveable@{Moveable}}
+\subsubsection[{Moveable}]{\setlength{\rightskip}{0pt plus 5cm}Moveable\-::\-Moveable (
+\begin{DoxyParamCaption}
+\item[{float}]{max\-Speed\-\_\-, }
+\item[{float}]{acceleration\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_moveable_ac76fdea840225276961ac42ba23e096e}
+
+
+Konstruktor. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_moveable_a3e42cec7b55d6320553b1c40e2392cb9}{\index{Moveable@{Moveable}!calculate\-Position@{calculate\-Position}}
+\index{calculate\-Position@{calculate\-Position}!Moveable@{Moveable}}
+\subsubsection[{calculate\-Position}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Moveable\-::calculate\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_moveable_a3e42cec7b55d6320553b1c40e2392cb9}
+
+
+Metoda obliczająca następną pozycję 
+
+
+
+Implementowany w \hyperlink{class_vehicle_ad5a55c6646313b8105b6dbb95b8eb89c}{Vehicle} i \hyperlink{class_pedestrian_aa7a2be507acde572507e185dc27eb6ec}{Pedestrian}.
+
+\hypertarget{class_moveable_aa34a08ea960f6a48e1239861ba1442a1}{\index{Moveable@{Moveable}!set\-Direction@{set\-Direction}}
+\index{set\-Direction@{set\-Direction}!Moveable@{Moveable}}
+\subsubsection[{set\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void Moveable\-::set\-Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf Direction}}]{d\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_moveable_aa34a08ea960f6a48e1239861ba1442a1}
+
+
+Metoda ustawiająca kierunek ruchu. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_moveable_a66d7998654c97643c5f95fdf26e886cf}{\index{Moveable@{Moveable}!acceleration@{acceleration}}
+\index{acceleration@{acceleration}!Moveable@{Moveable}}
+\subsubsection[{acceleration}]{\setlength{\rightskip}{0pt plus 5cm}float Moveable\-::acceleration\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_moveable_a66d7998654c97643c5f95fdf26e886cf}
+\hypertarget{class_moveable_acbdd4bee0a3e3e9edffa29bb95d692fd}{\index{Moveable@{Moveable}!current\-Speed@{current\-Speed}}
+\index{current\-Speed@{current\-Speed}!Moveable@{Moveable}}
+\subsubsection[{current\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Moveable\-::current\-Speed\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_moveable_acbdd4bee0a3e3e9edffa29bb95d692fd}
+\hypertarget{class_moveable_a1bcc6c440945c5204b2819fe040e8396}{\index{Moveable@{Moveable}!direction@{direction}}
+\index{direction@{direction}!Moveable@{Moveable}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Direction} Moveable\-::direction\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_moveable_a1bcc6c440945c5204b2819fe040e8396}
+\hypertarget{class_moveable_ae84e95afddc19665f9fda53bfcd1c3a3}{\index{Moveable@{Moveable}!dx@{dx}}
+\index{dx@{dx}!Moveable@{Moveable}}
+\subsubsection[{dx}]{\setlength{\rightskip}{0pt plus 5cm}double Moveable\-::dx\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_moveable_ae84e95afddc19665f9fda53bfcd1c3a3}
+\hypertarget{class_moveable_ab110147d19762b3e03c9421a2232ae82}{\index{Moveable@{Moveable}!dy@{dy}}
+\index{dy@{dy}!Moveable@{Moveable}}
+\subsubsection[{dy}]{\setlength{\rightskip}{0pt plus 5cm}double Moveable\-::dy\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_moveable_ab110147d19762b3e03c9421a2232ae82}
+\hypertarget{class_moveable_ab36dcef1bdc2dfdf662df044a61f7ba1}{\index{Moveable@{Moveable}!max\-Speed@{max\-Speed}}
+\index{max\-Speed@{max\-Speed}!Moveable@{Moveable}}
+\subsubsection[{max\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Moveable\-::max\-Speed\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_moveable_ab36dcef1bdc2dfdf662df044a61f7ba1}
+\hypertarget{class_moveable_af654ea303b092f0e89a9bd81fd3c3ac0}{\index{Moveable@{Moveable}!next\-Direction@{next\-Direction}}
+\index{next\-Direction@{next\-Direction}!Moveable@{Moveable}}
+\subsubsection[{next\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Direction} Moveable\-::next\-Direction\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_moveable_af654ea303b092f0e89a9bd81fd3c3ac0}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_moveable_8h}{Moveable.\-h}\end{DoxyCompactItemize}

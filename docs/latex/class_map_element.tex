@@ -1,0 +1,146 @@
+\hypertarget{class_map_element}{\section{Dokumentacja klasy Map\-Element}
+\label{class_map_element}\index{Map\-Element@{Map\-Element}}
+}
+
+
+Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów.  
+
+
+
+
+{\ttfamily \#include $<$Map\-Element.\-h$>$}
+
+Diagram dziedziczenia dla Map\-Element\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_map_element}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_map_element_a1e6c2dadb01e42de3980f1cb9a5e316c}{Map\-Element} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_map_element_abb9461a82f67bd340559879d305d3c43}{Map\-Element} (double x\-\_\-, double y\-\_\-, int id\-\_\-)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_map_element_a6eb24cff5179f6919b426ad3654545f1}{Map\-Element} (\hyperlink{struct_position}{Position} position\-\_\-, int id\-\_\-)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_map_element_a4e692e2575a667c25213e59d9ac893f7}{Map\-Element} (const \hyperlink{class_map_element}{Map\-Element} \&map\-Element)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_map_element_aa76ca7443c4f6a6683f68f44909b90d3}{draw} (\hyperlink{class_scene}{Scene} $\ast$scene)=0
+\item 
+int \hyperlink{class_map_element_a4b0a0465fb8859aa91ddb888857167bb}{get\-I\-D} () const 
+\begin{DoxyCompactList}\small\item\em Metoda zwraca id elementu mapy. \end{DoxyCompactList}\item 
+void \hyperlink{class_map_element_a616d51f35aba2279c6df5415f8ee29d9}{set\-I\-D} (const int id\-\_\-)
+\begin{DoxyCompactList}\small\item\em Metoda ustawia id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_map_element_a65ac80f170032e03dca2d2b751cbe688}{id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów. 
+
+\hyperlink{_map_element_8h}{Map\-Element.\-h} Klasa abstrakcyjna, bazowa dla wszystkich elementów mapy. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_map_element_a1e6c2dadb01e42de3980f1cb9a5e316c}{\index{Map\-Element@{Map\-Element}!Map\-Element@{Map\-Element}}
+\index{Map\-Element@{Map\-Element}!MapElement@{Map\-Element}}
+\subsubsection[{Map\-Element}]{\setlength{\rightskip}{0pt plus 5cm}Map\-Element\-::\-Map\-Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_map_element_a1e6c2dadb01e42de3980f1cb9a5e316c}
+
+
+Konstruktor. 
+
+\hypertarget{class_map_element_abb9461a82f67bd340559879d305d3c43}{\index{Map\-Element@{Map\-Element}!Map\-Element@{Map\-Element}}
+\index{Map\-Element@{Map\-Element}!MapElement@{Map\-Element}}
+\subsubsection[{Map\-Element}]{\setlength{\rightskip}{0pt plus 5cm}Map\-Element\-::\-Map\-Element (
+\begin{DoxyParamCaption}
+\item[{double}]{x\-\_\-, }
+\item[{double}]{y\-\_\-, }
+\item[{int}]{id\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_map_element_abb9461a82f67bd340559879d305d3c43}
+
+
+Konstruktor. 
+
+\hypertarget{class_map_element_a6eb24cff5179f6919b426ad3654545f1}{\index{Map\-Element@{Map\-Element}!Map\-Element@{Map\-Element}}
+\index{Map\-Element@{Map\-Element}!MapElement@{Map\-Element}}
+\subsubsection[{Map\-Element}]{\setlength{\rightskip}{0pt plus 5cm}Map\-Element\-::\-Map\-Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position\-\_\-, }
+\item[{int}]{id\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_map_element_a6eb24cff5179f6919b426ad3654545f1}
+
+
+Konstruktor. 
+
+\hypertarget{class_map_element_a4e692e2575a667c25213e59d9ac893f7}{\index{Map\-Element@{Map\-Element}!Map\-Element@{Map\-Element}}
+\index{Map\-Element@{Map\-Element}!MapElement@{Map\-Element}}
+\subsubsection[{Map\-Element}]{\setlength{\rightskip}{0pt plus 5cm}Map\-Element\-::\-Map\-Element (
+\begin{DoxyParamCaption}
+\item[{const {\bf Map\-Element} \&}]{map\-Element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_map_element_a4e692e2575a667c25213e59d9ac893f7}
+
+
+Konstruktor. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_map_element_aa76ca7443c4f6a6683f68f44909b90d3}{\index{Map\-Element@{Map\-Element}!draw@{draw}}
+\index{draw@{draw}!MapElement@{Map\-Element}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Map\-Element\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_map_element_aa76ca7443c4f6a6683f68f44909b90d3}
+To jest metoda przeciążona, udostępniona dla wygody. Różni się od powyższej metody tylko zestawem akceptowanych argumentów. 
+
+Implementuje \hyperlink{class_drawable_a1e24b799e5b5f5494b25a42e2624692c}{Drawable}.
+
+
+
+Implementowany w \hyperlink{class_cross_a3b127c19a196ad86bbd27b513eecdf44}{Cross}, \hyperlink{class_spawn_a725ac9cb33aff1b26b19ed3affecf692}{Spawn} i \hyperlink{class_road_a276332c2d6a617ca0fc665470fc49901}{Road}.
+
+\hypertarget{class_map_element_a4b0a0465fb8859aa91ddb888857167bb}{\index{Map\-Element@{Map\-Element}!get\-I\-D@{get\-I\-D}}
+\index{get\-I\-D@{get\-I\-D}!MapElement@{Map\-Element}}
+\subsubsection[{get\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Map\-Element\-::get\-I\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_map_element_a4b0a0465fb8859aa91ddb888857167bb}
+
+
+Metoda zwraca id elementu mapy. 
+
+\hypertarget{class_map_element_a616d51f35aba2279c6df5415f8ee29d9}{\index{Map\-Element@{Map\-Element}!set\-I\-D@{set\-I\-D}}
+\index{set\-I\-D@{set\-I\-D}!MapElement@{Map\-Element}}
+\subsubsection[{set\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void Map\-Element\-::set\-I\-D (
+\begin{DoxyParamCaption}
+\item[{const int}]{id\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_map_element_a616d51f35aba2279c6df5415f8ee29d9}
+
+
+Metoda ustawia id. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_map_element_a65ac80f170032e03dca2d2b751cbe688}{\index{Map\-Element@{Map\-Element}!id@{id}}
+\index{id@{id}!MapElement@{Map\-Element}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int Map\-Element\-::id\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_map_element_a65ac80f170032e03dca2d2b751cbe688}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_map_element_8h}{Map\-Element.\-h}\end{DoxyCompactItemize}

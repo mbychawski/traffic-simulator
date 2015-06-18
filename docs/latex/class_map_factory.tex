@@ -1,0 +1,150 @@
+\hypertarget{class_map_factory}{\section{Dokumentacja klasy Map\-Factory}
+\label{class_map_factory}\index{Map\-Factory@{Map\-Factory}}
+}
+
+
+Klasa odpowiada za czytanie pliku w formacie json i tworzenie na jego podstawie grafu i wszystkich elementów mapy.  
+
+
+
+
+{\ttfamily \#include $<$Map\-Factory.\-h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_map_factory_aad57a8dceca114847cc97579aaa6f569}{Map\-Factory} (const string \&)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \hyperlink{class_map_factory}{Map\-Factory}, parametrem jest scieżka do pliku. \end{DoxyCompactList}\item 
+\hyperlink{_types_8h_adb8cbccb1bf63dda03515e30e185c388}{Graph} $\ast$ \hyperlink{class_map_factory_a22c43a80224a98a9ad11f9e38dcda29b}{create\-Map} ()
+\begin{DoxyCompactList}\small\item\em Tworzy mapę i wszystkie elementy w niej zawarte. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} $>$ \& \hyperlink{class_map_factory_a49c90b6c269407a3fc71d103edd6ff9e}{get\-Map\-Elements} ()
+\begin{DoxyCompactList}\small\item\em Zwraca wektor zawierający elementy mapy. \end{DoxyCompactList}\item 
+\hyperlink{class_map_factory_a21d7130504a10cc0886c26326b2faa9d}{$\sim$\-Map\-Factory} ()
+\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_map_factory_a64ee27fb682c6cc7b4c45dd856b8e607}{add\-Cross\-\_\-} (const ptree\-::value\-\_\-type \&)
+\item 
+void \hyperlink{class_map_factory_a443185cbfeddc063df6aed004d2c21fd}{add\-Spawn\-\_\-} (const ptree\-::value\-\_\-type \&)
+\item 
+void \hyperlink{class_map_factory_ac4bdddf0aeeaedae80a2cd8814aefd78}{add\-Edges\-\_\-} (int, map$<$ \hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}, int $>$)
+\item 
+void \hyperlink{class_map_factory_addec2c9f5a0056a0887f09b781ffecf0}{add\-Edge\-\_\-} (int, int)
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_adb8cbccb1bf63dda03515e30e185c388}{Graph} $\ast$ \hyperlink{class_map_factory_af4450d69783b74d07d8686da50c66621}{g}
+\item 
+\hyperlink{_map_factory_8h_a54a98738cc1e3485f2cf5f24979317e5}{ptree} \hyperlink{class_map_factory_af0cbd48b8917121329660bd28877fcc6}{property\-Tree}
+\item 
+map$<$ int, \hyperlink{_types_8h_a8c93f604acf57e6a9bae1f91c379ac98}{Vertex} $>$ \hyperlink{class_map_factory_ab3f7a784d24d1cf06f03429312d030b4}{vertices}
+\item 
+map$<$ int, \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} $>$ \hyperlink{class_map_factory_aaf7d7680404bc0ac40766ca305f75753}{vertices\-Elements}
+\item 
+vector$<$ \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} $>$ \hyperlink{class_map_factory_ad4677e42d2e82c5ca31fa931fa60f9ce}{map\-Elements}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiada za czytanie pliku w formacie json i tworzenie na jego podstawie grafu i wszystkich elementów mapy. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_map_factory_aad57a8dceca114847cc97579aaa6f569}{\index{Map\-Factory@{Map\-Factory}!Map\-Factory@{Map\-Factory}}
+\index{Map\-Factory@{Map\-Factory}!MapFactory@{Map\-Factory}}
+\subsubsection[{Map\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}Map\-Factory\-::\-Map\-Factory (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_map_factory_aad57a8dceca114847cc97579aaa6f569}
+
+
+Konstruktor klasy \hyperlink{class_map_factory}{Map\-Factory}, parametrem jest scieżka do pliku. 
+
+\hypertarget{class_map_factory_a21d7130504a10cc0886c26326b2faa9d}{\index{Map\-Factory@{Map\-Factory}!$\sim$\-Map\-Factory@{$\sim$\-Map\-Factory}}
+\index{$\sim$\-Map\-Factory@{$\sim$\-Map\-Factory}!MapFactory@{Map\-Factory}}
+\subsubsection[{$\sim$\-Map\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}Map\-Factory\-::$\sim$\-Map\-Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_factory_a21d7130504a10cc0886c26326b2faa9d}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_map_factory_a64ee27fb682c6cc7b4c45dd856b8e607}{\index{Map\-Factory@{Map\-Factory}!add\-Cross\-\_\-@{add\-Cross\-\_\-}}
+\index{add\-Cross\-\_\-@{add\-Cross\-\_\-}!MapFactory@{Map\-Factory}}
+\subsubsection[{add\-Cross\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void Map\-Factory\-::add\-Cross\-\_\- (
+\begin{DoxyParamCaption}
+\item[{const ptree\-::value\-\_\-type \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_factory_a64ee27fb682c6cc7b4c45dd856b8e607}
+\hypertarget{class_map_factory_addec2c9f5a0056a0887f09b781ffecf0}{\index{Map\-Factory@{Map\-Factory}!add\-Edge\-\_\-@{add\-Edge\-\_\-}}
+\index{add\-Edge\-\_\-@{add\-Edge\-\_\-}!MapFactory@{Map\-Factory}}
+\subsubsection[{add\-Edge\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void Map\-Factory\-::add\-Edge\-\_\- (
+\begin{DoxyParamCaption}
+\item[{int}]{v1\-\_\-, }
+\item[{int}]{v2\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_factory_addec2c9f5a0056a0887f09b781ffecf0}
+\hypertarget{class_map_factory_ac4bdddf0aeeaedae80a2cd8814aefd78}{\index{Map\-Factory@{Map\-Factory}!add\-Edges\-\_\-@{add\-Edges\-\_\-}}
+\index{add\-Edges\-\_\-@{add\-Edges\-\_\-}!MapFactory@{Map\-Factory}}
+\subsubsection[{add\-Edges\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void Map\-Factory\-::add\-Edges\-\_\- (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-, }
+\item[{map$<$ {\bf Direction}, int $>$}]{neighbors\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_factory_ac4bdddf0aeeaedae80a2cd8814aefd78}
+\hypertarget{class_map_factory_a443185cbfeddc063df6aed004d2c21fd}{\index{Map\-Factory@{Map\-Factory}!add\-Spawn\-\_\-@{add\-Spawn\-\_\-}}
+\index{add\-Spawn\-\_\-@{add\-Spawn\-\_\-}!MapFactory@{Map\-Factory}}
+\subsubsection[{add\-Spawn\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void Map\-Factory\-::add\-Spawn\-\_\- (
+\begin{DoxyParamCaption}
+\item[{const ptree\-::value\-\_\-type \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_factory_a443185cbfeddc063df6aed004d2c21fd}
+\hypertarget{class_map_factory_a22c43a80224a98a9ad11f9e38dcda29b}{\index{Map\-Factory@{Map\-Factory}!create\-Map@{create\-Map}}
+\index{create\-Map@{create\-Map}!MapFactory@{Map\-Factory}}
+\subsubsection[{create\-Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph} $\ast$ Map\-Factory\-::create\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_factory_a22c43a80224a98a9ad11f9e38dcda29b}
+
+
+Tworzy mapę i wszystkie elementy w niej zawarte. 
+
+\hypertarget{class_map_factory_a49c90b6c269407a3fc71d103edd6ff9e}{\index{Map\-Factory@{Map\-Factory}!get\-Map\-Elements@{get\-Map\-Elements}}
+\index{get\-Map\-Elements@{get\-Map\-Elements}!MapFactory@{Map\-Factory}}
+\subsubsection[{get\-Map\-Elements}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf P\-Map\-Element} $>$ \& Map\-Factory\-::get\-Map\-Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_map_factory_a49c90b6c269407a3fc71d103edd6ff9e}
+
+
+Zwraca wektor zawierający elementy mapy. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_map_factory_af4450d69783b74d07d8686da50c66621}{\index{Map\-Factory@{Map\-Factory}!g@{g}}
+\index{g@{g}!MapFactory@{Map\-Factory}}
+\subsubsection[{g}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph}$\ast$ Map\-Factory\-::g\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_factory_af4450d69783b74d07d8686da50c66621}
+\hypertarget{class_map_factory_ad4677e42d2e82c5ca31fa931fa60f9ce}{\index{Map\-Factory@{Map\-Factory}!map\-Elements@{map\-Elements}}
+\index{map\-Elements@{map\-Elements}!MapFactory@{Map\-Factory}}
+\subsubsection[{map\-Elements}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf P\-Map\-Element}$>$ Map\-Factory\-::map\-Elements\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_factory_ad4677e42d2e82c5ca31fa931fa60f9ce}
+\hypertarget{class_map_factory_af0cbd48b8917121329660bd28877fcc6}{\index{Map\-Factory@{Map\-Factory}!property\-Tree@{property\-Tree}}
+\index{property\-Tree@{property\-Tree}!MapFactory@{Map\-Factory}}
+\subsubsection[{property\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ptree} Map\-Factory\-::property\-Tree\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_factory_af0cbd48b8917121329660bd28877fcc6}
+\hypertarget{class_map_factory_ab3f7a784d24d1cf06f03429312d030b4}{\index{Map\-Factory@{Map\-Factory}!vertices@{vertices}}
+\index{vertices@{vertices}!MapFactory@{Map\-Factory}}
+\subsubsection[{vertices}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int, {\bf Vertex}$>$ Map\-Factory\-::vertices\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_factory_ab3f7a784d24d1cf06f03429312d030b4}
+\hypertarget{class_map_factory_aaf7d7680404bc0ac40766ca305f75753}{\index{Map\-Factory@{Map\-Factory}!vertices\-Elements@{vertices\-Elements}}
+\index{vertices\-Elements@{vertices\-Elements}!MapFactory@{Map\-Factory}}
+\subsubsection[{vertices\-Elements}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int, {\bf P\-Map\-Element}$>$ Map\-Factory\-::vertices\-Elements\hspace{0.3cm}{\ttfamily [private]}}}\label{class_map_factory_aaf7d7680404bc0ac40766ca305f75753}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_map_factory_8h}{Map\-Factory.\-h}\item 
+src/\hyperlink{_map_factory_8cpp}{Map\-Factory.\-cpp}\end{DoxyCompactItemize}

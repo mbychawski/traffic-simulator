@@ -1,0 +1,103 @@
+\hypertarget{class_shortest_path}{\section{Dokumentacja klasy Shortest\-Path}
+\label{class_shortest_path}\index{Shortest\-Path@{Shortest\-Path}}
+}
+
+
+Klasa odpowiadająca za wyznaczanie najkrótszej ścieżki pomiędzy elementami o podanych I\-D.  
+
+
+
+
+{\ttfamily \#include $<$Shortest\-Path.\-h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_shortest_path_a25347cb0bbdb5caaad9f3ca9e0ef0d25}{Shortest\-Path} (\hyperlink{_types_8h_adb8cbccb1bf63dda03515e30e185c388}{Graph} $\ast$)
+\item 
+vector$<$ int $>$ \hyperlink{class_shortest_path_ad9c6dccde6b27fa1d7c1db57d9e67bfd}{get\-Path} (int from\-\_\-, int to\-\_\-)
+\begin{DoxyCompactList}\small\item\em Zwraca wektor z numerami I\-D kolejnych skrzyżowań na najkrótszej ścieżce. \end{DoxyCompactList}\item 
+\hyperlink{class_shortest_path_a5538d38c856b9836b4ab6b6881b2fca7}{$\sim$\-Shortest\-Path} ()
+\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_shortest_path_a4b137fbbd761ff28873a1b00c6b5055e}{get\-Id} (\hyperlink{_map_factory_8cpp_ae6603b1d73e6c4cf70f33b356e8d591c}{Vertex\-Iterator})
+\item 
+int \hyperlink{class_shortest_path_af25f1dff91ed0fa22e5d6c3cd4653085}{get\-Id} (\hyperlink{_types_8h_a8c93f604acf57e6a9bae1f91c379ac98}{Vertex})
+\item 
+\hyperlink{_types_8h_a8c93f604acf57e6a9bae1f91c379ac98}{Vertex} \hyperlink{class_shortest_path_a80f9815e7c4e13f7b125d93955c0538c}{find\-Vertex} (int)
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8h_adb8cbccb1bf63dda03515e30e185c388}{Graph} $\ast$ \hyperlink{class_shortest_path_a368d0008b535477ef2831958c8338bf1}{g}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiadająca za wyznaczanie najkrótszej ścieżki pomiędzy elementami o podanych I\-D. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_shortest_path_a25347cb0bbdb5caaad9f3ca9e0ef0d25}{\index{Shortest\-Path@{Shortest\-Path}!Shortest\-Path@{Shortest\-Path}}
+\index{Shortest\-Path@{Shortest\-Path}!ShortestPath@{Shortest\-Path}}
+\subsubsection[{Shortest\-Path}]{\setlength{\rightskip}{0pt plus 5cm}Shortest\-Path\-::\-Shortest\-Path (
+\begin{DoxyParamCaption}
+\item[{{\bf Graph} $\ast$}]{g\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_shortest_path_a25347cb0bbdb5caaad9f3ca9e0ef0d25}
+\hypertarget{class_shortest_path_a5538d38c856b9836b4ab6b6881b2fca7}{\index{Shortest\-Path@{Shortest\-Path}!$\sim$\-Shortest\-Path@{$\sim$\-Shortest\-Path}}
+\index{$\sim$\-Shortest\-Path@{$\sim$\-Shortest\-Path}!ShortestPath@{Shortest\-Path}}
+\subsubsection[{$\sim$\-Shortest\-Path}]{\setlength{\rightskip}{0pt plus 5cm}Shortest\-Path\-::$\sim$\-Shortest\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_shortest_path_a5538d38c856b9836b4ab6b6881b2fca7}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_shortest_path_a80f9815e7c4e13f7b125d93955c0538c}{\index{Shortest\-Path@{Shortest\-Path}!find\-Vertex@{find\-Vertex}}
+\index{find\-Vertex@{find\-Vertex}!ShortestPath@{Shortest\-Path}}
+\subsubsection[{find\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vertex} Shortest\-Path\-::find\-Vertex (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_shortest_path_a80f9815e7c4e13f7b125d93955c0538c}
+\hypertarget{class_shortest_path_a4b137fbbd761ff28873a1b00c6b5055e}{\index{Shortest\-Path@{Shortest\-Path}!get\-Id@{get\-Id}}
+\index{get\-Id@{get\-Id}!ShortestPath@{Shortest\-Path}}
+\subsubsection[{get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Shortest\-Path\-::get\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertex\-Iterator}}]{it}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_shortest_path_a4b137fbbd761ff28873a1b00c6b5055e}
+\hypertarget{class_shortest_path_af25f1dff91ed0fa22e5d6c3cd4653085}{\index{Shortest\-Path@{Shortest\-Path}!get\-Id@{get\-Id}}
+\index{get\-Id@{get\-Id}!ShortestPath@{Shortest\-Path}}
+\subsubsection[{get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Shortest\-Path\-::get\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertex}}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_shortest_path_af25f1dff91ed0fa22e5d6c3cd4653085}
+\hypertarget{class_shortest_path_ad9c6dccde6b27fa1d7c1db57d9e67bfd}{\index{Shortest\-Path@{Shortest\-Path}!get\-Path@{get\-Path}}
+\index{get\-Path@{get\-Path}!ShortestPath@{Shortest\-Path}}
+\subsubsection[{get\-Path}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ Shortest\-Path\-::get\-Path (
+\begin{DoxyParamCaption}
+\item[{int}]{from\-\_\-, }
+\item[{int}]{to\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_shortest_path_ad9c6dccde6b27fa1d7c1db57d9e67bfd}
+
+
+Zwraca wektor z numerami I\-D kolejnych skrzyżowań na najkrótszej ścieżce. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_shortest_path_a368d0008b535477ef2831958c8338bf1}{\index{Shortest\-Path@{Shortest\-Path}!g@{g}}
+\index{g@{g}!ShortestPath@{Shortest\-Path}}
+\subsubsection[{g}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graph}$\ast$ Shortest\-Path\-::g\hspace{0.3cm}{\ttfamily [private]}}}\label{class_shortest_path_a368d0008b535477ef2831958c8338bf1}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_shortest_path_8h}{Shortest\-Path.\-h}\item 
+src/\hyperlink{_shortest_path_8cpp}{Shortest\-Path.\-cpp}\end{DoxyCompactItemize}

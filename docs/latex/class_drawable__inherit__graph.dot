@@ -1,0 +1,18 @@
+digraph "Drawable"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Drawable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="MapElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_map_element.html",tooltip="Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Cross",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_cross.html",tooltip="Klasa reprezentujaca skrzyzowanie."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Road",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_road.html",tooltip="Klasa reprezentuje drogę na mapie."];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Spawn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_spawn.html",tooltip="Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszyc..."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Pedestrian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_pedestrian.html",tooltip="Klasa reprezentująca pieszego."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Vehicle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_vehicle.html",tooltip="Klasa odpowiadająca za pojazdy, ich poruszanie się po planszy, komunikację ze skrzyżowaniami, Spawnami, trasę przejazdu."];
+}

@@ -1,0 +1,87 @@
+\hypertarget{class_vehicle_creator}{\section{Dokumentacja klasy Vehicle\-Creator}
+\label{class_vehicle_creator}\index{Vehicle\-Creator@{Vehicle\-Creator}}
+}
+
+
+Klasa odpowiadająca za odczytanie z pliku konfiguracji pojazdów oraz stworzenie ich i dostarczenie do odpowiedniego elementu \hyperlink{class_spawn}{Spawn}.  
+
+
+
+
+{\ttfamily \#include $<$Vehicle\-Creator.\-h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vehicle_creator_a174fc1d2c051f86582ea84f8fc7acebb}{Vehicle\-Creator} (\hyperlink{class_scene}{Scene} $\ast$, const string \&)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy, drugim argumentem jest ścieżka do pliku konfiguracyjnego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_vehicle_creator_ab8145c81021566539a6ae95dc717e415}{add\-Vehicles} (const \hyperlink{_map_factory_8h_a54a98738cc1e3485f2cf5f24979317e5}{ptree} \&)
+\item 
+void \hyperlink{class_vehicle_creator_a420358012f0f6c22893cf8ee5adee14d}{add\-To\-Spawn} (int, \hyperlink{_types_8h_a564207d327881e8bcfa0843e1a874756}{P\-Vehicle})
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_vehicle_creator_a53e33d385593f7473da5afa14715e569}{scene}
+\item 
+\hyperlink{_map_factory_8h_a54a98738cc1e3485f2cf5f24979317e5}{ptree} \hyperlink{class_vehicle_creator_aa9ad6fb2dc9ff1b715196ae914c6925e}{property\-Tree}
+\item 
+vector$<$ \hyperlink{_types_8h_a564207d327881e8bcfa0843e1a874756}{P\-Vehicle} $>$ \hyperlink{class_vehicle_creator_a7cd2f07f6b6d9a8299bd2c6b5657f292}{vehicles}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiadająca za odczytanie z pliku konfiguracji pojazdów oraz stworzenie ich i dostarczenie do odpowiedniego elementu \hyperlink{class_spawn}{Spawn}. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_vehicle_creator_a174fc1d2c051f86582ea84f8fc7acebb}{\index{Vehicle\-Creator@{Vehicle\-Creator}!Vehicle\-Creator@{Vehicle\-Creator}}
+\index{Vehicle\-Creator@{Vehicle\-Creator}!VehicleCreator@{Vehicle\-Creator}}
+\subsubsection[{Vehicle\-Creator}]{\setlength{\rightskip}{0pt plus 5cm}Vehicle\-Creator\-::\-Vehicle\-Creator (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene\-\_\-, }
+\item[{const string \&}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_vehicle_creator_a174fc1d2c051f86582ea84f8fc7acebb}
+
+
+Konstruktor klasy, drugim argumentem jest ścieżka do pliku konfiguracyjnego. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_vehicle_creator_a420358012f0f6c22893cf8ee5adee14d}{\index{Vehicle\-Creator@{Vehicle\-Creator}!add\-To\-Spawn@{add\-To\-Spawn}}
+\index{add\-To\-Spawn@{add\-To\-Spawn}!VehicleCreator@{Vehicle\-Creator}}
+\subsubsection[{add\-To\-Spawn}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-Creator\-::add\-To\-Spawn (
+\begin{DoxyParamCaption}
+\item[{int}]{spawn\-I\-D\-\_\-, }
+\item[{{\bf P\-Vehicle}}]{v\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_creator_a420358012f0f6c22893cf8ee5adee14d}
+\hypertarget{class_vehicle_creator_ab8145c81021566539a6ae95dc717e415}{\index{Vehicle\-Creator@{Vehicle\-Creator}!add\-Vehicles@{add\-Vehicles}}
+\index{add\-Vehicles@{add\-Vehicles}!VehicleCreator@{Vehicle\-Creator}}
+\subsubsection[{add\-Vehicles}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-Creator\-::add\-Vehicles (
+\begin{DoxyParamCaption}
+\item[{const {\bf ptree} \&}]{v\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_creator_ab8145c81021566539a6ae95dc717e415}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_vehicle_creator_aa9ad6fb2dc9ff1b715196ae914c6925e}{\index{Vehicle\-Creator@{Vehicle\-Creator}!property\-Tree@{property\-Tree}}
+\index{property\-Tree@{property\-Tree}!VehicleCreator@{Vehicle\-Creator}}
+\subsubsection[{property\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ptree} Vehicle\-Creator\-::property\-Tree\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_creator_aa9ad6fb2dc9ff1b715196ae914c6925e}
+\hypertarget{class_vehicle_creator_a53e33d385593f7473da5afa14715e569}{\index{Vehicle\-Creator@{Vehicle\-Creator}!scene@{scene}}
+\index{scene@{scene}!VehicleCreator@{Vehicle\-Creator}}
+\subsubsection[{scene}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene}$\ast$ Vehicle\-Creator\-::scene\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_creator_a53e33d385593f7473da5afa14715e569}
+\hypertarget{class_vehicle_creator_a7cd2f07f6b6d9a8299bd2c6b5657f292}{\index{Vehicle\-Creator@{Vehicle\-Creator}!vehicles@{vehicles}}
+\index{vehicles@{vehicles}!VehicleCreator@{Vehicle\-Creator}}
+\subsubsection[{vehicles}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf P\-Vehicle}$>$ Vehicle\-Creator\-::vehicles\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_creator_a7cd2f07f6b6d9a8299bd2c6b5657f292}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_vehicle_creator_8h}{Vehicle\-Creator.\-h}\item 
+src/\hyperlink{_vehicle_creator_8cpp}{Vehicle\-Creator.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\hypertarget{class_animation_timer_thread}{\section{Dokumentacja klasy Animation\-Timer\-Thread}
+\label{class_animation_timer_thread}\index{Animation\-Timer\-Thread@{Animation\-Timer\-Thread}}
+}
+
+
+Klasa wątku animacji. Uruchamiająca timer i wybudzająca w odpowiednich momentach wątki obliczające.  
+
+
+
+
+{\ttfamily \#include $<$Animation\-Timer\-Thread.\-h$>$}
+
+\subsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_animation_timer_thread_a9babdfb5bfefd582ea1a0aaa1a673a49}{update\-View} ()
+\begin{DoxyCompactList}\small\item\em wywołuje odpowiednie metody w \hyperlink{class_animation}{Animation}. Działa tylko w wątku G\-U\-I \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_animation_timer_thread_a549cf2fb555d948c25ec9e7c0b967a2e}{Animation\-Timer\-Thread} (Q\-Wait\-Condition $\ast$, double, \hyperlink{class_scene}{Scene} $\ast$, \hyperlink{class_animation}{Animation} $\ast$, Q\-Mutex $\ast$, Q\-Mutex $\ast$)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_timer_thread_a653859a0781c75b6f0fe2decd601c0da}{run} ()
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Wait\-Condition $\ast$ \hyperlink{class_animation_timer_thread_ad0afad858a6fb161d4e2c9a9912e958a}{wait\-Condition}
+\item 
+double \hyperlink{class_animation_timer_thread_a7c99944245eb6574e966bd4db5a0055d}{interval}
+\item 
+\hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_animation_timer_thread_a7fe67347fd7ebd156414e68447713b49}{scene}
+\item 
+\hyperlink{class_animation}{Animation} $\ast$ \hyperlink{class_animation_timer_thread_aae21c4abd63a79a1df8122444d1a8813}{animation}
+\item 
+Q\-Mutex $\ast$ \hyperlink{class_animation_timer_thread_a0e631857e4de3236956f34fea244958f}{v\-Mutex}
+\item 
+Q\-Mutex $\ast$ \hyperlink{class_animation_timer_thread_a05984499ec314e871b9a13c4295b62a8}{p\-Mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa wątku animacji. Uruchamiająca timer i wybudzająca w odpowiednich momentach wątki obliczające. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_animation_timer_thread_a549cf2fb555d948c25ec9e7c0b967a2e}{\index{Animation\-Timer\-Thread@{Animation\-Timer\-Thread}!Animation\-Timer\-Thread@{Animation\-Timer\-Thread}}
+\index{Animation\-Timer\-Thread@{Animation\-Timer\-Thread}!AnimationTimerThread@{Animation\-Timer\-Thread}}
+\subsubsection[{Animation\-Timer\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}Animation\-Timer\-Thread\-::\-Animation\-Timer\-Thread (
+\begin{DoxyParamCaption}
+\item[{Q\-Wait\-Condition $\ast$}]{wait\-Condition\-\_\-, }
+\item[{double}]{interval\-\_\-, }
+\item[{{\bf Scene} $\ast$}]{scene\-\_\-, }
+\item[{{\bf Animation} $\ast$}]{animation\-\_\-, }
+\item[{Q\-Mutex $\ast$}]{v\-Mutex\-\_\-, }
+\item[{Q\-Mutex $\ast$}]{p\-Mutex\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_animation_timer_thread_a549cf2fb555d948c25ec9e7c0b967a2e}
+
+
+Konstruktor. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_animation_timer_thread_a653859a0781c75b6f0fe2decd601c0da}{\index{Animation\-Timer\-Thread@{Animation\-Timer\-Thread}!run@{run}}
+\index{run@{run}!AnimationTimerThread@{Animation\-Timer\-Thread}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-Timer\-Thread\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_timer_thread_a653859a0781c75b6f0fe2decd601c0da}
+To jest metoda przeciążona, udostępniona dla wygody. Różni się od powyższej metody tylko zestawem akceptowanych argumentów. \hypertarget{class_animation_timer_thread_a9babdfb5bfefd582ea1a0aaa1a673a49}{\index{Animation\-Timer\-Thread@{Animation\-Timer\-Thread}!update\-View@{update\-View}}
+\index{update\-View@{update\-View}!AnimationTimerThread@{Animation\-Timer\-Thread}}
+\subsubsection[{update\-View}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-Timer\-Thread\-::update\-View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_animation_timer_thread_a9babdfb5bfefd582ea1a0aaa1a673a49}
+
+
+wywołuje odpowiednie metody w \hyperlink{class_animation}{Animation}. Działa tylko w wątku G\-U\-I 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_animation_timer_thread_aae21c4abd63a79a1df8122444d1a8813}{\index{Animation\-Timer\-Thread@{Animation\-Timer\-Thread}!animation@{animation}}
+\index{animation@{animation}!AnimationTimerThread@{Animation\-Timer\-Thread}}
+\subsubsection[{animation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Animation}$\ast$ Animation\-Timer\-Thread\-::animation\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_timer_thread_aae21c4abd63a79a1df8122444d1a8813}
+\hypertarget{class_animation_timer_thread_a7c99944245eb6574e966bd4db5a0055d}{\index{Animation\-Timer\-Thread@{Animation\-Timer\-Thread}!interval@{interval}}
+\index{interval@{interval}!AnimationTimerThread@{Animation\-Timer\-Thread}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}double Animation\-Timer\-Thread\-::interval\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_timer_thread_a7c99944245eb6574e966bd4db5a0055d}
+\hypertarget{class_animation_timer_thread_a05984499ec314e871b9a13c4295b62a8}{\index{Animation\-Timer\-Thread@{Animation\-Timer\-Thread}!p\-Mutex@{p\-Mutex}}
+\index{p\-Mutex@{p\-Mutex}!AnimationTimerThread@{Animation\-Timer\-Thread}}
+\subsubsection[{p\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Mutex$\ast$ Animation\-Timer\-Thread\-::p\-Mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_timer_thread_a05984499ec314e871b9a13c4295b62a8}
+\hypertarget{class_animation_timer_thread_a7fe67347fd7ebd156414e68447713b49}{\index{Animation\-Timer\-Thread@{Animation\-Timer\-Thread}!scene@{scene}}
+\index{scene@{scene}!AnimationTimerThread@{Animation\-Timer\-Thread}}
+\subsubsection[{scene}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene}$\ast$ Animation\-Timer\-Thread\-::scene\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_timer_thread_a7fe67347fd7ebd156414e68447713b49}
+\hypertarget{class_animation_timer_thread_a0e631857e4de3236956f34fea244958f}{\index{Animation\-Timer\-Thread@{Animation\-Timer\-Thread}!v\-Mutex@{v\-Mutex}}
+\index{v\-Mutex@{v\-Mutex}!AnimationTimerThread@{Animation\-Timer\-Thread}}
+\subsubsection[{v\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Mutex$\ast$ Animation\-Timer\-Thread\-::v\-Mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_timer_thread_a0e631857e4de3236956f34fea244958f}
+\hypertarget{class_animation_timer_thread_ad0afad858a6fb161d4e2c9a9912e958a}{\index{Animation\-Timer\-Thread@{Animation\-Timer\-Thread}!wait\-Condition@{wait\-Condition}}
+\index{wait\-Condition@{wait\-Condition}!AnimationTimerThread@{Animation\-Timer\-Thread}}
+\subsubsection[{wait\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Wait\-Condition$\ast$ Animation\-Timer\-Thread\-::wait\-Condition\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_timer_thread_ad0afad858a6fb161d4e2c9a9912e958a}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_animation_timer_thread_8h}{Animation\-Timer\-Thread.\-h}\item 
+src/\hyperlink{_animation_timer_thread_8cpp}{Animation\-Timer\-Thread.\-cpp}\end{DoxyCompactItemize}

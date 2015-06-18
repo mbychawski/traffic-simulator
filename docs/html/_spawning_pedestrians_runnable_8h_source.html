@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Plik źródłowy src/SpawningPedestriansRunnable.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SpawningPedestriansRunnable.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_spawning_pedestrians_runnable_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SPAWNINGPEDESTRIANSRUNNABLE_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SPAWNINGPEDESTRIANSRUNNABLE_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">class </span><a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="class_simulator.html" title="Jedna z głównych klas aplikacji, odpowiada za zarządzanie wątkami oraz sterowanie animacją...">Simulator</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QtCore&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QRunnable&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="class_spawning_pedestrians_runnable.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_spawning_pedestrians_runnable.html" title="Klasa obsługująca powstawanie pieszych na planszy.">SpawningPedestriansRunnable</a> : <span class="keyword">public</span> QRunnable {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="class_spawning_pedestrians_runnable.html#af9ce8e24f1f5f6ce1800192f75592023">   15</a></span>&#160;    <a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>* <a class="code" href="class_spawning_pedestrians_runnable.html#af9ce8e24f1f5f6ce1800192f75592023">scene</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="class_spawning_pedestrians_runnable.html#a5eeaca249d8d0b3ec9d263f172eee0dc">   16</a></span>&#160;    <a class="code" href="class_simulator.html" title="Jedna z głównych klas aplikacji, odpowiada za zarządzanie wątkami oraz sterowanie animacją...">Simulator</a>* <a class="code" href="class_spawning_pedestrians_runnable.html#a5eeaca249d8d0b3ec9d263f172eee0dc">simulator</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_spawning_pedestrians_runnable.html#ad58c1c726a1f411f958d09ddab29325b">   18</a></span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">bool</span> <a class="code" href="class_spawning_pedestrians_runnable.html#ad58c1c726a1f411f958d09ddab29325b">go</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_spawning_pedestrians_runnable.html#a9d38055720541b747af740af852461bf" title="Konstruktor.">SpawningPedestriansRunnable</a>(<a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>*, <a class="code" href="class_simulator.html" title="Jedna z głównych klas aplikacji, odpowiada za zarządzanie wątkami oraz sterowanie animacją...">Simulator</a>*);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_spawning_pedestrians_runnable.html#acba967ae5ead3b5ceab0e620417f98c4">run</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_spawning_pedestrians_runnable.html#aeac5a206439673b58551a247ab2c270d" title="Metoda służąca do zatrzymywania działania wątku.">stopThread</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif // SPAWNINGPEDESTRIANSRUNNABLE_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:29 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

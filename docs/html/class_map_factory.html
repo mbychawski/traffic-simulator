@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Dokumentacja klasy MapFactory</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_map_factory-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy MapFactory</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa odpowiada za czytanie pliku w formacie json i tworzenie na jego podstawie grafu i wszystkich elementów mapy.  
+ <a href="class_map_factory.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_map_factory_8h_source.html">MapFactory.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:aad57a8dceca114847cc97579aaa6f569"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#aad57a8dceca114847cc97579aaa6f569">MapFactory</a> (const string &amp;)</td></tr>
+<tr class="memdesc:aad57a8dceca114847cc97579aaa6f569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="class_map_factory.html" title="Klasa odpowiada za czytanie pliku w formacie json i tworzenie na jego podstawie grafu i wszystkich el...">MapFactory</a>, parametrem jest scieżka do pliku.  <a href="#aad57a8dceca114847cc97579aaa6f569"></a><br/></td></tr>
+<tr class="memitem:a22c43a80224a98a9ad11f9e38dcda29b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">Graph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#a22c43a80224a98a9ad11f9e38dcda29b">createMap</a> ()</td></tr>
+<tr class="memdesc:a22c43a80224a98a9ad11f9e38dcda29b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tworzy mapę i wszystkie elementy w niej zawarte.  <a href="#a22c43a80224a98a9ad11f9e38dcda29b"></a><br/></td></tr>
+<tr class="memitem:a49c90b6c269407a3fc71d103edd6ff9e"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#a49c90b6c269407a3fc71d103edd6ff9e">getMapElements</a> ()</td></tr>
+<tr class="memdesc:a49c90b6c269407a3fc71d103edd6ff9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca wektor zawierający elementy mapy.  <a href="#a49c90b6c269407a3fc71d103edd6ff9e"></a><br/></td></tr>
+<tr class="memitem:a21d7130504a10cc0886c26326b2faa9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#a21d7130504a10cc0886c26326b2faa9d">~MapFactory</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:a64ee27fb682c6cc7b4c45dd856b8e607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#a64ee27fb682c6cc7b4c45dd856b8e607">addCross_</a> (const ptree::value_type &amp;)</td></tr>
+<tr class="memitem:a443185cbfeddc063df6aed004d2c21fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#a443185cbfeddc063df6aed004d2c21fd">addSpawn_</a> (const ptree::value_type &amp;)</td></tr>
+<tr class="memitem:ac4bdddf0aeeaedae80a2cd8814aefd78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#ac4bdddf0aeeaedae80a2cd8814aefd78">addEdges_</a> (int, map&lt; <a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a>, int &gt;)</td></tr>
+<tr class="memitem:addec2c9f5a0056a0887f09b781ffecf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#addec2c9f5a0056a0887f09b781ffecf0">addEdge_</a> (int, int)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:af4450d69783b74d07d8686da50c66621"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">Graph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#af4450d69783b74d07d8686da50c66621">g</a></td></tr>
+<tr class="memitem:af0cbd48b8917121329660bd28877fcc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_map_factory_8h.html#a54a98738cc1e3485f2cf5f24979317e5">ptree</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#af0cbd48b8917121329660bd28877fcc6">propertyTree</a></td></tr>
+<tr class="memitem:ab3f7a784d24d1cf06f03429312d030b4"><td class="memItemLeft" align="right" valign="top">map&lt; int, <a class="el" href="_types_8h.html#a8c93f604acf57e6a9bae1f91c379ac98">Vertex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#ab3f7a784d24d1cf06f03429312d030b4">vertices</a></td></tr>
+<tr class="memitem:aaf7d7680404bc0ac40766ca305f75753"><td class="memItemLeft" align="right" valign="top">map&lt; int, <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#aaf7d7680404bc0ac40766ca305f75753">verticesElements</a></td></tr>
+<tr class="memitem:ad4677e42d2e82c5ca31fa931fa60f9ce"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map_factory.html#ad4677e42d2e82c5ca31fa931fa60f9ce">mapElements</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa odpowiada za czytanie pliku w formacie json i tworzenie na jego podstawie grafu i wszystkich elementów mapy. </p>
+</div><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="aad57a8dceca114847cc97579aaa6f569"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MapFactory::MapFactory </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor klasy <a class="el" href="class_map_factory.html" title="Klasa odpowiada za czytanie pliku w formacie json i tworzenie na jego podstawie grafu i wszystkich el...">MapFactory</a>, parametrem jest scieżka do pliku. </p>
+
+</div>
+</div>
+<a class="anchor" id="a21d7130504a10cc0886c26326b2faa9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MapFactory::~MapFactory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a64ee27fb682c6cc7b4c45dd856b8e607"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapFactory::addCross_ </td>
+          <td>(</td>
+          <td class="paramtype">const ptree::value_type &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="addec2c9f5a0056a0887f09b781ffecf0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapFactory::addEdge_ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v1_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v2_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac4bdddf0aeeaedae80a2cd8814aefd78"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapFactory::addEdges_ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">map&lt; <a class="el" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a>, int &gt;&#160;</td>
+          <td class="paramname"><em>neighbors_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a443185cbfeddc063df6aed004d2c21fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapFactory::addSpawn_ </td>
+          <td>(</td>
+          <td class="paramtype">const ptree::value_type &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a22c43a80224a98a9ad11f9e38dcda29b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">Graph</a> * MapFactory::createMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tworzy mapę i wszystkie elementy w niej zawarte. </p>
+
+</div>
+</div>
+<a class="anchor" id="a49c90b6c269407a3fc71d103edd6ff9e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a> &gt; &amp; MapFactory::getMapElements </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwraca wektor zawierający elementy mapy. </p>
+
+</div>
+</div>
+<h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="af4450d69783b74d07d8686da50c66621"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">Graph</a>* MapFactory::g</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad4677e42d2e82c5ca31fa931fa60f9ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a>&gt; MapFactory::mapElements</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af0cbd48b8917121329660bd28877fcc6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_map_factory_8h.html#a54a98738cc1e3485f2cf5f24979317e5">ptree</a> MapFactory::propertyTree</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab3f7a784d24d1cf06f03429312d030b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt;int, <a class="el" href="_types_8h.html#a8c93f604acf57e6a9bae1f91c379ac98">Vertex</a>&gt; MapFactory::vertices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaf7d7680404bc0ac40766ca305f75753"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt;int, <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a>&gt; MapFactory::verticesElements</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/<a class="el" href="_map_factory_8h_source.html">MapFactory.h</a></li>
+<li>src/<a class="el" href="_map_factory_8cpp.html">MapFactory.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:30 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

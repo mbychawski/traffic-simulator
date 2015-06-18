@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Dokumentacja klasy Animation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_animation-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Animation</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa odpowiadająca za trzy podstawowe wątki animacji: aktualizacja położenia pojazdów i pieszych, oraz wątek timera.  
+ <a href="class_animation.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_animation_8h_source.html">Animation.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a068fa331baa85ea3e1ee72bd009a2972"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a068fa331baa85ea3e1ee72bd009a2972">Animation</a> (<a class="el" href="class_scene.html">Scene</a> *scene_, QMutex *vMutex_, QMutex *pMutex_)</td></tr>
+<tr class="memdesc:a068fa331baa85ea3e1ee72bd009a2972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor. Przyjmuje dwa mutexy: jeden dla synchronizacji pojazdów drugi pieszych.  <a href="#a068fa331baa85ea3e1ee72bd009a2972"></a><br/></td></tr>
+<tr class="memitem:a401b68793d4fbf48d481c030ee4b2a16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a401b68793d4fbf48d481c030ee4b2a16">~Animation</a> ()</td></tr>
+<tr class="memitem:a520325c807ae2abcf4a6d2b9f6f9a350"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a520325c807ae2abcf4a6d2b9f6f9a350">vNextPosition</a> ()</td></tr>
+<tr class="memdesc:a520325c807ae2abcf4a6d2b9f6f9a350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wywołuje dla każdego pojazdu obliczanie nowej pozycji oraz usuwa już nie aktywne pojazdy.  <a href="#a520325c807ae2abcf4a6d2b9f6f9a350"></a><br/></td></tr>
+<tr class="memitem:a86842c0474c5c9ac0040d8eca1988b6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a86842c0474c5c9ac0040d8eca1988b6a">pNextPosition</a> ()</td></tr>
+<tr class="memdesc:a86842c0474c5c9ac0040d8eca1988b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda analogiczna do <a class="el" href="class_animation.html#a520325c807ae2abcf4a6d2b9f6f9a350" title="Wywołuje dla każdego pojazdu obliczanie nowej pozycji oraz usuwa już nie aktywne pojazdy.">vNextPosition()</a>, tylko że dla pieszych.  <a href="#a86842c0474c5c9ac0040d8eca1988b6a"></a><br/></td></tr>
+<tr class="memitem:a5e42f1e3474b8c2d9a48e0f27d1e6825"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a5e42f1e3474b8c2d9a48e0f27d1e6825">startAnimation</a> ()</td></tr>
+<tr class="memdesc:a5e42f1e3474b8c2d9a48e0f27d1e6825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uruchamia wątki animacji.  <a href="#a5e42f1e3474b8c2d9a48e0f27d1e6825"></a><br/></td></tr>
+<tr class="memitem:a0de8514303e0146cb61b4b5838f832ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a0de8514303e0146cb61b4b5838f832ed">stopAnimation</a> ()</td></tr>
+<tr class="memdesc:a0de8514303e0146cb61b4b5838f832ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wylącza wszystkie wątki.  <a href="#a0de8514303e0146cb61b4b5838f832ed"></a><br/></td></tr>
+<tr class="memitem:a269bdbdd4ee7fd5513d99fb16fce5e84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a269bdbdd4ee7fd5513d99fb16fce5e84">addVehicle</a> (<a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>)</td></tr>
+<tr class="memdesc:a269bdbdd4ee7fd5513d99fb16fce5e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje pojazdy do kontenera pojazdów.  <a href="#a269bdbdd4ee7fd5513d99fb16fce5e84"></a><br/></td></tr>
+<tr class="memitem:a2f3e2091c26d247f70f20213f3f76d2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a2f3e2091c26d247f70f20213f3f76d2c">addPedestrian</a> (<a class="el" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>)</td></tr>
+<tr class="memdesc:a2f3e2091c26d247f70f20213f3f76d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda analogiczna do <a class="el" href="class_animation.html#a269bdbdd4ee7fd5513d99fb16fce5e84" title="Dodaje pojazdy do kontenera pojazdów.">addVehicle(PVehicle)</a>  <a href="#a2f3e2091c26d247f70f20213f3f76d2c"></a><br/></td></tr>
+<tr class="memitem:a74ed4d5c9ac4437a4cf70dd0003aed29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a74ed4d5c9ac4437a4cf70dd0003aed29">updateVehiclesOnScene</a> ()</td></tr>
+<tr class="memdesc:a74ed4d5c9ac4437a4cf70dd0003aed29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wywołuje dla każdego pojazdu aktualizację pozycji na <a class="el" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a> oraz sprawdzenie kolizji.  <a href="#a74ed4d5c9ac4437a4cf70dd0003aed29"></a><br/></td></tr>
+<tr class="memitem:a06fefc128b5577d5d61b08f7e9f3338b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a06fefc128b5577d5d61b08f7e9f3338b">updatePedestriansOnScene</a> ()</td></tr>
+<tr class="memdesc:a06fefc128b5577d5d61b08f7e9f3338b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda analogiczna do <a class="el" href="class_animation.html#a74ed4d5c9ac4437a4cf70dd0003aed29" title="Wywołuje dla każdego pojazdu aktualizację pozycji na Scene oraz sprawdzenie kolizji.">updateVehiclesOnScene()</a>  <a href="#a06fefc128b5577d5d61b08f7e9f3338b"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:af7faf55dbca323903ba7a89acaad0114"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#af7faf55dbca323903ba7a89acaad0114">scene</a></td></tr>
+<tr class="memitem:aed6db8ae1ae26cb18467ca84be657b2d"><td class="memItemLeft" align="right" valign="top">QMutex *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#aed6db8ae1ae26cb18467ca84be657b2d">vMutex</a></td></tr>
+<tr class="memitem:a5490d733aa00b66e70b6a565586302fa"><td class="memItemLeft" align="right" valign="top">QMutex *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a5490d733aa00b66e70b6a565586302fa">pMutex</a></td></tr>
+<tr class="memitem:a0de54bc2a828ee856a1e4b36b4952a3c"><td class="memItemLeft" align="right" valign="top">QWaitCondition&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a0de54bc2a828ee856a1e4b36b4952a3c">viewUpdated</a></td></tr>
+<tr class="memitem:af4fc6cb04c14b73cd645e72f07e07b79"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#af4fc6cb04c14b73cd645e72f07e07b79">vehicles</a></td></tr>
+<tr class="memitem:a9a50b5633df9820fa015877dd3edf58a"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a9a50b5633df9820fa015877dd3edf58a">pedestrians</a></td></tr>
+<tr class="memitem:ae5c845cf54f1bf8d1bc1eeb687ea9afa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_animation_waiting_thread.html">AnimationWaitingThread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#ae5c845cf54f1bf8d1bc1eeb687ea9afa">vThread</a></td></tr>
+<tr class="memitem:ac42fc82f2ed555969f1af462b9383808"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_animation_waiting_thread.html">AnimationWaitingThread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#ac42fc82f2ed555969f1af462b9383808">pThread</a></td></tr>
+<tr class="memitem:adb73aef80dc2314741d49b59654a536c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_animation_timer_thread.html">AnimationTimerThread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#adb73aef80dc2314741d49b59654a536c">timerThread</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa odpowiadająca za trzy podstawowe wątki animacji: aktualizacja położenia pojazdów i pieszych, oraz wątek timera. </p>
+</div><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a068fa331baa85ea3e1ee72bd009a2972"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animation::Animation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QMutex *&#160;</td>
+          <td class="paramname"><em>vMutex_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QMutex *&#160;</td>
+          <td class="paramname"><em>pMutex_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor. Przyjmuje dwa mutexy: jeden dla synchronizacji pojazdów drugi pieszych. </p>
+
+</div>
+</div>
+<a class="anchor" id="a401b68793d4fbf48d481c030ee4b2a16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animation::~Animation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a2f3e2091c26d247f70f20213f3f76d2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::addPedestrian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>&#160;</td>
+          <td class="paramname"><em>p_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda analogiczna do <a class="el" href="class_animation.html#a269bdbdd4ee7fd5513d99fb16fce5e84" title="Dodaje pojazdy do kontenera pojazdów.">addVehicle(PVehicle)</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a269bdbdd4ee7fd5513d99fb16fce5e84"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::addVehicle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>&#160;</td>
+          <td class="paramname"><em>v_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dodaje pojazdy do kontenera pojazdów. </p>
+
+</div>
+</div>
+<a class="anchor" id="a86842c0474c5c9ac0040d8eca1988b6a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::pNextPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda analogiczna do <a class="el" href="class_animation.html#a520325c807ae2abcf4a6d2b9f6f9a350" title="Wywołuje dla każdego pojazdu obliczanie nowej pozycji oraz usuwa już nie aktywne pojazdy.">vNextPosition()</a>, tylko że dla pieszych. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5e42f1e3474b8c2d9a48e0f27d1e6825"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::startAnimation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uruchamia wątki animacji. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0de8514303e0146cb61b4b5838f832ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::stopAnimation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wylącza wszystkie wątki. </p>
+
+</div>
+</div>
+<a class="anchor" id="a06fefc128b5577d5d61b08f7e9f3338b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::updatePedestriansOnScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda analogiczna do <a class="el" href="class_animation.html#a74ed4d5c9ac4437a4cf70dd0003aed29" title="Wywołuje dla każdego pojazdu aktualizację pozycji na Scene oraz sprawdzenie kolizji.">updateVehiclesOnScene()</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a74ed4d5c9ac4437a4cf70dd0003aed29"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::updateVehiclesOnScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wywołuje dla każdego pojazdu aktualizację pozycji na <a class="el" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a> oraz sprawdzenie kolizji. </p>
+
+</div>
+</div>
+<a class="anchor" id="a520325c807ae2abcf4a6d2b9f6f9a350"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::vNextPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wywołuje dla każdego pojazdu obliczanie nowej pozycji oraz usuwa już nie aktywne pojazdy. </p>
+
+</div>
+</div>
+<h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a9a50b5633df9820fa015877dd3edf58a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>&gt; Animation::pedestrians</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5490d733aa00b66e70b6a565586302fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMutex* Animation::pMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac42fc82f2ed555969f1af462b9383808"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_animation_waiting_thread.html">AnimationWaitingThread</a>* Animation::pThread</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af7faf55dbca323903ba7a89acaad0114"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene.html">Scene</a>* Animation::scene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adb73aef80dc2314741d49b59654a536c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_animation_timer_thread.html">AnimationTimerThread</a>* Animation::timerThread</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4fc6cb04c14b73cd645e72f07e07b79"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>&gt; Animation::vehicles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0de54bc2a828ee856a1e4b36b4952a3c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QWaitCondition Animation::viewUpdated</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aed6db8ae1ae26cb18467ca84be657b2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMutex* Animation::vMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae5c845cf54f1bf8d1bc1eeb687ea9afa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_animation_waiting_thread.html">AnimationWaitingThread</a>* Animation::vThread</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/<a class="el" href="_animation_8h_source.html">Animation.h</a></li>
+<li>src/<a class="el" href="_animation_8cpp.html">Animation.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:29 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

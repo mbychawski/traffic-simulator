@@ -1,0 +1,209 @@
+\hypertarget{class_animation}{\section{Dokumentacja klasy Animation}
+\label{class_animation}\index{Animation@{Animation}}
+}
+
+
+Klasa odpowiadająca za trzy podstawowe wątki animacji\-: aktualizacja położenia pojazdów i pieszych, oraz wątek timera.  
+
+
+
+
+{\ttfamily \#include $<$Animation.\-h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_animation_a068fa331baa85ea3e1ee72bd009a2972}{Animation} (\hyperlink{class_scene}{Scene} $\ast$scene\-\_\-, Q\-Mutex $\ast$v\-Mutex\-\_\-, Q\-Mutex $\ast$p\-Mutex\-\_\-)
+\begin{DoxyCompactList}\small\item\em Konstruktor. Przyjmuje dwa mutexy\-: jeden dla synchronizacji pojazdów drugi pieszych. \end{DoxyCompactList}\item 
+\hyperlink{class_animation_a401b68793d4fbf48d481c030ee4b2a16}{$\sim$\-Animation} ()
+\item 
+void \hyperlink{class_animation_a520325c807ae2abcf4a6d2b9f6f9a350}{v\-Next\-Position} ()
+\begin{DoxyCompactList}\small\item\em Wywołuje dla każdego pojazdu obliczanie nowej pozycji oraz usuwa już nie aktywne pojazdy. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a86842c0474c5c9ac0040d8eca1988b6a}{p\-Next\-Position} ()
+\begin{DoxyCompactList}\small\item\em Metoda analogiczna do \hyperlink{class_animation_a520325c807ae2abcf4a6d2b9f6f9a350}{v\-Next\-Position()}, tylko że dla pieszych. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a5e42f1e3474b8c2d9a48e0f27d1e6825}{start\-Animation} ()
+\begin{DoxyCompactList}\small\item\em Uruchamia wątki animacji. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a0de8514303e0146cb61b4b5838f832ed}{stop\-Animation} ()
+\begin{DoxyCompactList}\small\item\em Wylącza wszystkie wątki. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a269bdbdd4ee7fd5513d99fb16fce5e84}{add\-Vehicle} (\hyperlink{_types_8h_a564207d327881e8bcfa0843e1a874756}{P\-Vehicle})
+\begin{DoxyCompactList}\small\item\em Dodaje pojazdy do kontenera pojazdów. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a2f3e2091c26d247f70f20213f3f76d2c}{add\-Pedestrian} (\hyperlink{_types_8h_a6ca5cb67bb3df872d4650820dbc647b8}{P\-Pedestrian})
+\begin{DoxyCompactList}\small\item\em Metoda analogiczna do \hyperlink{class_animation_a269bdbdd4ee7fd5513d99fb16fce5e84}{add\-Vehicle(\-P\-Vehicle)} \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a74ed4d5c9ac4437a4cf70dd0003aed29}{update\-Vehicles\-On\-Scene} ()
+\begin{DoxyCompactList}\small\item\em Wywołuje dla każdego pojazdu aktualizację pozycji na \hyperlink{class_scene}{Scene} oraz sprawdzenie kolizji. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a06fefc128b5577d5d61b08f7e9f3338b}{update\-Pedestrians\-On\-Scene} ()
+\begin{DoxyCompactList}\small\item\em Metoda analogiczna do \hyperlink{class_animation_a74ed4d5c9ac4437a4cf70dd0003aed29}{update\-Vehicles\-On\-Scene()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_animation_af7faf55dbca323903ba7a89acaad0114}{scene}
+\item 
+Q\-Mutex $\ast$ \hyperlink{class_animation_aed6db8ae1ae26cb18467ca84be657b2d}{v\-Mutex}
+\item 
+Q\-Mutex $\ast$ \hyperlink{class_animation_a5490d733aa00b66e70b6a565586302fa}{p\-Mutex}
+\item 
+Q\-Wait\-Condition \hyperlink{class_animation_a0de54bc2a828ee856a1e4b36b4952a3c}{view\-Updated}
+\item 
+vector$<$ \hyperlink{_types_8h_a564207d327881e8bcfa0843e1a874756}{P\-Vehicle} $>$ \hyperlink{class_animation_af4fc6cb04c14b73cd645e72f07e07b79}{vehicles}
+\item 
+vector$<$ \hyperlink{_types_8h_a6ca5cb67bb3df872d4650820dbc647b8}{P\-Pedestrian} $>$ \hyperlink{class_animation_a9a50b5633df9820fa015877dd3edf58a}{pedestrians}
+\item 
+\hyperlink{class_animation_waiting_thread}{Animation\-Waiting\-Thread} $\ast$ \hyperlink{class_animation_ae5c845cf54f1bf8d1bc1eeb687ea9afa}{v\-Thread}
+\item 
+\hyperlink{class_animation_waiting_thread}{Animation\-Waiting\-Thread} $\ast$ \hyperlink{class_animation_ac42fc82f2ed555969f1af462b9383808}{p\-Thread}
+\item 
+\hyperlink{class_animation_timer_thread}{Animation\-Timer\-Thread} $\ast$ \hyperlink{class_animation_adb73aef80dc2314741d49b59654a536c}{timer\-Thread}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiadająca za trzy podstawowe wątki animacji\-: aktualizacja położenia pojazdów i pieszych, oraz wątek timera. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_animation_a068fa331baa85ea3e1ee72bd009a2972}{\index{Animation@{Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!Animation@{Animation}}
+\subsubsection[{Animation}]{\setlength{\rightskip}{0pt plus 5cm}Animation\-::\-Animation (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene\-\_\-, }
+\item[{Q\-Mutex $\ast$}]{v\-Mutex\-\_\-, }
+\item[{Q\-Mutex $\ast$}]{p\-Mutex\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a068fa331baa85ea3e1ee72bd009a2972}
+
+
+Konstruktor. Przyjmuje dwa mutexy\-: jeden dla synchronizacji pojazdów drugi pieszych. 
+
+\hypertarget{class_animation_a401b68793d4fbf48d481c030ee4b2a16}{\index{Animation@{Animation}!$\sim$\-Animation@{$\sim$\-Animation}}
+\index{$\sim$\-Animation@{$\sim$\-Animation}!Animation@{Animation}}
+\subsubsection[{$\sim$\-Animation}]{\setlength{\rightskip}{0pt plus 5cm}Animation\-::$\sim$\-Animation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a401b68793d4fbf48d481c030ee4b2a16}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_animation_a2f3e2091c26d247f70f20213f3f76d2c}{\index{Animation@{Animation}!add\-Pedestrian@{add\-Pedestrian}}
+\index{add\-Pedestrian@{add\-Pedestrian}!Animation@{Animation}}
+\subsubsection[{add\-Pedestrian}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-::add\-Pedestrian (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-Pedestrian}}]{p\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a2f3e2091c26d247f70f20213f3f76d2c}
+
+
+Metoda analogiczna do \hyperlink{class_animation_a269bdbdd4ee7fd5513d99fb16fce5e84}{add\-Vehicle(\-P\-Vehicle)} 
+
+\hypertarget{class_animation_a269bdbdd4ee7fd5513d99fb16fce5e84}{\index{Animation@{Animation}!add\-Vehicle@{add\-Vehicle}}
+\index{add\-Vehicle@{add\-Vehicle}!Animation@{Animation}}
+\subsubsection[{add\-Vehicle}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-::add\-Vehicle (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-Vehicle}}]{v\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a269bdbdd4ee7fd5513d99fb16fce5e84}
+
+
+Dodaje pojazdy do kontenera pojazdów. 
+
+\hypertarget{class_animation_a86842c0474c5c9ac0040d8eca1988b6a}{\index{Animation@{Animation}!p\-Next\-Position@{p\-Next\-Position}}
+\index{p\-Next\-Position@{p\-Next\-Position}!Animation@{Animation}}
+\subsubsection[{p\-Next\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-::p\-Next\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a86842c0474c5c9ac0040d8eca1988b6a}
+
+
+Metoda analogiczna do \hyperlink{class_animation_a520325c807ae2abcf4a6d2b9f6f9a350}{v\-Next\-Position()}, tylko że dla pieszych. 
+
+\hypertarget{class_animation_a5e42f1e3474b8c2d9a48e0f27d1e6825}{\index{Animation@{Animation}!start\-Animation@{start\-Animation}}
+\index{start\-Animation@{start\-Animation}!Animation@{Animation}}
+\subsubsection[{start\-Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-::start\-Animation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a5e42f1e3474b8c2d9a48e0f27d1e6825}
+
+
+Uruchamia wątki animacji. 
+
+\hypertarget{class_animation_a0de8514303e0146cb61b4b5838f832ed}{\index{Animation@{Animation}!stop\-Animation@{stop\-Animation}}
+\index{stop\-Animation@{stop\-Animation}!Animation@{Animation}}
+\subsubsection[{stop\-Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-::stop\-Animation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a0de8514303e0146cb61b4b5838f832ed}
+
+
+Wylącza wszystkie wątki. 
+
+\hypertarget{class_animation_a06fefc128b5577d5d61b08f7e9f3338b}{\index{Animation@{Animation}!update\-Pedestrians\-On\-Scene@{update\-Pedestrians\-On\-Scene}}
+\index{update\-Pedestrians\-On\-Scene@{update\-Pedestrians\-On\-Scene}!Animation@{Animation}}
+\subsubsection[{update\-Pedestrians\-On\-Scene}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-::update\-Pedestrians\-On\-Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a06fefc128b5577d5d61b08f7e9f3338b}
+
+
+Metoda analogiczna do \hyperlink{class_animation_a74ed4d5c9ac4437a4cf70dd0003aed29}{update\-Vehicles\-On\-Scene()} 
+
+\hypertarget{class_animation_a74ed4d5c9ac4437a4cf70dd0003aed29}{\index{Animation@{Animation}!update\-Vehicles\-On\-Scene@{update\-Vehicles\-On\-Scene}}
+\index{update\-Vehicles\-On\-Scene@{update\-Vehicles\-On\-Scene}!Animation@{Animation}}
+\subsubsection[{update\-Vehicles\-On\-Scene}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-::update\-Vehicles\-On\-Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a74ed4d5c9ac4437a4cf70dd0003aed29}
+
+
+Wywołuje dla każdego pojazdu aktualizację pozycji na \hyperlink{class_scene}{Scene} oraz sprawdzenie kolizji. 
+
+\hypertarget{class_animation_a520325c807ae2abcf4a6d2b9f6f9a350}{\index{Animation@{Animation}!v\-Next\-Position@{v\-Next\-Position}}
+\index{v\-Next\-Position@{v\-Next\-Position}!Animation@{Animation}}
+\subsubsection[{v\-Next\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-::v\-Next\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a520325c807ae2abcf4a6d2b9f6f9a350}
+
+
+Wywołuje dla każdego pojazdu obliczanie nowej pozycji oraz usuwa już nie aktywne pojazdy. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_animation_a9a50b5633df9820fa015877dd3edf58a}{\index{Animation@{Animation}!pedestrians@{pedestrians}}
+\index{pedestrians@{pedestrians}!Animation@{Animation}}
+\subsubsection[{pedestrians}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf P\-Pedestrian}$>$ Animation\-::pedestrians\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_a9a50b5633df9820fa015877dd3edf58a}
+\hypertarget{class_animation_a5490d733aa00b66e70b6a565586302fa}{\index{Animation@{Animation}!p\-Mutex@{p\-Mutex}}
+\index{p\-Mutex@{p\-Mutex}!Animation@{Animation}}
+\subsubsection[{p\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Mutex$\ast$ Animation\-::p\-Mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_a5490d733aa00b66e70b6a565586302fa}
+\hypertarget{class_animation_ac42fc82f2ed555969f1af462b9383808}{\index{Animation@{Animation}!p\-Thread@{p\-Thread}}
+\index{p\-Thread@{p\-Thread}!Animation@{Animation}}
+\subsubsection[{p\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Animation\-Waiting\-Thread}$\ast$ Animation\-::p\-Thread\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_ac42fc82f2ed555969f1af462b9383808}
+\hypertarget{class_animation_af7faf55dbca323903ba7a89acaad0114}{\index{Animation@{Animation}!scene@{scene}}
+\index{scene@{scene}!Animation@{Animation}}
+\subsubsection[{scene}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene}$\ast$ Animation\-::scene\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_af7faf55dbca323903ba7a89acaad0114}
+\hypertarget{class_animation_adb73aef80dc2314741d49b59654a536c}{\index{Animation@{Animation}!timer\-Thread@{timer\-Thread}}
+\index{timer\-Thread@{timer\-Thread}!Animation@{Animation}}
+\subsubsection[{timer\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Animation\-Timer\-Thread}$\ast$ Animation\-::timer\-Thread\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_adb73aef80dc2314741d49b59654a536c}
+\hypertarget{class_animation_af4fc6cb04c14b73cd645e72f07e07b79}{\index{Animation@{Animation}!vehicles@{vehicles}}
+\index{vehicles@{vehicles}!Animation@{Animation}}
+\subsubsection[{vehicles}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf P\-Vehicle}$>$ Animation\-::vehicles\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_af4fc6cb04c14b73cd645e72f07e07b79}
+\hypertarget{class_animation_a0de54bc2a828ee856a1e4b36b4952a3c}{\index{Animation@{Animation}!view\-Updated@{view\-Updated}}
+\index{view\-Updated@{view\-Updated}!Animation@{Animation}}
+\subsubsection[{view\-Updated}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Wait\-Condition Animation\-::view\-Updated\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_a0de54bc2a828ee856a1e4b36b4952a3c}
+\hypertarget{class_animation_aed6db8ae1ae26cb18467ca84be657b2d}{\index{Animation@{Animation}!v\-Mutex@{v\-Mutex}}
+\index{v\-Mutex@{v\-Mutex}!Animation@{Animation}}
+\subsubsection[{v\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Mutex$\ast$ Animation\-::v\-Mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_aed6db8ae1ae26cb18467ca84be657b2d}
+\hypertarget{class_animation_ae5c845cf54f1bf8d1bc1eeb687ea9afa}{\index{Animation@{Animation}!v\-Thread@{v\-Thread}}
+\index{v\-Thread@{v\-Thread}!Animation@{Animation}}
+\subsubsection[{v\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Animation\-Waiting\-Thread}$\ast$ Animation\-::v\-Thread\hspace{0.3cm}{\ttfamily [private]}}}\label{class_animation_ae5c845cf54f1bf8d1bc1eeb687ea9afa}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_animation_8h}{Animation.\-h}\item 
+src/\hyperlink{_animation_8cpp}{Animation.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,205 @@
+{
+	"1" : {
+		"type": "cross",
+		"id": 1,
+		"x" : 0,			
+		"y" : 0,			
+		"N" : -1,	
+		"E" : 2,
+		"S" : 7,
+		"W" : -1,
+        "crossType" : "rules",
+        "subordinate" : ""
+	},
+	"2" : {
+		"type": "cross",
+		"id": 2,
+		"x" : 33,			
+		"y" : 0,			
+		"N" : -1,	
+		"E" : 3,
+		"S" : 5,
+		"W" : 1,
+		"crossType" : "rules",	
+        "subordinate" : "S"
+	},
+	"3" : {
+		"type": "cross",
+		"id": 3,
+		"x" : 51,			
+		"y" : 0,			
+		"N" : -1,	
+		"E" : -1,
+		"S" : 12,
+		"W" : 2,
+        "crossType" : "rules",
+        "subordinate" : ""
+	},
+	"4" : {
+		"type": "cross",
+        "id": 4,
+		"x" : 21,			
+		"y" : 12,			
+		"N" : -1,	
+		"E" : 5,
+		"S" : 8,
+		"W" : -1,
+        "crossType" : "rules",
+        "subordinate" : ""
+	},
+	"5" : {
+		"type": "cross",
+		"id": 5,
+		"x" : 33,			
+		"y" : 12,			
+		"N" : 2,	
+		"E" : 6,
+		"S" : -1,
+		"W" : 4,
+        "crossType" : "rules",
+        "subordinate" : "N"
+	},
+	"6" : {
+		"type": "cross",
+		"id": 6,
+		"x" : 42,			
+		"y" : 12,			
+		"N" : -1,	
+		"E" : -1,
+		"S" : 9,
+		"W" : 5,
+        "crossType" : "rules",
+        "subordinate" : ""
+	},
+	"7" : {
+		"type": "cross",
+		"id": 7,
+		"x" : 0,			
+		"y" : 24,			
+		"N" : 1,	
+		"E" : 8,
+		"S" : 13,
+		"W" : -1,
+        "crossType" : "rules",
+        "subordinate" : "E"
+	},
+	"8" : {
+		"type": "cross",
+		"id": 8,
+		"x" : 21,			
+		"y" : 24,			
+		"N" : 4,	
+		"E" : -1,
+		"S" : 10,
+		"W" : 7,
+        "crossType" : "rules",
+        "subordinate" : "W"
+	},
+	"9" : {
+		"type": "cross",
+		"id": 9,
+		"x" : 42,			
+		"y" : 24,			
+		"N" : 6,	
+		"E" : -1,
+		"S" : 11,
+		"W" : 20,
+        "crossType" : "rules",
+        "subordinate" : "W"
+	},
+	"10" : {
+		"type": "cross",
+		"id": 10,
+		"x" : 21,			
+		"y" : 33,			
+		"N" : 8,	
+		"E" : 11,
+		"S" : 14,
+		"W" : -1,
+        "crossType" : "rules",
+        "subordinate" : "E"
+	},
+	"11" : {
+		"type": "cross",
+		"id": 11,
+		"x" : 42,			
+		"y" : 33,			
+		"N" : 9,	
+		"E" : 12,
+		"S" : -1,
+		"W" : 10,
+        "crossType" : "rules",
+        "subordinate" : "N"
+	},
+
+	"12" : {
+		"type": "cross",
+		"id": 12,
+		"x" : 51,			
+		"y" : 33,			
+		"N" : 3,	
+		"E" : -1,
+		"S" : 15,
+		"W" : 11,
+        "crossType" : "rules",
+        "subordinate" : "N"
+	},
+	"13" : {
+		"type": "cross",
+		"id": 13,
+		"x" : 0,			
+		"y" : 48,			
+		"N" : 7,	
+		"E" : 14,
+        "S" : 19,
+		"W" : -1,
+        "crossType" : "rules",
+        "subordinate" : ""
+	},
+
+	"14" : {
+		"type": "cross",
+		"id": 14,
+		"x" : 21,			
+		"y" : 48,			
+		"N" : 10,	
+		"E" : 15,
+		"S" : -1,
+		"W" : 13,
+        "crossType" : "rules",
+        "subordinate" : "E"
+	},
+	"15" : {
+		"type": "cross",
+		"id": 15,
+		"x" : 51,			
+		"y" : 48,			
+		"N" : 12,	
+		"E" : 18,
+        "S" : -1,
+		"W" : 14,
+		"crossType" : "rules",
+		"subordinate" : "N"
+	},
+	"18" : {
+		"type": "spawn",
+		"id": 18,
+        "x" : 60,
+        "y" : 48,
+		"next" : 15
+	},
+	"19" : {
+		"type": "spawn",
+        "id": 19,
+        "x" : 0,
+        "y" : 55,
+        "next" : 13
+	},
+	"20" : {
+		"type": "spawn",
+        "id": 20,
+        "x" : 30,
+        "y" : 24,
+        "next" : 9
+	}
+}

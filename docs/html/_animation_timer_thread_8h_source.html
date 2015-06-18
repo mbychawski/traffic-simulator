@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Plik źródłowy src/AnimationTimerThread.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AnimationTimerThread.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_animation_timer_thread_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ANIMATIONTIMERTHREAD_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ANIMATIONTIMERTHREAD_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">class </span>QWaitCondition;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span><a class="code" href="class_animation.html" title="Klasa odpowiadająca za trzy podstawowe wątki animacji: aktualizacja położenia pojazdów i pieszych...">Animation</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span>QMutex;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QThread&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="class_animation_timer_thread.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_animation_timer_thread.html" title="Klasa wątku animacji. Uruchamiająca timer i wybudzająca w odpowiednich momentach wątki obliczające...">AnimationTimerThread</a> : <span class="keyword">public</span> QThread {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_animation_timer_thread.html#ad0afad858a6fb161d4e2c9a9912e958a">   18</a></span>&#160;    QWaitCondition* <a class="code" href="class_animation_timer_thread.html#ad0afad858a6fb161d4e2c9a9912e958a">waitCondition</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_animation_timer_thread.html#a7c99944245eb6574e966bd4db5a0055d">   19</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_animation_timer_thread.html#a7c99944245eb6574e966bd4db5a0055d">interval</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="class_animation_timer_thread.html#a7fe67347fd7ebd156414e68447713b49">   20</a></span>&#160;    <a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>* <a class="code" href="class_animation_timer_thread.html#a7fe67347fd7ebd156414e68447713b49">scene</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="class_animation_timer_thread.html#aae21c4abd63a79a1df8122444d1a8813">   21</a></span>&#160;    <a class="code" href="class_animation.html" title="Klasa odpowiadająca za trzy podstawowe wątki animacji: aktualizacja położenia pojazdów i pieszych...">Animation</a>* <a class="code" href="class_animation_timer_thread.html#aae21c4abd63a79a1df8122444d1a8813">animation</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_animation_timer_thread.html#a0e631857e4de3236956f34fea244958f">   22</a></span>&#160;    QMutex* <a class="code" href="class_animation_timer_thread.html#a0e631857e4de3236956f34fea244958f">vMutex</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="class_animation_timer_thread.html#a05984499ec314e871b9a13c4295b62a8">   23</a></span>&#160;    QMutex* <a class="code" href="class_animation_timer_thread.html#a05984499ec314e871b9a13c4295b62a8">pMutex</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_animation_timer_thread.html#a549cf2fb555d948c25ec9e7c0b967a2e" title="Konstruktor.">AnimationTimerThread</a>(QWaitCondition*, <span class="keywordtype">double</span>, <a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>*, <a class="code" href="class_animation.html" title="Klasa odpowiadająca za trzy podstawowe wątki animacji: aktualizacja położenia pojazdów i pieszych...">Animation</a>*, QMutex*, QMutex*);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animation_timer_thread.html#a653859a0781c75b6f0fe2decd601c0da">run</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span> Q_SLOTS:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animation_timer_thread.html#a9babdfb5bfefd582ea1a0aaa1a673a49" title="wywołuje odpowiednie metody w Animation. Działa tylko w wątku GUI">updateView</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif // ANIMATIONTIMERTHREAD_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:29 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

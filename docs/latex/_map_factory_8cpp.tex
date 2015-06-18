@@ -1,0 +1,34 @@
+\hypertarget{_map_factory_8cpp}{\section{Dokumentacja pliku src/\-Map\-Factory.cpp}
+\label{_map_factory_8cpp}\index{src/\-Map\-Factory.\-cpp@{src/\-Map\-Factory.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}Map\-Factory.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Scene.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Spawn.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cross.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cross\-Rules.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Exceptions.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Constants.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include $<$boost/property\-\_\-tree/json\-\_\-parser.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/property\-\_\-tree/detail/json\-\_\-parser\-\_\-error.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/foreach.\-hpp$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+\subsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::graph\-\_\-traits\\*
+$<$ \hyperlink{_types_8h_adb8cbccb1bf63dda03515e30e185c388}{Graph} $>$\-::vertex\-\_\-iterator \hyperlink{_map_factory_8cpp_ae6603b1d73e6c4cf70f33b356e8d591c}{Vertex\-Iterator}
+\item 
+typedef boost\-::property\-\_\-map\\*
+$<$ \hyperlink{_types_8h_adb8cbccb1bf63dda03515e30e185c388}{Graph}, boost\-::vertex\-\_\-index\-\_\-t $>$\\*
+\-::type \hyperlink{_map_factory_8cpp_a60e573ea64bc6383ce20314f49c90c8c}{Index\-Map}
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja definicji typów}
+\hypertarget{_map_factory_8cpp_a60e573ea64bc6383ce20314f49c90c8c}{\index{Map\-Factory.\-cpp@{Map\-Factory.\-cpp}!Index\-Map@{Index\-Map}}
+\index{Index\-Map@{Index\-Map}!MapFactory.cpp@{Map\-Factory.\-cpp}}
+\subsubsection[{Index\-Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::property\-\_\-map$<${\bf Graph}, boost\-::vertex\-\_\-index\-\_\-t $>$\-::type {\bf Index\-Map}}}\label{_map_factory_8cpp_a60e573ea64bc6383ce20314f49c90c8c}
+\hypertarget{_map_factory_8cpp_ae6603b1d73e6c4cf70f33b356e8d591c}{\index{Map\-Factory.\-cpp@{Map\-Factory.\-cpp}!Vertex\-Iterator@{Vertex\-Iterator}}
+\index{Vertex\-Iterator@{Vertex\-Iterator}!MapFactory.cpp@{Map\-Factory.\-cpp}}
+\subsubsection[{Vertex\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::graph\-\_\-traits$<${\bf Graph}$>$\-::vertex\-\_\-iterator {\bf Vertex\-Iterator}}}\label{_map_factory_8cpp_ae6603b1d73e6c4cf70f33b356e8d591c}

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Plik źródłowy src/Cross.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cross.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cross_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef CROSS_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CROSS_H_</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span><a class="code" href="class_priority_rules.html" title="Klasa bazowa dla CrossRules. Dwustopniowa herarchia klas umożliwia późniejszy rozwój. Np. dodanie sygnalizacji świetlnej.">PriorityRules</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="class_cross_rules.html" title="Klasa podająca informacje o pierwszeństwie przejazdu.">CrossRules</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span>QGraphicsItemGroup;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span>QGraphicsEllipseItem;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_map_element_8h.html">MapElement.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_types_8h.html">Types.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_constants_8h.html">Constants.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_direction_8h.html">Direction.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> std::map;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="class_cross.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cross.html" title="Klasa reprezentujaca skrzyzowanie.">Cross</a> : <span class="keyword">public</span> <a class="code" href="class_map_element.html" title="Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów.">MapElement</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="class_cross.html#a46a8edfbb4172a050ceeba58db6c30bb">   29</a></span>&#160;    <a class="code" href="class_priority_rules.html" title="Klasa bazowa dla CrossRules. Dwustopniowa herarchia klas umożliwia późniejszy rozwój. Np. dodanie sygnalizacji świetlnej.">PriorityRules</a>* <a class="code" href="class_cross.html#a46a8edfbb4172a050ceeba58db6c30bb">priorityRules</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="class_cross.html#af931388763664ba4224f054b6a42fea2">   31</a></span>&#160;    map&lt;Direction, int&gt; <a class="code" href="class_cross.html#af931388763664ba4224f054b6a42fea2">neighbors</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="class_cross.html#aa6994973a6c8e4d0478410dbeb47d3b4">   32</a></span>&#160;    map&lt;Direction, vector&lt;Vehicle*&gt; &gt; <a class="code" href="class_cross.html#aa6994973a6c8e4d0478410dbeb47d3b4">waitingVehicles</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    vector&lt;QGraphicsEllipseItem*&gt; <a class="code" href="class_cross.html#acc4e85c6307c933995275b7c84916ca9">drawDot</a>(<a class="code" href="class_cross_rules.html" title="Klasa podająca informacje o pierwszeństwie przejazdu.">CrossRules</a>*);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="class_cross.html#a62b3a18fc6fa317d516846efe454b8ae">   37</a></span>&#160;     QGraphicsItemGroup* <a class="code" href="class_cross.html#a62b3a18fc6fa317d516846efe454b8ae">crossGroup</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="class_cross.html#ad0886f2b47a4375b7b6feedfc13c0692">   40</a></span>&#160;    <a class="code" href="class_cross.html#ad0886f2b47a4375b7b6feedfc13c0692" title="Konstruktor.">Cross</a>(<span class="keywordtype">int</span> id_, <span class="keywordtype">double</span> x_, <span class="keywordtype">double</span> y_, <a class="code" href="class_priority_rules.html" title="Klasa bazowa dla CrossRules. Dwustopniowa herarchia klas umożliwia późniejszy rozwój. Np. dodanie sygnalizacji świetlnej.">PriorityRules</a>* rules_, map&lt;Direction, int&gt; neighbors_)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        : <a class="code" href="class_map_element.html" title="Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów.">MapElement</a>(x_, y_, id_), <a class="code" href="class_cross.html#a46a8edfbb4172a050ceeba58db6c30bb">priorityRules</a>(rules_), <a class="code" href="class_cross.html#af931388763664ba4224f054b6a42fea2">neighbors</a>(neighbors_) { }</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="class_cross.html#afa046c5821fd92064ecfdcb2c28fae00">   43</a></span>&#160;    <a class="code" href="class_cross.html#ad0886f2b47a4375b7b6feedfc13c0692" title="Konstruktor.">Cross</a>(<span class="keywordtype">int</span> id_, <a class="code" href="struct_position.html" title="Klasa reprezentuje punkt w trójwymiarowej przestrzeni.">Position</a> position_, <a class="code" href="class_priority_rules.html" title="Klasa bazowa dla CrossRules. Dwustopniowa herarchia klas umożliwia późniejszy rozwój. Np. dodanie sygnalizacji świetlnej.">PriorityRules</a>* rules_, map&lt;Direction, int&gt; neighbors_)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        : <a class="code" href="class_map_element.html" title="Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów.">MapElement</a>(position_, id_), <a class="code" href="class_cross.html#a46a8edfbb4172a050ceeba58db6c30bb">priorityRules</a>(rules_), <a class="code" href="class_cross.html#af931388763664ba4224f054b6a42fea2">neighbors</a>(neighbors_) {}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="class_cross.html#a1d87d50bd56692c7ed29640b0f7d1d81">   46</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_cross.html#a1d87d50bd56692c7ed29640b0f7d1d81">~Cross</a>() {}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_cross.html#a3b127c19a196ad86bbd27b513eecdf44" title="Metoda odpowiadająca za wyświetlenie skrzyżowania na scenie.">draw</a>(<a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>* scene);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cross.html#a01b9a1199aa8a1cc8f7c2a4268eb2656" title="Rejestracja pojazdu w skrzyżowaniu.">registerVehicle</a>(<a class="code" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa" title="Typ wyliczeniowy do określania kierunków.">Direction</a> direction_, <a class="code" href="class_vehicle.html" title="Klasa odpowiadająca za pojazdy, ich poruszanie się po planszy, komunikację ze skrzyżowaniami, Spawnami, trasę przejazdu.">Vehicle</a>* v_);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_cross.html#a02405bee42d1e6faf6450d8198e1cb45" title="Wyrejestrowanie pojazdu.">unregisterVehicle</a>(<a class="code" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa" title="Typ wyliczeniowy do określania kierunków.">Direction</a> direction_);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_cross.html#a9c8223fd7c88d4ebfebf44eec3abfc87" title="Metoda zwraca przyzwolenie na wjazd na skrzyżowanie.">canGo</a>(<a class="code" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa" title="Typ wyliczeniowy do określania kierunków.">Direction</a> from_, <a class="code" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa" title="Typ wyliczeniowy do określania kierunków.">Direction</a> to_);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa" title="Typ wyliczeniowy do określania kierunków.">Direction</a> <a class="code" href="class_cross.html#ac1bb07b4ecdaa59c3bc4ef1583424281" title="Metoda zwraca kierunek w którym znajduje się sąsiad o danym ID.">getNeighborDirection</a>(<span class="keywordtype">int</span> id_);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa" title="Typ wyliczeniowy do określania kierunków.">Direction</a> <a class="code" href="class_cross.html#a034afdc8547efdf62c44e05c276ed601" title="Metoda podaje losowy z dostepnych kierunków.">getRandomDirection</a>(<span class="keywordtype">int</span> from_);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="struct_position.html" title="Klasa reprezentuje punkt w trójwymiarowej przestrzeni.">Position</a> <a class="code" href="class_cross.html#a0e1bc9d7a602cfa4b1ffe22d9748c11c" title="Metoda obliczająca pozycję startową dla przechodnia oraz informująca go gdzie jest chodnik...">calculatePedestrianPosition</a>(<a class="code" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa" title="Typ wyliczeniowy do określania kierunków.">Direction</a> direction_, <span class="keywordtype">int</span> side_);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="_direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa" title="Typ wyliczeniowy do określania kierunków.">Direction</a> <a class="code" href="class_cross.html#a34bf1008f626560d8200a9b2b677abb3" title="Zwraca losowy z dostepnych kierunków dla ruchu pieszych.">getPedestrianRandomDirection</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_cross.html#a50997bb8f3f5fb2b850ec897b1f3912c" title="funkcja sprawdzająca czy obiekt wskazywany przez PMapElement jest skrzyżowaniem">isCross</a>(<span class="keyword">const</span> <a class="code" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a> el);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CROSS_H_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:29 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

@@ -1,0 +1,801 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Dokumentacja klasy Scene</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-slots">Sloty publiczne</a> &#124;
+<a href="#signals">Sygnały</a> &#124;
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pro-methods">Metody chronione</a> &#124;
+<a href="#pro-attribs">Atrybuty chronione</a> &#124;
+<a href="#friends">Przyjaciele</a> &#124;
+<a href="class_scene-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Scene</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszczególne elementy.  
+ <a href="class_scene.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_scene_8h_source.html">Scene.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-slots"></a>
+Sloty publiczne</h2></td></tr>
+<tr class="memitem:a184c9be4892411819742a9fd70e8333b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a184c9be4892411819742a9fd70e8333b">addItemSlot</a> (QGraphicsItem *, QWaitCondition *)</td></tr>
+<tr class="memitem:ad35ef97681da43e764a5303e77e3844d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ad35ef97681da43e764a5303e77e3844d">addVehicleToAnimationSlot</a> (<a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>, <a class="el" href="class_animation.html">Animation</a> *, QMutex *)</td></tr>
+<tr class="memitem:a8b99a0335933b1ac07b032c349952788"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a8b99a0335933b1ac07b032c349952788">addPedestrianToAnimationSlot</a> (<a class="el" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>, <a class="el" href="class_animation.html">Animation</a> *, QMutex *)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="signals"></a>
+Sygnały</h2></td></tr>
+<tr class="memitem:a15683b9f4afcdc10bde922fab5f4a951"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a15683b9f4afcdc10bde922fab5f4a951">mousePressed</a> (QGraphicsSceneMouseEvent *mouseEvent)</td></tr>
+<tr class="memitem:a4c6c8254c928419b74aa95fa3bb1c534"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4c6c8254c928419b74aa95fa3bb1c534">mouseMoved</a> (QGraphicsSceneMouseEvent *mouseEvent)</td></tr>
+<tr class="memitem:a9d8b2c7b7d91f001421e95734934be06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a9d8b2c7b7d91f001421e95734934be06">mouseReleased</a> (QGraphicsSceneMouseEvent *mouseEvent)</td></tr>
+<tr class="memitem:a7e2a3ec20454137ea1c0512afd56a639"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a7e2a3ec20454137ea1c0512afd56a639">addItemSignal</a> (QGraphicsItem *, QWaitCondition *)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a4b30c21fd0065d816fdf1e51fe67a4fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4b30c21fd0065d816fdf1e51fe67a4fd">Scene</a> (QObject *parent=0)</td></tr>
+<tr class="memitem:a3b8cec2e32546713915f8c6303c951f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a3b8cec2e32546713915f8c6303c951f1">~Scene</a> ()</td></tr>
+<tr class="memitem:ac0e3d2c98ba6063a086467fb2c19142f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ac0e3d2c98ba6063a086467fb2c19142f">draw</a> ()</td></tr>
+<tr class="memdesc:ac0e3d2c98ba6063a086467fb2c19142f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda rysująca wszystkie obiekty <a class="el" href="class_map_element.html" title="Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów.">MapElement</a>.  <a href="#ac0e3d2c98ba6063a086467fb2c19142f"></a><br/></td></tr>
+<tr class="memitem:a848776d5d67d321587b102c3a6f10a11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a848776d5d67d321587b102c3a6f10a11">init</a> (const string &amp;)</td></tr>
+<tr class="memdesc:a848776d5d67d321587b102c3a6f10a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda inicjująca <a class="el" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>. Argumentem jest ścieżka do pliku mapy (format: JSON).  <a href="#a848776d5d67d321587b102c3a6f10a11"></a><br/></td></tr>
+<tr class="memitem:a00b47fa58618a2144393413935f65561"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a00b47fa58618a2144393413935f65561">getMapElements</a> ()</td></tr>
+<tr class="memdesc:a00b47fa58618a2144393413935f65561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwraca wszystkie obiekty MapElements.  <a href="#a00b47fa58618a2144393413935f65561"></a><br/></td></tr>
+<tr class="memitem:a14e5edf4c038b83e77f0980f0c77b849"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a14e5edf4c038b83e77f0980f0c77b849">getShortestPath</a> (int, int)</td></tr>
+<tr class="memdesc:a14e5edf4c038b83e77f0980f0c77b849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda służy do wyznaczenia najkrótszej ścieżki pomiędzy dwoma wierzchołkami grafu.  <a href="#a14e5edf4c038b83e77f0980f0c77b849"></a><br/></td></tr>
+<tr class="memitem:a4f6fb72b97821a0542e0da2f68e807b3"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_map_element.html">MapElement</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a4f6fb72b97821a0542e0da2f68e807b3">collidingMapElements</a> (QGraphicsItem *)</td></tr>
+<tr class="memdesc:a4f6fb72b97821a0542e0da2f68e807b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwraca elementy mapy kolidujące z podanym.  <a href="#a4f6fb72b97821a0542e0da2f68e807b3"></a><br/></td></tr>
+<tr class="memitem:a560c19dc6d85da16487c4d60db3578e8"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_vehicle.html">Vehicle</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a560c19dc6d85da16487c4d60db3578e8">collidingVehicles</a> (QGraphicsItem *)</td></tr>
+<tr class="memdesc:a560c19dc6d85da16487c4d60db3578e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda zwraca pojazdy kolidujące z podanym.  <a href="#a560c19dc6d85da16487c4d60db3578e8"></a><br/></td></tr>
+<tr class="memitem:abd71e84fa122bce0104dbcf701b9edd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#abd71e84fa122bce0104dbcf701b9edd8">collidingVehicles</a> (QGraphicsItem *, <a class="el" href="class_vehicle.html">Vehicle</a> *)</td></tr>
+<tr class="memdesc:abd71e84fa122bce0104dbcf701b9edd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda określa czy podany element koliduje z innymi pojazdami.  <a href="#abd71e84fa122bce0104dbcf701b9edd8"></a><br/></td></tr>
+<tr class="memitem:a82b551d4fd83aaeb36ba341365963105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a82b551d4fd83aaeb36ba341365963105">updateViewPort</a> ()</td></tr>
+<tr class="memdesc:a82b551d4fd83aaeb36ba341365963105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda służąca do odświeżania widoku.  <a href="#a82b551d4fd83aaeb36ba341365963105"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
+Metody chronione</h2></td></tr>
+<tr class="memitem:a6ad4dcff66d55c4f1a7cd2c5364459ef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a6ad4dcff66d55c4f1a7cd2c5364459ef">mousePressEvent</a> (QGraphicsSceneMouseEvent *)</td></tr>
+<tr class="memitem:ae046b7a5d0dc99d01c059961fff16d95"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ae046b7a5d0dc99d01c059961fff16d95">mouseMoveEvent</a> (QGraphicsSceneMouseEvent *)</td></tr>
+<tr class="memitem:adffea18c1ebe0abd3291ac48b0f83211"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#adffea18c1ebe0abd3291ac48b0f83211">mouseReleaseEvent</a> (QGraphicsSceneMouseEvent *)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pro-attribs"></a>
+Atrybuty chronione</h2></td></tr>
+<tr class="memitem:a209cfc1d4f90fb58093a3db2fad23e08"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a209cfc1d4f90fb58093a3db2fad23e08">mapElements</a></td></tr>
+<tr class="memitem:a279299a043594536431e538c2bdd76e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shortest_path.html">ShortestPath</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a279299a043594536431e538c2bdd76e7">shortestPath</a></td></tr>
+<tr class="memitem:a61809011ee96172d42280dd9aa1c0846"><td class="memItemLeft" align="right" valign="top">const QBrush&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a61809011ee96172d42280dd9aa1c0846">asphaltBrush</a></td></tr>
+<tr class="memitem:a3cc532bd0e9e328041509d829d58f50d"><td class="memItemLeft" align="right" valign="top">const QBrush&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a3cc532bd0e9e328041509d829d58f50d">lanesBrush</a></td></tr>
+<tr class="memitem:aa07495f36b834636c73de85b6f8143f9"><td class="memItemLeft" align="right" valign="top">const QBrush&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#aa07495f36b834636c73de85b6f8143f9">pavementBrush</a></td></tr>
+<tr class="memitem:a310ffbaf94652c71e44c3576caa2bd99"><td class="memItemLeft" align="right" valign="top">const QPen&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a310ffbaf94652c71e44c3576caa2bd99">noPen</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="friends"></a>
+Przyjaciele</h2></td></tr>
+<tr class="memitem:a1fbbe65f53589c2d26f43a3635f2f8a3"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a1fbbe65f53589c2d26f43a3635f2f8a3">Road</a></td></tr>
+<tr class="memitem:ace3ec366f47be67a97ce4c94dfa569fd"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ace3ec366f47be67a97ce4c94dfa569fd">Cross</a></td></tr>
+<tr class="memitem:a6c5d0923647f9e8875e27eb17f8ea8a5"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a6c5d0923647f9e8875e27eb17f8ea8a5">Spawn</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszczególne elementy. </p>
+</div><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a4b30c21fd0065d816fdf1e51fe67a4fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene::Scene </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3b8cec2e32546713915f8c6303c951f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Scene::~Scene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a7e2a3ec20454137ea1c0512afd56a639"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::addItemSignal </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsItem *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWaitCondition *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a184c9be4892411819742a9fd70e8333b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::addItemSlot </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsItem *&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWaitCondition *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8b99a0335933b1ac07b032c349952788"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::addPedestrianToAnimationSlot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>&#160;</td>
+          <td class="paramname"><em>p_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_animation.html">Animation</a> *&#160;</td>
+          <td class="paramname"><em>animation_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QMutex *&#160;</td>
+          <td class="paramname"><em>mutex_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad35ef97681da43e764a5303e77e3844d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::addVehicleToAnimationSlot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>&#160;</td>
+          <td class="paramname"><em>v_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_animation.html">Animation</a> *&#160;</td>
+          <td class="paramname"><em>animation_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QMutex *&#160;</td>
+          <td class="paramname"><em>mutex_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4f6fb72b97821a0542e0da2f68e807b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="class_map_element.html">MapElement</a> * &gt; Scene::collidingMapElements </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsItem *&#160;</td>
+          <td class="paramname"><em>item_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda zwraca elementy mapy kolidujące z podanym. </p>
+
+</div>
+</div>
+<a class="anchor" id="a560c19dc6d85da16487c4d60db3578e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="class_vehicle.html">Vehicle</a> * &gt; Scene::collidingVehicles </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsItem *&#160;</td>
+          <td class="paramname"><em>item_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda zwraca pojazdy kolidujące z podanym. </p>
+
+</div>
+</div>
+<a class="anchor" id="abd71e84fa122bce0104dbcf701b9edd8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Scene::collidingVehicles </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsItem *&#160;</td>
+          <td class="paramname"><em>item_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vehicle.html">Vehicle</a> *&#160;</td>
+          <td class="paramname"><em>v_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda określa czy podany element koliduje z innymi pojazdami. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac0e3d2c98ba6063a086467fb2c19142f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda rysująca wszystkie obiekty <a class="el" href="class_map_element.html" title="Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów.">MapElement</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a00b47fa58618a2144393413935f65561"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; <a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a> &gt; &amp; Scene::getMapElements </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda zwraca wszystkie obiekty MapElements. </p>
+
+</div>
+</div>
+<a class="anchor" id="a14e5edf4c038b83e77f0980f0c77b849"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; int &gt; Scene::getShortestPath </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>from_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda służy do wyznaczenia najkrótszej ścieżki pomiędzy dwoma wierzchołkami grafu. </p>
+
+</div>
+</div>
+<a class="anchor" id="a848776d5d67d321587b102c3a6f10a11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::init </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda inicjująca <a class="el" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>. Argumentem jest ścieżka do pliku mapy (format: JSON). </p>
+
+</div>
+</div>
+<a class="anchor" id="a4c6c8254c928419b74aa95fa3bb1c534"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::mouseMoved </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneMouseEvent *&#160;</td>
+          <td class="paramname"><em>mouseEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae046b7a5d0dc99d01c059961fff16d95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::mouseMoveEvent </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneMouseEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a15683b9f4afcdc10bde922fab5f4a951"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::mousePressed </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneMouseEvent *&#160;</td>
+          <td class="paramname"><em>mouseEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6ad4dcff66d55c4f1a7cd2c5364459ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::mousePressEvent </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneMouseEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9d8b2c7b7d91f001421e95734934be06"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::mouseReleased </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneMouseEvent *&#160;</td>
+          <td class="paramname"><em>mouseEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adffea18c1ebe0abd3291ac48b0f83211"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::mouseReleaseEvent </td>
+          <td>(</td>
+          <td class="paramtype">QGraphicsSceneMouseEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a82b551d4fd83aaeb36ba341365963105"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::updateViewPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda służąca do odświeżania widoku. </p>
+
+</div>
+</div>
+<h2>Dokumentacja przyjaciół i funkcji związanych</h2>
+<a class="anchor" id="ace3ec366f47be67a97ce4c94dfa569fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_cross.html">Cross</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1fbbe65f53589c2d26f43a3635f2f8a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_road.html">Road</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6c5d0923647f9e8875e27eb17f8ea8a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_spawn.html">Spawn</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a61809011ee96172d42280dd9aa1c0846"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QBrush Scene::asphaltBrush</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3cc532bd0e9e328041509d829d58f50d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QBrush Scene::lanesBrush</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a209cfc1d4f90fb58093a3db2fad23e08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="_types_8h.html#a4260a5280323637f8a1fa28e89b6ef14">PMapElement</a>&gt; Scene::mapElements</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a310ffbaf94652c71e44c3576caa2bd99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QPen Scene::noPen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa07495f36b834636c73de85b6f8143f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QBrush Scene::pavementBrush</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a279299a043594536431e538c2bdd76e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shortest_path.html">ShortestPath</a>* Scene::shortestPath</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/<a class="el" href="_scene_8h_source.html">Scene.h</a></li>
+<li>src/<a class="el" href="_scene_8cpp.html">Scene.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:31 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

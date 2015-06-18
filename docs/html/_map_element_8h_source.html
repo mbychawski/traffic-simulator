@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Plik źródłowy src/MapElement.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MapElement.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_map_element_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef MAPELEMENT_H_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MAPELEMENT_H_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_drawable_8h.html">Drawable.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="class_map_element.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_map_element.html" title="Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów.">MapElement</a> : <span class="keyword">public</span> <a class="code" href="class_drawable.html" title="Klasa bazowa dla obiektów, które będą wyświetlane na scenie.">Drawable</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="class_map_element.html#a65ac80f170032e03dca2d2b751cbe688">   16</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_map_element.html#a65ac80f170032e03dca2d2b751cbe688">id</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="class_map_element.html#a1e6c2dadb01e42de3980f1cb9a5e316c">   20</a></span>&#160;        <a class="code" href="class_map_element.html#a1e6c2dadb01e42de3980f1cb9a5e316c" title="Konstruktor.">MapElement</a>() : <a class="code" href="class_drawable.html" title="Klasa bazowa dla obiektów, które będą wyświetlane na scenie.">Drawable</a>(0,0), <a class="code" href="class_map_element.html#a65ac80f170032e03dca2d2b751cbe688">id</a>(-1) {}</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_map_element.html#abb9461a82f67bd340559879d305d3c43">   22</a></span>&#160;        <a class="code" href="class_map_element.html#abb9461a82f67bd340559879d305d3c43" title="Konstruktor.">MapElement</a>(<span class="keywordtype">double</span> x_, <span class="keywordtype">double</span> y_, <span class="keywordtype">int</span> id_) : <a class="code" href="class_drawable.html" title="Klasa bazowa dla obiektów, które będą wyświetlane na scenie.">Drawable</a>(x_, y_), <a class="code" href="class_map_element.html#a65ac80f170032e03dca2d2b751cbe688">id</a>(id_) {}</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="class_map_element.html#a6eb24cff5179f6919b426ad3654545f1">   24</a></span>&#160;        <a class="code" href="class_map_element.html#a6eb24cff5179f6919b426ad3654545f1" title="Konstruktor.">MapElement</a>(<a class="code" href="struct_position.html" title="Klasa reprezentuje punkt w trójwymiarowej przestrzeni.">Position</a> position_, <span class="keywordtype">int</span> id_) : <a class="code" href="class_drawable.html" title="Klasa bazowa dla obiektów, które będą wyświetlane na scenie.">Drawable</a>(position_), <a class="code" href="class_map_element.html#a65ac80f170032e03dca2d2b751cbe688">id</a>(id_) {}</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="class_map_element.html#a4e692e2575a667c25213e59d9ac893f7">   26</a></span>&#160;        <a class="code" href="class_map_element.html#a4e692e2575a667c25213e59d9ac893f7" title="Konstruktor.">MapElement</a>(<span class="keyword">const</span> <a class="code" href="class_map_element.html" title="Klasa bazowa dla Drogi, Skrzyżowania i miejsc tworzenia pojazdów.">MapElement</a>&amp; mapElement) : <a class="code" href="class_drawable.html" title="Klasa bazowa dla obiektów, które będą wyświetlane na scenie.">Drawable</a>(mapElement.<a class="code" href="class_drawable.html#aaeba34b10714af371e05d44d825af8a5">position</a>), <a class="code" href="class_map_element.html#a65ac80f170032e03dca2d2b751cbe688">id</a>(mapElement.<a class="code" href="class_map_element.html#a65ac80f170032e03dca2d2b751cbe688">id</a>) {}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_map_element.html#aa76ca7443c4f6a6683f68f44909b90d3">draw</a>(<a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a> *scene) = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="class_map_element.html#a4b0a0465fb8859aa91ddb888857167bb">   32</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_map_element.html#a4b0a0465fb8859aa91ddb888857167bb" title="Metoda zwraca id elementu mapy.">getID</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_map_element.html#a65ac80f170032e03dca2d2b751cbe688">id</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="class_map_element.html#a616d51f35aba2279c6df5415f8ee29d9">   37</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_map_element.html#a616d51f35aba2279c6df5415f8ee29d9" title="Metoda ustawia id.">setID</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> id_) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordtype">id</span> = id_;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor"></span><span class="comment">/* MAPELEMENT_H_ */</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:29 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

@@ -1,0 +1,248 @@
+\hypertarget{class_cross}{\section{Dokumentacja klasy Cross}
+\label{class_cross}\index{Cross@{Cross}}
+}
+
+
+Klasa reprezentujaca skrzyzowanie.  
+
+
+
+
+{\ttfamily \#include $<$Cross.\-h$>$}
+
+Diagram dziedziczenia dla Cross\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_cross}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cross_ad0886f2b47a4375b7b6feedfc13c0692}{Cross} (int id\-\_\-, double x\-\_\-, double y\-\_\-, \hyperlink{class_priority_rules}{Priority\-Rules} $\ast$rules\-\_\-, map$<$ \hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}, int $>$ neighbors\-\_\-)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_cross_afa046c5821fd92064ecfdcb2c28fae00}{Cross} (int id\-\_\-, \hyperlink{struct_position}{Position} position\-\_\-, \hyperlink{class_priority_rules}{Priority\-Rules} $\ast$rules\-\_\-, map$<$ \hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}, int $>$ neighbors\-\_\-)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_cross_a1d87d50bd56692c7ed29640b0f7d1d81}{$\sim$\-Cross} ()
+\item 
+virtual void \hyperlink{class_cross_a3b127c19a196ad86bbd27b513eecdf44}{draw} (\hyperlink{class_scene}{Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za wyświetlenie skrzyżowania na scenie. \end{DoxyCompactList}\item 
+void \hyperlink{class_cross_a01b9a1199aa8a1cc8f7c2a4268eb2656}{register\-Vehicle} (\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} direction\-\_\-, \hyperlink{class_vehicle}{Vehicle} $\ast$v\-\_\-)
+\begin{DoxyCompactList}\small\item\em Rejestracja pojazdu w skrzyżowaniu. \end{DoxyCompactList}\item 
+void \hyperlink{class_cross_a02405bee42d1e6faf6450d8198e1cb45}{unregister\-Vehicle} (\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} direction\-\_\-)
+\begin{DoxyCompactList}\small\item\em Wyrejestrowanie pojazdu. \end{DoxyCompactList}\item 
+bool \hyperlink{class_cross_a9c8223fd7c88d4ebfebf44eec3abfc87}{can\-Go} (\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} from\-\_\-, \hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} to\-\_\-)
+\begin{DoxyCompactList}\small\item\em Metoda zwraca przyzwolenie na wjazd na skrzyżowanie. \end{DoxyCompactList}\item 
+\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \hyperlink{class_cross_ac1bb07b4ecdaa59c3bc4ef1583424281}{get\-Neighbor\-Direction} (int id\-\_\-)
+\begin{DoxyCompactList}\small\item\em Metoda zwraca kierunek w którym znajduje się sąsiad o danym I\-D. \end{DoxyCompactList}\item 
+\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \hyperlink{class_cross_a034afdc8547efdf62c44e05c276ed601}{get\-Random\-Direction} (int from\-\_\-)
+\begin{DoxyCompactList}\small\item\em Metoda podaje losowy z dostepnych kierunków. \end{DoxyCompactList}\item 
+\hyperlink{struct_position}{Position} \hyperlink{class_cross_a0e1bc9d7a602cfa4b1ffe22d9748c11c}{calculate\-Pedestrian\-Position} (\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} direction\-\_\-, int side\-\_\-)
+\begin{DoxyCompactList}\small\item\em Metoda obliczająca pozycję startową dla przechodnia oraz informująca go gdzie jest chodnik. \end{DoxyCompactList}\item 
+\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \hyperlink{class_cross_a34bf1008f626560d8200a9b2b677abb3}{get\-Pedestrian\-Random\-Direction} ()
+\begin{DoxyCompactList}\small\item\em Zwraca losowy z dostepnych kierunków dla ruchu pieszych. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_cross_a50997bb8f3f5fb2b850ec897b1f3912c}{is\-Cross} (const \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} el)
+\begin{DoxyCompactList}\small\item\em funkcja sprawdzająca czy obiekt wskazywany przez P\-Map\-Element jest skrzyżowaniem \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Graphics\-Item\-Group $\ast$ \hyperlink{class_cross_a62b3a18fc6fa317d516846efe454b8ae}{cross\-Group}
+\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ Q\-Graphics\-Ellipse\-Item $\ast$ $>$ \hyperlink{class_cross_acc4e85c6307c933995275b7c84916ca9}{draw\-Dot} (\hyperlink{class_cross_rules}{Cross\-Rules} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_priority_rules}{Priority\-Rules} $\ast$ \hyperlink{class_cross_a46a8edfbb4172a050ceeba58db6c30bb}{priority\-Rules}
+\item 
+map$<$ \hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}, int $>$ \hyperlink{class_cross_af931388763664ba4224f054b6a42fea2}{neighbors}
+\item 
+map$<$ \hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}, vector\\*
+$<$ \hyperlink{class_vehicle}{Vehicle} $\ast$ $>$ $>$ \hyperlink{class_cross_aa6994973a6c8e4d0478410dbeb47d3b4}{waiting\-Vehicles}
+\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa reprezentujaca skrzyzowanie. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_cross_ad0886f2b47a4375b7b6feedfc13c0692}{\index{Cross@{Cross}!Cross@{Cross}}
+\index{Cross@{Cross}!Cross@{Cross}}
+\subsubsection[{Cross}]{\setlength{\rightskip}{0pt plus 5cm}Cross\-::\-Cross (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-, }
+\item[{double}]{x\-\_\-, }
+\item[{double}]{y\-\_\-, }
+\item[{{\bf Priority\-Rules} $\ast$}]{rules\-\_\-, }
+\item[{map$<$ {\bf Direction}, int $>$}]{neighbors\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cross_ad0886f2b47a4375b7b6feedfc13c0692}
+
+
+Konstruktor. 
+
+\hypertarget{class_cross_afa046c5821fd92064ecfdcb2c28fae00}{\index{Cross@{Cross}!Cross@{Cross}}
+\index{Cross@{Cross}!Cross@{Cross}}
+\subsubsection[{Cross}]{\setlength{\rightskip}{0pt plus 5cm}Cross\-::\-Cross (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-, }
+\item[{{\bf Position}}]{position\-\_\-, }
+\item[{{\bf Priority\-Rules} $\ast$}]{rules\-\_\-, }
+\item[{map$<$ {\bf Direction}, int $>$}]{neighbors\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cross_afa046c5821fd92064ecfdcb2c28fae00}
+
+
+Konstruktor. 
+
+\hypertarget{class_cross_a1d87d50bd56692c7ed29640b0f7d1d81}{\index{Cross@{Cross}!$\sim$\-Cross@{$\sim$\-Cross}}
+\index{$\sim$\-Cross@{$\sim$\-Cross}!Cross@{Cross}}
+\subsubsection[{$\sim$\-Cross}]{\setlength{\rightskip}{0pt plus 5cm}virtual Cross\-::$\sim$\-Cross (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_cross_a1d87d50bd56692c7ed29640b0f7d1d81}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_cross_a0e1bc9d7a602cfa4b1ffe22d9748c11c}{\index{Cross@{Cross}!calculate\-Pedestrian\-Position@{calculate\-Pedestrian\-Position}}
+\index{calculate\-Pedestrian\-Position@{calculate\-Pedestrian\-Position}!Cross@{Cross}}
+\subsubsection[{calculate\-Pedestrian\-Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Cross\-::calculate\-Pedestrian\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Direction}}]{direction\-\_\-, }
+\item[{int}]{side\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_cross_a0e1bc9d7a602cfa4b1ffe22d9748c11c}
+
+
+Metoda obliczająca pozycję startową dla przechodnia oraz informująca go gdzie jest chodnik. 
+
+\hypertarget{class_cross_a9c8223fd7c88d4ebfebf44eec3abfc87}{\index{Cross@{Cross}!can\-Go@{can\-Go}}
+\index{can\-Go@{can\-Go}!Cross@{Cross}}
+\subsubsection[{can\-Go}]{\setlength{\rightskip}{0pt plus 5cm}bool Cross\-::can\-Go (
+\begin{DoxyParamCaption}
+\item[{{\bf Direction}}]{from\-\_\-, }
+\item[{{\bf Direction}}]{to\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_cross_a9c8223fd7c88d4ebfebf44eec3abfc87}
+
+
+Metoda zwraca przyzwolenie na wjazd na skrzyżowanie. 
+
+\hypertarget{class_cross_a3b127c19a196ad86bbd27b513eecdf44}{\index{Cross@{Cross}!draw@{draw}}
+\index{draw@{draw}!Cross@{Cross}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Cross\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_cross_a3b127c19a196ad86bbd27b513eecdf44}
+
+
+Metoda odpowiadająca za wyświetlenie skrzyżowania na scenie. 
+
+
+
+Implementuje \hyperlink{class_map_element_aa76ca7443c4f6a6683f68f44909b90d3}{Map\-Element}.
+
+\hypertarget{class_cross_acc4e85c6307c933995275b7c84916ca9}{\index{Cross@{Cross}!draw\-Dot@{draw\-Dot}}
+\index{draw\-Dot@{draw\-Dot}!Cross@{Cross}}
+\subsubsection[{draw\-Dot}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ Q\-Graphics\-Ellipse\-Item $\ast$ $>$ Cross\-::draw\-Dot (
+\begin{DoxyParamCaption}
+\item[{{\bf Cross\-Rules} $\ast$}]{cr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cross_acc4e85c6307c933995275b7c84916ca9}
+\hypertarget{class_cross_ac1bb07b4ecdaa59c3bc4ef1583424281}{\index{Cross@{Cross}!get\-Neighbor\-Direction@{get\-Neighbor\-Direction}}
+\index{get\-Neighbor\-Direction@{get\-Neighbor\-Direction}!Cross@{Cross}}
+\subsubsection[{get\-Neighbor\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Direction} Cross\-::get\-Neighbor\-Direction (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_cross_ac1bb07b4ecdaa59c3bc4ef1583424281}
+
+
+Metoda zwraca kierunek w którym znajduje się sąsiad o danym I\-D. 
+
+\hypertarget{class_cross_a34bf1008f626560d8200a9b2b677abb3}{\index{Cross@{Cross}!get\-Pedestrian\-Random\-Direction@{get\-Pedestrian\-Random\-Direction}}
+\index{get\-Pedestrian\-Random\-Direction@{get\-Pedestrian\-Random\-Direction}!Cross@{Cross}}
+\subsubsection[{get\-Pedestrian\-Random\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Direction} Cross\-::get\-Pedestrian\-Random\-Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_cross_a34bf1008f626560d8200a9b2b677abb3}
+
+
+Zwraca losowy z dostepnych kierunków dla ruchu pieszych. 
+
+\hypertarget{class_cross_a034afdc8547efdf62c44e05c276ed601}{\index{Cross@{Cross}!get\-Random\-Direction@{get\-Random\-Direction}}
+\index{get\-Random\-Direction@{get\-Random\-Direction}!Cross@{Cross}}
+\subsubsection[{get\-Random\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Direction} Cross\-::get\-Random\-Direction (
+\begin{DoxyParamCaption}
+\item[{int}]{from\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_cross_a034afdc8547efdf62c44e05c276ed601}
+
+
+Metoda podaje losowy z dostepnych kierunków. 
+
+\hypertarget{class_cross_a50997bb8f3f5fb2b850ec897b1f3912c}{\index{Cross@{Cross}!is\-Cross@{is\-Cross}}
+\index{is\-Cross@{is\-Cross}!Cross@{Cross}}
+\subsubsection[{is\-Cross}]{\setlength{\rightskip}{0pt plus 5cm}bool Cross\-::is\-Cross (
+\begin{DoxyParamCaption}
+\item[{const {\bf P\-Map\-Element}}]{el}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_cross_a50997bb8f3f5fb2b850ec897b1f3912c}
+
+
+funkcja sprawdzająca czy obiekt wskazywany przez P\-Map\-Element jest skrzyżowaniem 
+
+\hypertarget{class_cross_a01b9a1199aa8a1cc8f7c2a4268eb2656}{\index{Cross@{Cross}!register\-Vehicle@{register\-Vehicle}}
+\index{register\-Vehicle@{register\-Vehicle}!Cross@{Cross}}
+\subsubsection[{register\-Vehicle}]{\setlength{\rightskip}{0pt plus 5cm}void Cross\-::register\-Vehicle (
+\begin{DoxyParamCaption}
+\item[{{\bf Direction}}]{direction\-\_\-, }
+\item[{{\bf Vehicle} $\ast$}]{v\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_cross_a01b9a1199aa8a1cc8f7c2a4268eb2656}
+
+
+Rejestracja pojazdu w skrzyżowaniu. 
+
+\hypertarget{class_cross_a02405bee42d1e6faf6450d8198e1cb45}{\index{Cross@{Cross}!unregister\-Vehicle@{unregister\-Vehicle}}
+\index{unregister\-Vehicle@{unregister\-Vehicle}!Cross@{Cross}}
+\subsubsection[{unregister\-Vehicle}]{\setlength{\rightskip}{0pt plus 5cm}void Cross\-::unregister\-Vehicle (
+\begin{DoxyParamCaption}
+\item[{{\bf Direction}}]{direction\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_cross_a02405bee42d1e6faf6450d8198e1cb45}
+
+
+Wyrejestrowanie pojazdu. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_cross_a62b3a18fc6fa317d516846efe454b8ae}{\index{Cross@{Cross}!cross\-Group@{cross\-Group}}
+\index{cross\-Group@{cross\-Group}!Cross@{Cross}}
+\subsubsection[{cross\-Group}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Graphics\-Item\-Group$\ast$ Cross\-::cross\-Group}}\label{class_cross_a62b3a18fc6fa317d516846efe454b8ae}
+\hypertarget{class_cross_af931388763664ba4224f054b6a42fea2}{\index{Cross@{Cross}!neighbors@{neighbors}}
+\index{neighbors@{neighbors}!Cross@{Cross}}
+\subsubsection[{neighbors}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf Direction}, int$>$ Cross\-::neighbors\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cross_af931388763664ba4224f054b6a42fea2}
+\hypertarget{class_cross_a46a8edfbb4172a050ceeba58db6c30bb}{\index{Cross@{Cross}!priority\-Rules@{priority\-Rules}}
+\index{priority\-Rules@{priority\-Rules}!Cross@{Cross}}
+\subsubsection[{priority\-Rules}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Priority\-Rules}$\ast$ Cross\-::priority\-Rules\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cross_a46a8edfbb4172a050ceeba58db6c30bb}
+\hypertarget{class_cross_aa6994973a6c8e4d0478410dbeb47d3b4}{\index{Cross@{Cross}!waiting\-Vehicles@{waiting\-Vehicles}}
+\index{waiting\-Vehicles@{waiting\-Vehicles}!Cross@{Cross}}
+\subsubsection[{waiting\-Vehicles}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf Direction}, vector$<${\bf Vehicle}$\ast$$>$ $>$ Cross\-::waiting\-Vehicles\hspace{0.3cm}{\ttfamily [private]}}}\label{class_cross_aa6994973a6c8e4d0478410dbeb47d3b4}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_cross_8h}{Cross.\-h}\item 
+src/\hyperlink{_cross_8cpp}{Cross.\-cpp}\end{DoxyCompactItemize}

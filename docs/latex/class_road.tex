@@ -1,0 +1,125 @@
+\hypertarget{class_road}{\section{Dokumentacja klasy Road}
+\label{class_road}\index{Road@{Road}}
+}
+
+
+Klasa reprezentuje drogę na mapie.  
+
+
+
+
+{\ttfamily \#include $<$Road.\-h$>$}
+
+Diagram dziedziczenia dla Road\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_road}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_road_a90bb6be2a5c3b6997849a915e2af0cf0}{Road} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_road_a65e61485d6940225dbdb9f6def8e6aa4}{Road} (\hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} from\-\_\-, \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} to\-\_\-)
+\item 
+virtual void \hyperlink{class_road_a276332c2d6a617ca0fc665470fc49901}{draw} (\hyperlink{class_scene}{Scene} $\ast$scene)
+\begin{DoxyCompactList}\small\item\em Metoda tworząca i dodająca obiekty Graphics\-Item do sceny. \end{DoxyCompactList}\item 
+int \hyperlink{class_road_ac28b45b44c84944d22aa737fc53a45af}{get\-Length} () const 
+\begin{DoxyCompactList}\small\item\em Zwraca długość drogi. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_road_ab32a196528ec20e7665a0c402a241b4e}{$\sim$\-Road} ()
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \hyperlink{class_road_a751b38c96aad271b5e1ac771f82059d1}{direction}
+\item 
+int \hyperlink{class_road_ad255cda1be7acc3806c8946154e9f79f}{length}
+\item 
+\hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} \hyperlink{class_road_acf1b7cd300df6c8617e6f0fe68c9f688}{from}
+\item 
+\hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} \hyperlink{class_road_acdc9a6cb99fa3e7fb4042560d143bb53}{to}
+\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa reprezentuje drogę na mapie. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_road_a90bb6be2a5c3b6997849a915e2af0cf0}{\index{Road@{Road}!Road@{Road}}
+\index{Road@{Road}!Road@{Road}}
+\subsubsection[{Road}]{\setlength{\rightskip}{0pt plus 5cm}Road\-::\-Road (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_road_a90bb6be2a5c3b6997849a915e2af0cf0}
+
+
+Konstruktor. 
+
+\hypertarget{class_road_a65e61485d6940225dbdb9f6def8e6aa4}{\index{Road@{Road}!Road@{Road}}
+\index{Road@{Road}!Road@{Road}}
+\subsubsection[{Road}]{\setlength{\rightskip}{0pt plus 5cm}Road\-::\-Road (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-Map\-Element}}]{from\-\_\-, }
+\item[{{\bf P\-Map\-Element}}]{to\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_road_a65e61485d6940225dbdb9f6def8e6aa4}
+\hypertarget{class_road_ab32a196528ec20e7665a0c402a241b4e}{\index{Road@{Road}!$\sim$\-Road@{$\sim$\-Road}}
+\index{$\sim$\-Road@{$\sim$\-Road}!Road@{Road}}
+\subsubsection[{$\sim$\-Road}]{\setlength{\rightskip}{0pt plus 5cm}virtual Road\-::$\sim$\-Road (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_road_ab32a196528ec20e7665a0c402a241b4e}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_road_a276332c2d6a617ca0fc665470fc49901}{\index{Road@{Road}!draw@{draw}}
+\index{draw@{draw}!Road@{Road}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Road\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_road_a276332c2d6a617ca0fc665470fc49901}
+
+
+Metoda tworząca i dodająca obiekty Graphics\-Item do sceny. 
+
+
+
+Implementuje \hyperlink{class_map_element_aa76ca7443c4f6a6683f68f44909b90d3}{Map\-Element}.
+
+\hypertarget{class_road_ac28b45b44c84944d22aa737fc53a45af}{\index{Road@{Road}!get\-Length@{get\-Length}}
+\index{get\-Length@{get\-Length}!Road@{Road}}
+\subsubsection[{get\-Length}]{\setlength{\rightskip}{0pt plus 5cm}int Road\-::get\-Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_road_ac28b45b44c84944d22aa737fc53a45af}
+
+
+Zwraca długość drogi. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_road_a751b38c96aad271b5e1ac771f82059d1}{\index{Road@{Road}!direction@{direction}}
+\index{direction@{direction}!Road@{Road}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Direction} Road\-::direction\hspace{0.3cm}{\ttfamily [private]}}}\label{class_road_a751b38c96aad271b5e1ac771f82059d1}
+\hypertarget{class_road_acf1b7cd300df6c8617e6f0fe68c9f688}{\index{Road@{Road}!from@{from}}
+\index{from@{from}!Road@{Road}}
+\subsubsection[{from}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-Map\-Element} Road\-::from\hspace{0.3cm}{\ttfamily [private]}}}\label{class_road_acf1b7cd300df6c8617e6f0fe68c9f688}
+\hypertarget{class_road_ad255cda1be7acc3806c8946154e9f79f}{\index{Road@{Road}!length@{length}}
+\index{length@{length}!Road@{Road}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}int Road\-::length\hspace{0.3cm}{\ttfamily [private]}}}\label{class_road_ad255cda1be7acc3806c8946154e9f79f}
+\hypertarget{class_road_acdc9a6cb99fa3e7fb4042560d143bb53}{\index{Road@{Road}!to@{to}}
+\index{to@{to}!Road@{Road}}
+\subsubsection[{to}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-Map\-Element} Road\-::to\hspace{0.3cm}{\ttfamily [private]}}}\label{class_road_acdc9a6cb99fa3e7fb4042560d143bb53}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_road_8h}{Road.\-h}\item 
+src/\hyperlink{_road_8cpp}{Road.\-cpp}\end{DoxyCompactItemize}

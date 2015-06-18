@@ -1,0 +1,177 @@
+\hypertarget{class_simulator}{\section{Dokumentacja klasy Simulator}
+\label{class_simulator}\index{Simulator@{Simulator}}
+}
+
+
+Jedna z głównych klas aplikacji, odpowiada za zarządzanie wątkami oraz sterowanie animacją.  
+
+
+
+
+{\ttfamily \#include $<$Simulator.\-h$>$}
+
+\subsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_a4c5b5d48f4f40984cdd5e540ade4d776}{add\-Vehicle\-To\-Animate} (\hyperlink{_types_8h_a564207d327881e8bcfa0843e1a874756}{P\-Vehicle}, \hyperlink{class_animation}{Animation} $\ast$, Q\-Mutex $\ast$)
+\begin{DoxyCompactList}\small\item\em Sygnał potrzebny do dodawania pojazdu do animacji (ponieważ jest to oddzielny wątek) \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_a2553d83940167fe5ecc36fb19e382126}{add\-Pedestrian\-To\-Animate} (\hyperlink{_types_8h_a6ca5cb67bb3df872d4650820dbc647b8}{P\-Pedestrian}, \hyperlink{class_animation}{Animation} $\ast$, Q\-Mutex $\ast$)
+\begin{DoxyCompactList}\small\item\em Analogicznie jak add\-Vehicle\-To\-Animate, ale dla pieszego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_a777790f7422ca543634ed4ac80862f6a}{Simulator} (\hyperlink{class_scene}{Scene} $\ast$, Q\-Object $\ast$=0)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_a0f49aa04f42060a785adf77346b9de9f}{$\sim$\-Simulator} ()
+\item 
+void \hyperlink{class_simulator_a7c1fedfeee2955be5805acb2f9ad74a4}{start\-Simulation} ()
+\begin{DoxyCompactList}\small\item\em Rozpoczynanie symulacji. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_a2a296c0672d3093a491fd0c399fa1e44}{stop\-Simulation} ()
+\begin{DoxyCompactList}\small\item\em Zatrzymywanie symulacji. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_ac3c8dfab9bf1ccbc61bad82e369851bc}{add\-Vehicle} (\hyperlink{_types_8h_a564207d327881e8bcfa0843e1a874756}{P\-Vehicle})
+\begin{DoxyCompactList}\small\item\em Dodawanie pojazdu do symulacji. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_a63e6b1e0b6cde8d6430fa4a4c1c35308}{add\-Pedestrian} (\hyperlink{_types_8h_a6ca5cb67bb3df872d4650820dbc647b8}{P\-Pedestrian})
+\begin{DoxyCompactList}\small\item\em Dodawanie pieszego do symulacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_animation}{Animation} $\ast$ \hyperlink{class_simulator_afa279a763fb0f744606c7d343ee9843d}{animation}
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_simulator_abdd826ea1db1c69cc087d24fe69ca272}{scene}
+\item 
+\hyperlink{class_spawning_vehicles_runnable}{Spawning\-Vehicles\-Runnable} $\ast$ \hyperlink{class_simulator_a131c2140d1870c403c4b9618ee376007}{v\-Runnable}
+\item 
+\hyperlink{class_spawning_pedestrians_runnable}{Spawning\-Pedestrians\-Runnable} $\ast$ \hyperlink{class_simulator_a81dbad2542cad2e24995c90e01df4563}{p\-Runnable}
+\item 
+Q\-Mutex \hyperlink{class_simulator_adc7182b7aa6d573820b41cebab938518}{v\-Mutex}
+\item 
+Q\-Mutex \hyperlink{class_simulator_a9b12b4ecb21b9fa0a6e8b43de0683b6c}{p\-Mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Jedna z głównych klas aplikacji, odpowiada za zarządzanie wątkami oraz sterowanie animacją. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_simulator_a777790f7422ca543634ed4ac80862f6a}{\index{Simulator@{Simulator}!Simulator@{Simulator}}
+\index{Simulator@{Simulator}!Simulator@{Simulator}}
+\subsubsection[{Simulator}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\-::\-Simulator (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene\-\_\-, }
+\item[{Q\-Object $\ast$}]{parent\-\_\- = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_a777790f7422ca543634ed4ac80862f6a}
+
+
+Konstruktor. 
+
+\hypertarget{class_simulator_a0f49aa04f42060a785adf77346b9de9f}{\index{Simulator@{Simulator}!$\sim$\-Simulator@{$\sim$\-Simulator}}
+\index{$\sim$\-Simulator@{$\sim$\-Simulator}!Simulator@{Simulator}}
+\subsubsection[{$\sim$\-Simulator}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\-::$\sim$\-Simulator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_a0f49aa04f42060a785adf77346b9de9f}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_simulator_a63e6b1e0b6cde8d6430fa4a4c1c35308}{\index{Simulator@{Simulator}!add\-Pedestrian@{add\-Pedestrian}}
+\index{add\-Pedestrian@{add\-Pedestrian}!Simulator@{Simulator}}
+\subsubsection[{add\-Pedestrian}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\-::add\-Pedestrian (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-Pedestrian}}]{p\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_a63e6b1e0b6cde8d6430fa4a4c1c35308}
+
+
+Dodawanie pieszego do symulacji. 
+
+\hypertarget{class_simulator_a2553d83940167fe5ecc36fb19e382126}{\index{Simulator@{Simulator}!add\-Pedestrian\-To\-Animate@{add\-Pedestrian\-To\-Animate}}
+\index{add\-Pedestrian\-To\-Animate@{add\-Pedestrian\-To\-Animate}!Simulator@{Simulator}}
+\subsubsection[{add\-Pedestrian\-To\-Animate}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\-::add\-Pedestrian\-To\-Animate (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-Pedestrian}}]{, }
+\item[{{\bf Animation} $\ast$}]{, }
+\item[{Q\-Mutex $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_simulator_a2553d83940167fe5ecc36fb19e382126}
+
+
+Analogicznie jak add\-Vehicle\-To\-Animate, ale dla pieszego. 
+
+\hypertarget{class_simulator_ac3c8dfab9bf1ccbc61bad82e369851bc}{\index{Simulator@{Simulator}!add\-Vehicle@{add\-Vehicle}}
+\index{add\-Vehicle@{add\-Vehicle}!Simulator@{Simulator}}
+\subsubsection[{add\-Vehicle}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\-::add\-Vehicle (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-Vehicle}}]{v\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_ac3c8dfab9bf1ccbc61bad82e369851bc}
+
+
+Dodawanie pojazdu do symulacji. 
+
+\hypertarget{class_simulator_a4c5b5d48f4f40984cdd5e540ade4d776}{\index{Simulator@{Simulator}!add\-Vehicle\-To\-Animate@{add\-Vehicle\-To\-Animate}}
+\index{add\-Vehicle\-To\-Animate@{add\-Vehicle\-To\-Animate}!Simulator@{Simulator}}
+\subsubsection[{add\-Vehicle\-To\-Animate}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\-::add\-Vehicle\-To\-Animate (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-Vehicle}}]{, }
+\item[{{\bf Animation} $\ast$}]{, }
+\item[{Q\-Mutex $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_simulator_a4c5b5d48f4f40984cdd5e540ade4d776}
+
+
+Sygnał potrzebny do dodawania pojazdu do animacji (ponieważ jest to oddzielny wątek) 
+
+\hypertarget{class_simulator_a7c1fedfeee2955be5805acb2f9ad74a4}{\index{Simulator@{Simulator}!start\-Simulation@{start\-Simulation}}
+\index{start\-Simulation@{start\-Simulation}!Simulator@{Simulator}}
+\subsubsection[{start\-Simulation}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\-::start\-Simulation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_a7c1fedfeee2955be5805acb2f9ad74a4}
+
+
+Rozpoczynanie symulacji. 
+
+\hypertarget{class_simulator_a2a296c0672d3093a491fd0c399fa1e44}{\index{Simulator@{Simulator}!stop\-Simulation@{stop\-Simulation}}
+\index{stop\-Simulation@{stop\-Simulation}!Simulator@{Simulator}}
+\subsubsection[{stop\-Simulation}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\-::stop\-Simulation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_a2a296c0672d3093a491fd0c399fa1e44}
+
+
+Zatrzymywanie symulacji. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_simulator_afa279a763fb0f744606c7d343ee9843d}{\index{Simulator@{Simulator}!animation@{animation}}
+\index{animation@{animation}!Simulator@{Simulator}}
+\subsubsection[{animation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Animation}$\ast$ Simulator\-::animation}}\label{class_simulator_afa279a763fb0f744606c7d343ee9843d}
+\hypertarget{class_simulator_a9b12b4ecb21b9fa0a6e8b43de0683b6c}{\index{Simulator@{Simulator}!p\-Mutex@{p\-Mutex}}
+\index{p\-Mutex@{p\-Mutex}!Simulator@{Simulator}}
+\subsubsection[{p\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Mutex Simulator\-::p\-Mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{class_simulator_a9b12b4ecb21b9fa0a6e8b43de0683b6c}
+\hypertarget{class_simulator_a81dbad2542cad2e24995c90e01df4563}{\index{Simulator@{Simulator}!p\-Runnable@{p\-Runnable}}
+\index{p\-Runnable@{p\-Runnable}!Simulator@{Simulator}}
+\subsubsection[{p\-Runnable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Spawning\-Pedestrians\-Runnable}$\ast$ Simulator\-::p\-Runnable\hspace{0.3cm}{\ttfamily [private]}}}\label{class_simulator_a81dbad2542cad2e24995c90e01df4563}
+\hypertarget{class_simulator_abdd826ea1db1c69cc087d24fe69ca272}{\index{Simulator@{Simulator}!scene@{scene}}
+\index{scene@{scene}!Simulator@{Simulator}}
+\subsubsection[{scene}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene}$\ast$ Simulator\-::scene\hspace{0.3cm}{\ttfamily [private]}}}\label{class_simulator_abdd826ea1db1c69cc087d24fe69ca272}
+\hypertarget{class_simulator_adc7182b7aa6d573820b41cebab938518}{\index{Simulator@{Simulator}!v\-Mutex@{v\-Mutex}}
+\index{v\-Mutex@{v\-Mutex}!Simulator@{Simulator}}
+\subsubsection[{v\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Mutex Simulator\-::v\-Mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{class_simulator_adc7182b7aa6d573820b41cebab938518}
+\hypertarget{class_simulator_a131c2140d1870c403c4b9618ee376007}{\index{Simulator@{Simulator}!v\-Runnable@{v\-Runnable}}
+\index{v\-Runnable@{v\-Runnable}!Simulator@{Simulator}}
+\subsubsection[{v\-Runnable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Spawning\-Vehicles\-Runnable}$\ast$ Simulator\-::v\-Runnable\hspace{0.3cm}{\ttfamily [private]}}}\label{class_simulator_a131c2140d1870c403c4b9618ee376007}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_simulator_8h}{Simulator.\-h}\item 
+src/\hyperlink{_simulator_8cpp}{Simulator.\-cpp}\end{DoxyCompactItemize}

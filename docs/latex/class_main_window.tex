@@ -1,0 +1,216 @@
+\hypertarget{class_main_window}{\section{Dokumentacja klasy Main\-Window}
+\label{class_main_window}\index{Main\-Window@{Main\-Window}}
+}
+
+
+Klasa głównego okna aplikacji.  
+
+
+
+
+{\ttfamily \#include $<$Main\-Window.\-h$>$}
+
+\subsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_main_window_a524779fedd6fbedd87913f9e38d059aa}{start\-Button\-Clicked} ()
+\begin{DoxyCompactList}\small\item\em Slot wykonujący dzialanie po naciśnięciu przycisku Start. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ad59e90d0dd01444e222c94421dbfb1aa}{add\-Camera\-Button\-Clicked} ()
+\begin{DoxyCompactList}\small\item\em Slot wykonujący dzialanie po naciśnięciu przycisku Add \hyperlink{class_camera}{Camera}. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a391c23cbe0aea03008357c96c89d79e0}{save\-Camera\-Log\-Button\-Clicked} ()
+\begin{DoxyCompactList}\small\item\em Slot wykonujący dzialanie po naciśnięciu przycisku Save Log. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_acfe9790838bda5b46ccc90c2760822ba}{camera\-Event} (Q\-String)
+\begin{DoxyCompactList}\small\item\em Slot przyjmujący wiadomości od kamer. Wyświetla je w Q\-Text\-Edit. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a52d6970c3dcddf7c1ed65ff435743bc3}{show\-Exception\-Dialog} (Q\-String)
+\begin{DoxyCompactList}\small\item\em Slot wyświeltający okienko z treścią wyjątku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{Main\-Window} (Q\-Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\-Main\-Window} ()
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_main_window_a5fac52928ceff08c8137f4689aee3874}{scene}
+\begin{DoxyCompactList}\small\item\em Wskaźnik na obiekt \hyperlink{class_scene}{Scene}. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator}{Simulator} $\ast$ \hyperlink{class_main_window_a0bb9399936b67eb8dba43b80443c0469}{simulator}
+\begin{DoxyCompactList}\small\item\em Wskaźnik na obiekt \hyperlink{class_simulator}{Simulator}. \end{DoxyCompactList}\item 
+\hyperlink{class_camera_controller}{Camera\-Controller} $\ast$ \hyperlink{class_main_window_a5db1869c49b5f061ee85f0843ba7d6f9}{camera\-Controller}
+\begin{DoxyCompactList}\small\item\em Wskaźnik na obiekt \hyperlink{class_camera_controller}{Camera\-Controller}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_main_window_aa353e8faed952a95e2fc62d7a5018a89}{setup\-Ui} ()
+\item 
+void \hyperlink{class_main_window_a8851a931482834eeec527490eedaf20e}{resize\-Event} (Q\-Resize\-Event $\ast$)
+\item 
+void \hyperlink{class_main_window_a38edb88d43e844aca9d2e762c8706565}{close\-Event} (Q\-Close\-Event $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Grid\-Layout $\ast$ \hyperlink{class_main_window_a16d41d6fadc8befa5afa12460580334a}{grid\-Layout}
+\item 
+Q\-Push\-Button $\ast$ \hyperlink{class_main_window_a209284547cc0a28bb29f55e5fd4e570a}{start\-Button}
+\item 
+Q\-Push\-Button $\ast$ \hyperlink{class_main_window_a57be70fafedbc093231447e86720672f}{add\-Camera\-Button}
+\item 
+Q\-Push\-Button $\ast$ \hyperlink{class_main_window_aec7ac81c3d7701401f21e91b5f843dec}{save\-Camera\-Log\-Button}
+\item 
+Q\-Text\-Edit $\ast$ \hyperlink{class_main_window_acb3521a7e05db17e12240ed82dcaa8d0}{camera\-Events\-Edit}
+\item 
+Q\-Graphics\-View $\ast$ \hyperlink{class_main_window_a2ae234c8fc9c4a897231f2ead4ad6d29}{graphics\-View}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa głównego okna aplikacji. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}{\index{Main\-Window@{Main\-Window}!Main\-Window@{Main\-Window}}
+\index{Main\-Window@{Main\-Window}!MainWindow@{Main\-Window}}
+\subsubsection[{Main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}Main\-Window\-::\-Main\-Window (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_main_window_a8b244be8b7b7db1b08de2a2acb9409db}
+
+
+Konstruktor. 
+
+\hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\index{Main\-Window@{Main\-Window}!$\sim$\-Main\-Window@{$\sim$\-Main\-Window}}
+\index{$\sim$\-Main\-Window@{$\sim$\-Main\-Window}!MainWindow@{Main\-Window}}
+\subsubsection[{$\sim$\-Main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}Main\-Window\-::$\sim$\-Main\-Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_main_window_ad59e90d0dd01444e222c94421dbfb1aa}{\index{Main\-Window@{Main\-Window}!add\-Camera\-Button\-Clicked@{add\-Camera\-Button\-Clicked}}
+\index{add\-Camera\-Button\-Clicked@{add\-Camera\-Button\-Clicked}!MainWindow@{Main\-Window}}
+\subsubsection[{add\-Camera\-Button\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::add\-Camera\-Button\-Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_ad59e90d0dd01444e222c94421dbfb1aa}
+
+
+Slot wykonujący dzialanie po naciśnięciu przycisku Add \hyperlink{class_camera}{Camera}. 
+
+\hypertarget{class_main_window_acfe9790838bda5b46ccc90c2760822ba}{\index{Main\-Window@{Main\-Window}!camera\-Event@{camera\-Event}}
+\index{camera\-Event@{camera\-Event}!MainWindow@{Main\-Window}}
+\subsubsection[{camera\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::camera\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_acfe9790838bda5b46ccc90c2760822ba}
+
+
+Slot przyjmujący wiadomości od kamer. Wyświetla je w Q\-Text\-Edit. 
+
+\hypertarget{class_main_window_a38edb88d43e844aca9d2e762c8706565}{\index{Main\-Window@{Main\-Window}!close\-Event@{close\-Event}}
+\index{close\-Event@{close\-Event}!MainWindow@{Main\-Window}}
+\subsubsection[{close\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::close\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Close\-Event $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a38edb88d43e844aca9d2e762c8706565}
+\hypertarget{class_main_window_a8851a931482834eeec527490eedaf20e}{\index{Main\-Window@{Main\-Window}!resize\-Event@{resize\-Event}}
+\index{resize\-Event@{resize\-Event}!MainWindow@{Main\-Window}}
+\subsubsection[{resize\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::resize\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Resize\-Event $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a8851a931482834eeec527490eedaf20e}
+\hypertarget{class_main_window_a391c23cbe0aea03008357c96c89d79e0}{\index{Main\-Window@{Main\-Window}!save\-Camera\-Log\-Button\-Clicked@{save\-Camera\-Log\-Button\-Clicked}}
+\index{save\-Camera\-Log\-Button\-Clicked@{save\-Camera\-Log\-Button\-Clicked}!MainWindow@{Main\-Window}}
+\subsubsection[{save\-Camera\-Log\-Button\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::save\-Camera\-Log\-Button\-Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a391c23cbe0aea03008357c96c89d79e0}
+
+
+Slot wykonujący dzialanie po naciśnięciu przycisku Save Log. 
+
+\hypertarget{class_main_window_aa353e8faed952a95e2fc62d7a5018a89}{\index{Main\-Window@{Main\-Window}!setup\-Ui@{setup\-Ui}}
+\index{setup\-Ui@{setup\-Ui}!MainWindow@{Main\-Window}}
+\subsubsection[{setup\-Ui}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::setup\-Ui (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_aa353e8faed952a95e2fc62d7a5018a89}
+\hypertarget{class_main_window_a52d6970c3dcddf7c1ed65ff435743bc3}{\index{Main\-Window@{Main\-Window}!show\-Exception\-Dialog@{show\-Exception\-Dialog}}
+\index{show\-Exception\-Dialog@{show\-Exception\-Dialog}!MainWindow@{Main\-Window}}
+\subsubsection[{show\-Exception\-Dialog}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::show\-Exception\-Dialog (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a52d6970c3dcddf7c1ed65ff435743bc3}
+
+
+Slot wyświeltający okienko z treścią wyjątku. 
+
+\hypertarget{class_main_window_a524779fedd6fbedd87913f9e38d059aa}{\index{Main\-Window@{Main\-Window}!start\-Button\-Clicked@{start\-Button\-Clicked}}
+\index{start\-Button\-Clicked@{start\-Button\-Clicked}!MainWindow@{Main\-Window}}
+\subsubsection[{start\-Button\-Clicked}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::start\-Button\-Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a524779fedd6fbedd87913f9e38d059aa}
+
+
+Slot wykonujący dzialanie po naciśnięciu przycisku Start. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_main_window_a57be70fafedbc093231447e86720672f}{\index{Main\-Window@{Main\-Window}!add\-Camera\-Button@{add\-Camera\-Button}}
+\index{add\-Camera\-Button@{add\-Camera\-Button}!MainWindow@{Main\-Window}}
+\subsubsection[{add\-Camera\-Button}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Push\-Button$\ast$ Main\-Window\-::add\-Camera\-Button\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a57be70fafedbc093231447e86720672f}
+\hypertarget{class_main_window_a5db1869c49b5f061ee85f0843ba7d6f9}{\index{Main\-Window@{Main\-Window}!camera\-Controller@{camera\-Controller}}
+\index{camera\-Controller@{camera\-Controller}!MainWindow@{Main\-Window}}
+\subsubsection[{camera\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera\-Controller}$\ast$ Main\-Window\-::camera\-Controller}}\label{class_main_window_a5db1869c49b5f061ee85f0843ba7d6f9}
+
+
+Wskaźnik na obiekt \hyperlink{class_camera_controller}{Camera\-Controller}. 
+
+\hypertarget{class_main_window_acb3521a7e05db17e12240ed82dcaa8d0}{\index{Main\-Window@{Main\-Window}!camera\-Events\-Edit@{camera\-Events\-Edit}}
+\index{camera\-Events\-Edit@{camera\-Events\-Edit}!MainWindow@{Main\-Window}}
+\subsubsection[{camera\-Events\-Edit}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Text\-Edit$\ast$ Main\-Window\-::camera\-Events\-Edit\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_acb3521a7e05db17e12240ed82dcaa8d0}
+\hypertarget{class_main_window_a2ae234c8fc9c4a897231f2ead4ad6d29}{\index{Main\-Window@{Main\-Window}!graphics\-View@{graphics\-View}}
+\index{graphics\-View@{graphics\-View}!MainWindow@{Main\-Window}}
+\subsubsection[{graphics\-View}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Graphics\-View$\ast$ Main\-Window\-::graphics\-View\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a2ae234c8fc9c4a897231f2ead4ad6d29}
+\hypertarget{class_main_window_a16d41d6fadc8befa5afa12460580334a}{\index{Main\-Window@{Main\-Window}!grid\-Layout@{grid\-Layout}}
+\index{grid\-Layout@{grid\-Layout}!MainWindow@{Main\-Window}}
+\subsubsection[{grid\-Layout}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Grid\-Layout$\ast$ Main\-Window\-::grid\-Layout\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a16d41d6fadc8befa5afa12460580334a}
+\hypertarget{class_main_window_aec7ac81c3d7701401f21e91b5f843dec}{\index{Main\-Window@{Main\-Window}!save\-Camera\-Log\-Button@{save\-Camera\-Log\-Button}}
+\index{save\-Camera\-Log\-Button@{save\-Camera\-Log\-Button}!MainWindow@{Main\-Window}}
+\subsubsection[{save\-Camera\-Log\-Button}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Push\-Button$\ast$ Main\-Window\-::save\-Camera\-Log\-Button\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_aec7ac81c3d7701401f21e91b5f843dec}
+\hypertarget{class_main_window_a5fac52928ceff08c8137f4689aee3874}{\index{Main\-Window@{Main\-Window}!scene@{scene}}
+\index{scene@{scene}!MainWindow@{Main\-Window}}
+\subsubsection[{scene}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene}$\ast$ Main\-Window\-::scene}}\label{class_main_window_a5fac52928ceff08c8137f4689aee3874}
+
+
+Wskaźnik na obiekt \hyperlink{class_scene}{Scene}. 
+
+\hypertarget{class_main_window_a0bb9399936b67eb8dba43b80443c0469}{\index{Main\-Window@{Main\-Window}!simulator@{simulator}}
+\index{simulator@{simulator}!MainWindow@{Main\-Window}}
+\subsubsection[{simulator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Simulator}$\ast$ Main\-Window\-::simulator}}\label{class_main_window_a0bb9399936b67eb8dba43b80443c0469}
+
+
+Wskaźnik na obiekt \hyperlink{class_simulator}{Simulator}. 
+
+\hypertarget{class_main_window_a209284547cc0a28bb29f55e5fd4e570a}{\index{Main\-Window@{Main\-Window}!start\-Button@{start\-Button}}
+\index{start\-Button@{start\-Button}!MainWindow@{Main\-Window}}
+\subsubsection[{start\-Button}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Push\-Button$\ast$ Main\-Window\-::start\-Button\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a209284547cc0a28bb29f55e5fd4e570a}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_main_window_8h}{Main\-Window.\-h}\item 
+src/\hyperlink{_main_window_8cpp}{Main\-Window.\-cpp}\end{DoxyCompactItemize}

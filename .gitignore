@@ -1,0 +1,15 @@
+#################
+## Qt Project
+#################
+
+debug/
+Debug/
+release/
+vc100.pdb
+Makefile*
+*.o
+*.obj
+*.pyc
+moc_*
+TrafficSimulator.pro.user*
+*.orig

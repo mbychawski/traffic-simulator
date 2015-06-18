@@ -1,0 +1,77 @@
+\hypertarget{_types_8h}{\section{Dokumentacja pliku src/\-Types.h}
+\label{_types_8h}\index{src/\-Types.\-h@{src/\-Types.\-h}}
+}
+{\ttfamily \#include $<$boost/smart\-\_\-ptr/shared\-\_\-ptr.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/graph/adjacency\-\_\-list.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/graph/graph\-\_\-traits.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/function.\-hpp$>$}\\*
+\subsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_vertex_info}{Vertex\-Info}
+\end{DoxyCompactItemize}
+\subsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_map_element}{Map\-Element} $>$ \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element}
+\item 
+typedef boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_vehicle}{Vehicle} $>$ \hyperlink{_types_8h_a564207d327881e8bcfa0843e1a874756}{P\-Vehicle}
+\item 
+typedef boost\-::shared\-\_\-ptr$<$ \hyperlink{class_camera}{Camera} $>$ \hyperlink{_types_8h_afe843f318b77c769d92d3858a28dfd9f}{P\-Camera}
+\item 
+typedef boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_pedestrian}{Pedestrian} $>$ \hyperlink{_types_8h_a6ca5cb67bb3df872d4650820dbc647b8}{P\-Pedestrian}
+\item 
+typedef int \hyperlink{_types_8h_aa4dd30204ac53d8c88cfd0cab7b81789}{Weight}
+\item 
+typedef boost\-::property\\*
+$<$ boost\-::edge\-\_\-weight\-\_\-t, \hyperlink{_types_8h_aa4dd30204ac53d8c88cfd0cab7b81789}{Weight} $>$ \hyperlink{_types_8h_adafd959ae5e10fee25f0d54353dc5714}{Weight\-Property}
+\item 
+typedef boost\-::adjacency\-\_\-list\\*
+$<$ boost\-::list\-S, boost\-::vec\-S, \\*
+boost\-::undirected\-S, \hyperlink{struct_vertex_info}{Vertex\-Info}, \\*
+\hyperlink{_types_8h_adafd959ae5e10fee25f0d54353dc5714}{Weight\-Property} $>$ \hyperlink{_types_8h_adb8cbccb1bf63dda03515e30e185c388}{Graph}
+\item 
+typedef boost\-::graph\-\_\-traits\\*
+$<$ \hyperlink{_types_8h_adb8cbccb1bf63dda03515e30e185c388}{Graph} $>$\-::vertex\-\_\-descriptor \hyperlink{_types_8h_a8c93f604acf57e6a9bae1f91c379ac98}{Vertex}
+\item 
+typedef boost\-::graph\-\_\-traits\\*
+$<$ \hyperlink{_types_8h_adb8cbccb1bf63dda03515e30e185c388}{Graph} $>$\-::edge\-\_\-descriptor \hyperlink{_types_8h_a937736e62dd4d4c5fe8bc7b9de4c8833}{Edge}
+\item 
+typedef boost\-::function$<$ void(void)$>$ \hyperlink{_types_8h_afaef7be4497cef01f6bda50ac57e44cb}{function\-Ptr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja definicji typów}
+\hypertarget{_types_8h_a937736e62dd4d4c5fe8bc7b9de4c8833}{\index{Types.\-h@{Types.\-h}!Edge@{Edge}}
+\index{Edge@{Edge}!Types.h@{Types.\-h}}
+\subsubsection[{Edge}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::graph\-\_\-traits$<${\bf Graph}$>$\-::edge\-\_\-descriptor {\bf Edge}}}\label{_types_8h_a937736e62dd4d4c5fe8bc7b9de4c8833}
+\hypertarget{_types_8h_afaef7be4497cef01f6bda50ac57e44cb}{\index{Types.\-h@{Types.\-h}!function\-Ptr@{function\-Ptr}}
+\index{function\-Ptr@{function\-Ptr}!Types.h@{Types.\-h}}
+\subsubsection[{function\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::function$<$void(void)$>$ {\bf function\-Ptr}}}\label{_types_8h_afaef7be4497cef01f6bda50ac57e44cb}
+\hypertarget{_types_8h_adb8cbccb1bf63dda03515e30e185c388}{\index{Types.\-h@{Types.\-h}!Graph@{Graph}}
+\index{Graph@{Graph}!Types.h@{Types.\-h}}
+\subsubsection[{Graph}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::adjacency\-\_\-list$<$boost\-::list\-S, boost\-::vec\-S, boost\-::undirected\-S, {\bf Vertex\-Info}, {\bf Weight\-Property}$>$ {\bf Graph}}}\label{_types_8h_adb8cbccb1bf63dda03515e30e185c388}
+\hypertarget{_types_8h_afe843f318b77c769d92d3858a28dfd9f}{\index{Types.\-h@{Types.\-h}!P\-Camera@{P\-Camera}}
+\index{P\-Camera@{P\-Camera}!Types.h@{Types.\-h}}
+\subsubsection[{P\-Camera}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf Camera}$>$ {\bf P\-Camera}}}\label{_types_8h_afe843f318b77c769d92d3858a28dfd9f}
+\hypertarget{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{\index{Types.\-h@{Types.\-h}!P\-Map\-Element@{P\-Map\-Element}}
+\index{P\-Map\-Element@{P\-Map\-Element}!Types.h@{Types.\-h}}
+\subsubsection[{P\-Map\-Element}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf Map\-Element}$>$ {\bf P\-Map\-Element}}}\label{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}
+\hypertarget{_types_8h_a6ca5cb67bb3df872d4650820dbc647b8}{\index{Types.\-h@{Types.\-h}!P\-Pedestrian@{P\-Pedestrian}}
+\index{P\-Pedestrian@{P\-Pedestrian}!Types.h@{Types.\-h}}
+\subsubsection[{P\-Pedestrian}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf Pedestrian}$>$ {\bf P\-Pedestrian}}}\label{_types_8h_a6ca5cb67bb3df872d4650820dbc647b8}
+\hypertarget{_types_8h_a564207d327881e8bcfa0843e1a874756}{\index{Types.\-h@{Types.\-h}!P\-Vehicle@{P\-Vehicle}}
+\index{P\-Vehicle@{P\-Vehicle}!Types.h@{Types.\-h}}
+\subsubsection[{P\-Vehicle}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf Vehicle}$>$ {\bf P\-Vehicle}}}\label{_types_8h_a564207d327881e8bcfa0843e1a874756}
+\hypertarget{_types_8h_a8c93f604acf57e6a9bae1f91c379ac98}{\index{Types.\-h@{Types.\-h}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!Types.h@{Types.\-h}}
+\subsubsection[{Vertex}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::graph\-\_\-traits$<${\bf Graph}$>$\-::vertex\-\_\-descriptor {\bf Vertex}}}\label{_types_8h_a8c93f604acf57e6a9bae1f91c379ac98}
+\hypertarget{_types_8h_aa4dd30204ac53d8c88cfd0cab7b81789}{\index{Types.\-h@{Types.\-h}!Weight@{Weight}}
+\index{Weight@{Weight}!Types.h@{Types.\-h}}
+\subsubsection[{Weight}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf Weight}}}\label{_types_8h_aa4dd30204ac53d8c88cfd0cab7b81789}
+\hypertarget{_types_8h_adafd959ae5e10fee25f0d54353dc5714}{\index{Types.\-h@{Types.\-h}!Weight\-Property@{Weight\-Property}}
+\index{Weight\-Property@{Weight\-Property}!Types.h@{Types.\-h}}
+\subsubsection[{Weight\-Property}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::property$<$boost\-::edge\-\_\-weight\-\_\-t, {\bf Weight}$>$ {\bf Weight\-Property}}}\label{_types_8h_adafd959ae5e10fee25f0d54353dc5714}

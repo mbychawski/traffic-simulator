@@ -1,0 +1,7 @@
+digraph "Graficzna hierarchia klas"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ShortestPath",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_shortest_path.html",tooltip="Klasa odpowiadająca za wyznaczanie najkrótszej ścieżki pomiędzy elementami o podanych ID..."];
+}

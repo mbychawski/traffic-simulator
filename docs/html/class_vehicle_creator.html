@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Dokumentacja klasy VehicleCreator</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_vehicle_creator-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy VehicleCreator</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa odpowiadająca za odczytanie z pliku konfiguracji pojazdów oraz stworzenie ich i dostarczenie do odpowiedniego elementu <a class="el" href="class_spawn.html" title="Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszyc...">Spawn</a>.  
+ <a href="class_vehicle_creator.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_vehicle_creator_8h_source.html">VehicleCreator.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a174fc1d2c051f86582ea84f8fc7acebb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vehicle_creator.html#a174fc1d2c051f86582ea84f8fc7acebb">VehicleCreator</a> (<a class="el" href="class_scene.html">Scene</a> *, const string &amp;)</td></tr>
+<tr class="memdesc:a174fc1d2c051f86582ea84f8fc7acebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy, drugim argumentem jest ścieżka do pliku konfiguracyjnego.  <a href="#a174fc1d2c051f86582ea84f8fc7acebb"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:ab8145c81021566539a6ae95dc717e415"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vehicle_creator.html#ab8145c81021566539a6ae95dc717e415">addVehicles</a> (const <a class="el" href="_map_factory_8h.html#a54a98738cc1e3485f2cf5f24979317e5">ptree</a> &amp;)</td></tr>
+<tr class="memitem:a420358012f0f6c22893cf8ee5adee14d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vehicle_creator.html#a420358012f0f6c22893cf8ee5adee14d">addToSpawn</a> (int, <a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a53e33d385593f7473da5afa14715e569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vehicle_creator.html#a53e33d385593f7473da5afa14715e569">scene</a></td></tr>
+<tr class="memitem:aa9ad6fb2dc9ff1b715196ae914c6925e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_map_factory_8h.html#a54a98738cc1e3485f2cf5f24979317e5">ptree</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vehicle_creator.html#aa9ad6fb2dc9ff1b715196ae914c6925e">propertyTree</a></td></tr>
+<tr class="memitem:a7cd2f07f6b6d9a8299bd2c6b5657f292"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_vehicle_creator.html#a7cd2f07f6b6d9a8299bd2c6b5657f292">vehicles</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa odpowiadająca za odczytanie z pliku konfiguracji pojazdów oraz stworzenie ich i dostarczenie do odpowiedniego elementu <a class="el" href="class_spawn.html" title="Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszyc...">Spawn</a>. </p>
+</div><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a174fc1d2c051f86582ea84f8fc7acebb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VehicleCreator::VehicleCreator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>scene_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Konstruktor klasy, drugim argumentem jest ścieżka do pliku konfiguracyjnego. </p>
+
+</div>
+</div>
+<h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a420358012f0f6c22893cf8ee5adee14d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VehicleCreator::addToSpawn </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spawnID_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>&#160;</td>
+          <td class="paramname"><em>v_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab8145c81021566539a6ae95dc717e415"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VehicleCreator::addVehicles </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_map_factory_8h.html#a54a98738cc1e3485f2cf5f24979317e5">ptree</a> &amp;&#160;</td>
+          <td class="paramname"><em>v_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="aa9ad6fb2dc9ff1b715196ae914c6925e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_map_factory_8h.html#a54a98738cc1e3485f2cf5f24979317e5">ptree</a> VehicleCreator::propertyTree</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a53e33d385593f7473da5afa14715e569"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene.html">Scene</a>* VehicleCreator::scene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7cd2f07f6b6d9a8299bd2c6b5657f292"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>&gt; VehicleCreator::vehicles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/<a class="el" href="_vehicle_creator_8h_source.html">VehicleCreator.h</a></li>
+<li>src/<a class="el" href="_vehicle_creator_8cpp.html">VehicleCreator.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:31 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

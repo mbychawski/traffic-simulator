@@ -1,0 +1,208 @@
+\hypertarget{class_spawn}{\section{Dokumentacja klasy Spawn}
+\label{class_spawn}\index{Spawn@{Spawn}}
+}
+
+
+Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszych.  
+
+
+
+
+{\ttfamily \#include $<$Spawn.\-h$>$}
+
+Diagram dziedziczenia dla Spawn\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_spawn}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_spawn_a972290baedf94f776541be6039ee7d75}{Spawn} (int, \hyperlink{struct_position}{Position}, \hyperlink{struct_position}{Position})
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_spawn_a54ab1e49c79ee947204f920046164829}{Spawn} (int, double, double, \hyperlink{struct_position}{Position})
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{class_spawn_afce802a99344be2869d5723f930cb3f4}{add\-Vehicle} (\hyperlink{_types_8h_a564207d327881e8bcfa0843e1a874756}{P\-Vehicle})
+\begin{DoxyCompactList}\small\item\em Dodawanie pojazdu do kolejki oczekujących na start. \end{DoxyCompactList}\item 
+\hyperlink{_types_8h_a564207d327881e8bcfa0843e1a874756}{P\-Vehicle} \hyperlink{class_spawn_af9f3e004e311973f4c8983aa586869f4}{start\-Vehicle} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla pojazdy na mapie. \end{DoxyCompactList}\item 
+bool \hyperlink{class_spawn_a343f21c11732fad395e1b9f5bf1a227e}{has\-Vehicles\-To\-Start} ()
+\begin{DoxyCompactList}\small\item\em Zwraca informację, czy \hyperlink{class_spawn}{Spawn} posiada jeszcze elementy do wystartowania. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_spawn_a725ac9cb33aff1b26b19ed3affecf692}{draw} (\hyperlink{class_scene}{Scene} $\ast$)
+\begin{DoxyCompactList}\small\item\em Metoda odpowiadająca za rysowanie elementu. \end{DoxyCompactList}\item 
+\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \hyperlink{class_spawn_a4a8907eb45fc0a0168d75063b51456a1}{get\-Direction} () const 
+\begin{DoxyCompactList}\small\item\em Pobieranie kierunku, w którym skierowany jest \hyperlink{class_spawn}{Spawn}. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_spawn_aea08036b23acdb06fd47eba35dc2a8cf}{$\sim$\-Spawn} ()
+\end{DoxyCompactItemize}
+\subsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_spawn_abe804575f38e55324e413283898b5d57}{is\-Not\-Spawn} (const \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} el)
+\item 
+static bool \hyperlink{class_spawn_a488b20e9deeebe095670804599a3ddc9}{spawn\-Has\-Vehicles\-To\-Start} (const \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} el)
+\begin{DoxyCompactList}\small\item\em Metoda sprawdza czy dany \hyperlink{class_spawn}{Spawn} ma jeszcze pojazdy do wystartowania. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_spawn_aece1dda8039ac307dd9bfdf9c47fb1c0}{calculate\-Direction} (\hyperlink{struct_position}{Position})
+\item 
+\hyperlink{struct_position}{Position} \hyperlink{class_spawn_a9dd0bae055d82dba2d95c0fab52d14f7}{calculate\-Start\-Position} (int)
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{_types_8h_a564207d327881e8bcfa0843e1a874756}{P\-Vehicle} $>$ \hyperlink{class_spawn_a9796373f175f911096daa7ffda1186ea}{vehicles\-To\-Start}
+\item 
+\hyperlink{_direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \hyperlink{class_spawn_a593c6fb8ae012980751c4364b8ebb5b5}{direction}
+\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa reprezentująca pojedynczy element służący jak punkt początkowy i końcowy dla pojazdów i pieszych. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_spawn_a972290baedf94f776541be6039ee7d75}{\index{Spawn@{Spawn}!Spawn@{Spawn}}
+\index{Spawn@{Spawn}!Spawn@{Spawn}}
+\subsubsection[{Spawn}]{\setlength{\rightskip}{0pt plus 5cm}Spawn\-::\-Spawn (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-, }
+\item[{{\bf Position}}]{position\-\_\-, }
+\item[{{\bf Position}}]{neighbor\-Pos\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_spawn_a972290baedf94f776541be6039ee7d75}
+
+
+Konstruktor. 
+
+\hypertarget{class_spawn_a54ab1e49c79ee947204f920046164829}{\index{Spawn@{Spawn}!Spawn@{Spawn}}
+\index{Spawn@{Spawn}!Spawn@{Spawn}}
+\subsubsection[{Spawn}]{\setlength{\rightskip}{0pt plus 5cm}Spawn\-::\-Spawn (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-, }
+\item[{double}]{x\-\_\-, }
+\item[{double}]{y\-\_\-, }
+\item[{{\bf Position}}]{neighbor\-Pos\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_spawn_a54ab1e49c79ee947204f920046164829}
+
+
+Konstruktor. 
+
+\hypertarget{class_spawn_aea08036b23acdb06fd47eba35dc2a8cf}{\index{Spawn@{Spawn}!$\sim$\-Spawn@{$\sim$\-Spawn}}
+\index{$\sim$\-Spawn@{$\sim$\-Spawn}!Spawn@{Spawn}}
+\subsubsection[{$\sim$\-Spawn}]{\setlength{\rightskip}{0pt plus 5cm}Spawn\-::$\sim$\-Spawn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_spawn_aea08036b23acdb06fd47eba35dc2a8cf}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_spawn_afce802a99344be2869d5723f930cb3f4}{\index{Spawn@{Spawn}!add\-Vehicle@{add\-Vehicle}}
+\index{add\-Vehicle@{add\-Vehicle}!Spawn@{Spawn}}
+\subsubsection[{add\-Vehicle}]{\setlength{\rightskip}{0pt plus 5cm}void Spawn\-::add\-Vehicle (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-Vehicle}}]{v\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_spawn_afce802a99344be2869d5723f930cb3f4}
+
+
+Dodawanie pojazdu do kolejki oczekujących na start. 
+
+\hypertarget{class_spawn_aece1dda8039ac307dd9bfdf9c47fb1c0}{\index{Spawn@{Spawn}!calculate\-Direction@{calculate\-Direction}}
+\index{calculate\-Direction@{calculate\-Direction}!Spawn@{Spawn}}
+\subsubsection[{calculate\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void Spawn\-::calculate\-Direction (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{neighbor\-Pos\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_spawn_aece1dda8039ac307dd9bfdf9c47fb1c0}
+\hypertarget{class_spawn_a9dd0bae055d82dba2d95c0fab52d14f7}{\index{Spawn@{Spawn}!calculate\-Start\-Position@{calculate\-Start\-Position}}
+\index{calculate\-Start\-Position@{calculate\-Start\-Position}!Spawn@{Spawn}}
+\subsubsection[{calculate\-Start\-Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Spawn\-::calculate\-Start\-Position (
+\begin{DoxyParamCaption}
+\item[{int}]{lane\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_spawn_a9dd0bae055d82dba2d95c0fab52d14f7}
+\hypertarget{class_spawn_a725ac9cb33aff1b26b19ed3affecf692}{\index{Spawn@{Spawn}!draw@{draw}}
+\index{draw@{draw}!Spawn@{Spawn}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Spawn\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_spawn_a725ac9cb33aff1b26b19ed3affecf692}
+
+
+Metoda odpowiadająca za rysowanie elementu. 
+
+
+
+Implementuje \hyperlink{class_map_element_aa76ca7443c4f6a6683f68f44909b90d3}{Map\-Element}.
+
+\hypertarget{class_spawn_a4a8907eb45fc0a0168d75063b51456a1}{\index{Spawn@{Spawn}!get\-Direction@{get\-Direction}}
+\index{get\-Direction@{get\-Direction}!Spawn@{Spawn}}
+\subsubsection[{get\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Direction} Spawn\-::get\-Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_spawn_a4a8907eb45fc0a0168d75063b51456a1}
+
+
+Pobieranie kierunku, w którym skierowany jest \hyperlink{class_spawn}{Spawn}. 
+
+\hypertarget{class_spawn_a343f21c11732fad395e1b9f5bf1a227e}{\index{Spawn@{Spawn}!has\-Vehicles\-To\-Start@{has\-Vehicles\-To\-Start}}
+\index{has\-Vehicles\-To\-Start@{has\-Vehicles\-To\-Start}!Spawn@{Spawn}}
+\subsubsection[{has\-Vehicles\-To\-Start}]{\setlength{\rightskip}{0pt plus 5cm}bool Spawn\-::has\-Vehicles\-To\-Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spawn_a343f21c11732fad395e1b9f5bf1a227e}
+
+
+Zwraca informację, czy \hyperlink{class_spawn}{Spawn} posiada jeszcze elementy do wystartowania. 
+
+\hypertarget{class_spawn_abe804575f38e55324e413283898b5d57}{\index{Spawn@{Spawn}!is\-Not\-Spawn@{is\-Not\-Spawn}}
+\index{is\-Not\-Spawn@{is\-Not\-Spawn}!Spawn@{Spawn}}
+\subsubsection[{is\-Not\-Spawn}]{\setlength{\rightskip}{0pt plus 5cm}static bool Spawn\-::is\-Not\-Spawn (
+\begin{DoxyParamCaption}
+\item[{const {\bf P\-Map\-Element}}]{el}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_spawn_abe804575f38e55324e413283898b5d57}
+\hypertarget{class_spawn_a488b20e9deeebe095670804599a3ddc9}{\index{Spawn@{Spawn}!spawn\-Has\-Vehicles\-To\-Start@{spawn\-Has\-Vehicles\-To\-Start}}
+\index{spawn\-Has\-Vehicles\-To\-Start@{spawn\-Has\-Vehicles\-To\-Start}!Spawn@{Spawn}}
+\subsubsection[{spawn\-Has\-Vehicles\-To\-Start}]{\setlength{\rightskip}{0pt plus 5cm}static bool Spawn\-::spawn\-Has\-Vehicles\-To\-Start (
+\begin{DoxyParamCaption}
+\item[{const {\bf P\-Map\-Element}}]{el}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_spawn_a488b20e9deeebe095670804599a3ddc9}
+
+
+Metoda sprawdza czy dany \hyperlink{class_spawn}{Spawn} ma jeszcze pojazdy do wystartowania. 
+
+\hypertarget{class_spawn_af9f3e004e311973f4c8983aa586869f4}{\index{Spawn@{Spawn}!start\-Vehicle@{start\-Vehicle}}
+\index{start\-Vehicle@{start\-Vehicle}!Spawn@{Spawn}}
+\subsubsection[{start\-Vehicle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-Vehicle} Spawn\-::start\-Vehicle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_spawn_af9f3e004e311973f4c8983aa586869f4}
+
+
+Wyświetla pojazdy na mapie. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_spawn_a593c6fb8ae012980751c4364b8ebb5b5}{\index{Spawn@{Spawn}!direction@{direction}}
+\index{direction@{direction}!Spawn@{Spawn}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Direction} Spawn\-::direction\hspace{0.3cm}{\ttfamily [private]}}}\label{class_spawn_a593c6fb8ae012980751c4364b8ebb5b5}
+\hypertarget{class_spawn_a9796373f175f911096daa7ffda1186ea}{\index{Spawn@{Spawn}!vehicles\-To\-Start@{vehicles\-To\-Start}}
+\index{vehicles\-To\-Start@{vehicles\-To\-Start}!Spawn@{Spawn}}
+\subsubsection[{vehicles\-To\-Start}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf P\-Vehicle}$>$ Spawn\-::vehicles\-To\-Start\hspace{0.3cm}{\ttfamily [private]}}}\label{class_spawn_a9796373f175f911096daa7ffda1186ea}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_spawn_8h}{Spawn.\-h}\item 
+src/\hyperlink{_spawn_8cpp}{Spawn.\-cpp}\end{DoxyCompactItemize}

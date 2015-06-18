@@ -1,0 +1,127 @@
+\hypertarget{class_drawable}{\section{Dokumentacja klasy Drawable}
+\label{class_drawable}\index{Drawable@{Drawable}}
+}
+
+
+Klasa bazowa dla obiektów, które będą wyświetlane na scenie.  
+
+
+
+
+{\ttfamily \#include $<$Drawable.\-h$>$}
+
+Diagram dziedziczenia dla Drawable\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_drawable}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_drawable_acdf5ee89ba1c083f4162cfd892c1989c}{Drawable} (\hyperlink{struct_position}{Position} position\-\_\-)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_drawable_a7799a0919cf41e051ef48f2467a8686f}{Drawable} (double x\-\_\-, double y\-\_\-, double z\-\_\-=0)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_drawable_a1e24b799e5b5f5494b25a42e2624692c}{draw} (\hyperlink{class_scene}{Scene} $\ast$scene)=0
+\item 
+\hyperlink{struct_position}{Position} \hyperlink{class_drawable_ae9383e020b150097521c248763c071fa}{get\-Position} () const 
+\begin{DoxyCompactList}\small\item\em Zwraca pozycję obiektu. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_ab4a98a7b3e4fd76a2d14b9f1d51c3a41}{set\-Position} (const double x\-\_\-, const double y\-\_\-)
+\begin{DoxyCompactList}\small\item\em Ustawia pozycję obiektu. \end{DoxyCompactList}\item 
+void \hyperlink{class_drawable_afa4dae6843185ee5a2cdaf79325099a5}{set\-Position} (const \hyperlink{struct_position}{Position} position\-\_\-)
+\begin{DoxyCompactList}\small\item\em Ustawia pozycję obiektu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_position}{Position} \hyperlink{class_drawable_aaeba34b10714af371e05d44d825af8a5}{position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa bazowa dla obiektów, które będą wyświetlane na scenie. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_drawable_acdf5ee89ba1c083f4162cfd892c1989c}{\index{Drawable@{Drawable}!Drawable@{Drawable}}
+\index{Drawable@{Drawable}!Drawable@{Drawable}}
+\subsubsection[{Drawable}]{\setlength{\rightskip}{0pt plus 5cm}Drawable\-::\-Drawable (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_drawable_acdf5ee89ba1c083f4162cfd892c1989c}
+
+
+Konstruktor. 
+
+\hypertarget{class_drawable_a7799a0919cf41e051ef48f2467a8686f}{\index{Drawable@{Drawable}!Drawable@{Drawable}}
+\index{Drawable@{Drawable}!Drawable@{Drawable}}
+\subsubsection[{Drawable}]{\setlength{\rightskip}{0pt plus 5cm}Drawable\-::\-Drawable (
+\begin{DoxyParamCaption}
+\item[{double}]{x\-\_\-, }
+\item[{double}]{y\-\_\-, }
+\item[{double}]{z\-\_\- = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_drawable_a7799a0919cf41e051ef48f2467a8686f}
+
+
+Konstruktor. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_drawable_a1e24b799e5b5f5494b25a42e2624692c}{\index{Drawable@{Drawable}!draw@{draw}}
+\index{draw@{draw}!Drawable@{Drawable}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Drawable\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_drawable_a1e24b799e5b5f5494b25a42e2624692c}
+
+
+Implementowany w \hyperlink{class_vehicle_a91c55b0a0ffc22c4f759452332b9ecd0}{Vehicle}, \hyperlink{class_cross_a3b127c19a196ad86bbd27b513eecdf44}{Cross}, \hyperlink{class_pedestrian_a51d926e2af8c607afef85f5e4d169a7a}{Pedestrian}, \hyperlink{class_spawn_a725ac9cb33aff1b26b19ed3affecf692}{Spawn}, \hyperlink{class_map_element_aa76ca7443c4f6a6683f68f44909b90d3}{Map\-Element} i \hyperlink{class_road_a276332c2d6a617ca0fc665470fc49901}{Road}.
+
+\hypertarget{class_drawable_ae9383e020b150097521c248763c071fa}{\index{Drawable@{Drawable}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!Drawable@{Drawable}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Drawable\-::get\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_drawable_ae9383e020b150097521c248763c071fa}
+
+
+Zwraca pozycję obiektu. 
+
+\hypertarget{class_drawable_ab4a98a7b3e4fd76a2d14b9f1d51c3a41}{\index{Drawable@{Drawable}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!Drawable@{Drawable}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Drawable\-::set\-Position (
+\begin{DoxyParamCaption}
+\item[{const double}]{x\-\_\-, }
+\item[{const double}]{y\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_drawable_ab4a98a7b3e4fd76a2d14b9f1d51c3a41}
+
+
+Ustawia pozycję obiektu. 
+
+\hypertarget{class_drawable_afa4dae6843185ee5a2cdaf79325099a5}{\index{Drawable@{Drawable}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!Drawable@{Drawable}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Drawable\-::set\-Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position}}]{position\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_drawable_afa4dae6843185ee5a2cdaf79325099a5}
+
+
+Ustawia pozycję obiektu. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_drawable_aaeba34b10714af371e05d44d825af8a5}{\index{Drawable@{Drawable}!position@{position}}
+\index{position@{position}!Drawable@{Drawable}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Drawable\-::position\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_drawable_aaeba34b10714af371e05d44d825af8a5}
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_drawable_8h}{Drawable.\-h}\end{DoxyCompactItemize}

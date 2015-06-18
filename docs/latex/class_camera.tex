@@ -1,0 +1,210 @@
+\hypertarget{class_camera}{\section{Dokumentacja klasy Camera}
+\label{class_camera}\index{Camera@{Camera}}
+}
+
+
+Klasa reprezentująca pojedyńczą kamerę. Odpowiada za jej rysowanie i wykrywanie obiektów.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\-h$>$}
+
+\subsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_camera_a71280fa7f0b78ec5b0134361feea23e7}{scene\-Changed} (const Q\-List$<$ Q\-Rect\-F $>$ \&)
+\begin{DoxyCompactList}\small\item\em slot na który przychodzą powiadomienia o zminionych obszarach na Q\-Graphics\-View \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_camera_a5af40cfa217ffb9c6a2fc4d3c931a9cb}{camera\-Event} (Q\-String)
+\begin{DoxyCompactList}\small\item\em Sygnał emitowany do okna głównego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_camera_aada4c36f1a6dfc8cfd71a6adc65ce37f}{Camera} (qreal, qreal, qreal, qreal, int, \hyperlink{class_scene}{Scene} $\ast$)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_a3dbc4d339b7245dd98716da34e323bb8}{draw} (\hyperlink{class_scene}{Scene} $\ast$)
+\begin{DoxyCompactList}\small\item\em Tworzy odpowiadający kamerze Q\-Graphics\-Item i umiezcza go na scenie. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_aad77e2d85f7b0445eed867f85ba1811e}{check} ()
+\begin{DoxyCompactList}\small\item\em Wykrywa pojazdy i emituje sygnał połączony z głównym oknem aplikacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Point\-F \hyperlink{class_camera_a9c751a6ce1b3ef4d7e2049db4c8bc81c}{add\-Noise\-To\-Pos} (\hyperlink{struct_position}{Position})
+\item 
+Q\-String \hyperlink{class_camera_a31954d7d988e4113688ce4952f4de4ac}{num\-To\-Str} (double)
+\item 
+Q\-String \hyperlink{class_camera_a639a82d63e7ac13195e7111a3d1163db}{num\-To\-Str} (int)
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_camera_a4777e12d1a1138468a2d9023d8bff4ec}{id}
+\item 
+double \hyperlink{class_camera_aebcfa32751541de5c3523a18bb70c0eb}{x}
+\item 
+double \hyperlink{class_camera_ab1cd623bebcb4d23871b8b49231f808a}{y}
+\item 
+double \hyperlink{class_camera_aa4b50520b479a3051294e9c1355c597e}{range}
+\item 
+int \hyperlink{class_camera_af03876fc053f6ec72bab934db895a3bf}{angle}
+\item 
+int \hyperlink{class_camera_a837aff0494c895ffbb77bc9feb8f19b4}{view\-Angle}
+\item 
+Q\-Time \hyperlink{class_camera_ae95d988bf5dfede5627543ee14eae612}{last\-Check}
+\item 
+Q\-Brush \hyperlink{class_camera_a42fec17d586950465bc8b04e72654462}{brush}
+\item 
+Q\-Pen \hyperlink{class_camera_a0c4a7357bafc01ddcd838bc17738131b}{pen}
+\item 
+Q\-Point\-F \hyperlink{class_camera_ab18e82e118c2f58109a04ea1def3355c}{text\-Pos}
+\item 
+Q\-Graphics\-Ellipse\-Item $\ast$ \hyperlink{class_camera_afe62e86c4583ff405bf04251b56d38d0}{camera\-Graphics\-Item}
+\item 
+\hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_camera_a7e1604c078852fe16c23bf0578d2530b}{scene}
+\end{DoxyCompactItemize}
+\subsection*{Statyczne atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_camera_a26c98856bed4d250d0b042f71881b42c}{counter} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa reprezentująca pojedyńczą kamerę. Odpowiada za jej rysowanie i wykrywanie obiektów. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_camera_aada4c36f1a6dfc8cfd71a6adc65ce37f}{\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection[{Camera}]{\setlength{\rightskip}{0pt plus 5cm}Camera\-::\-Camera (
+\begin{DoxyParamCaption}
+\item[{qreal}]{x1\-\_\-, }
+\item[{qreal}]{y1\-\_\-, }
+\item[{qreal}]{x2\-\_\-, }
+\item[{qreal}]{y2\-\_\-, }
+\item[{int}]{view\-Angle\-\_\-, }
+\item[{{\bf Scene} $\ast$}]{scene\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_camera_aada4c36f1a6dfc8cfd71a6adc65ce37f}
+
+
+Konstruktor. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_camera_a9c751a6ce1b3ef4d7e2049db4c8bc81c}{\index{Camera@{Camera}!add\-Noise\-To\-Pos@{add\-Noise\-To\-Pos}}
+\index{add\-Noise\-To\-Pos@{add\-Noise\-To\-Pos}!Camera@{Camera}}
+\subsubsection[{add\-Noise\-To\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Point\-F Camera\-::add\-Noise\-To\-Pos (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_a9c751a6ce1b3ef4d7e2049db4c8bc81c}
+\hypertarget{class_camera_a5af40cfa217ffb9c6a2fc4d3c931a9cb}{\index{Camera@{Camera}!camera\-Event@{camera\-Event}}
+\index{camera\-Event@{camera\-Event}!Camera@{Camera}}
+\subsubsection[{camera\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-::camera\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_camera_a5af40cfa217ffb9c6a2fc4d3c931a9cb}
+
+
+Sygnał emitowany do okna głównego. 
+
+\hypertarget{class_camera_aad77e2d85f7b0445eed867f85ba1811e}{\index{Camera@{Camera}!check@{check}}
+\index{check@{check}!Camera@{Camera}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-::check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_camera_aad77e2d85f7b0445eed867f85ba1811e}
+
+
+Wykrywa pojazdy i emituje sygnał połączony z głównym oknem aplikacji. 
+
+\hypertarget{class_camera_a3dbc4d339b7245dd98716da34e323bb8}{\index{Camera@{Camera}!draw@{draw}}
+\index{draw@{draw}!Camera@{Camera}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene}
+\end{DoxyParamCaption}
+)}}\label{class_camera_a3dbc4d339b7245dd98716da34e323bb8}
+
+
+Tworzy odpowiadający kamerze Q\-Graphics\-Item i umiezcza go na scenie. 
+
+\hypertarget{class_camera_a31954d7d988e4113688ce4952f4de4ac}{\index{Camera@{Camera}!num\-To\-Str@{num\-To\-Str}}
+\index{num\-To\-Str@{num\-To\-Str}!Camera@{Camera}}
+\subsubsection[{num\-To\-Str}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Camera\-::num\-To\-Str (
+\begin{DoxyParamCaption}
+\item[{double}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_a31954d7d988e4113688ce4952f4de4ac}
+\hypertarget{class_camera_a639a82d63e7ac13195e7111a3d1163db}{\index{Camera@{Camera}!num\-To\-Str@{num\-To\-Str}}
+\index{num\-To\-Str@{num\-To\-Str}!Camera@{Camera}}
+\subsubsection[{num\-To\-Str}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Camera\-::num\-To\-Str (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_a639a82d63e7ac13195e7111a3d1163db}
+\hypertarget{class_camera_a71280fa7f0b78ec5b0134361feea23e7}{\index{Camera@{Camera}!scene\-Changed@{scene\-Changed}}
+\index{scene\-Changed@{scene\-Changed}!Camera@{Camera}}
+\subsubsection[{scene\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-::scene\-Changed (
+\begin{DoxyParamCaption}
+\item[{const Q\-List$<$ Q\-Rect\-F $>$ \&}]{region}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_camera_a71280fa7f0b78ec5b0134361feea23e7}
+
+
+slot na który przychodzą powiadomienia o zminionych obszarach na Q\-Graphics\-View 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_camera_af03876fc053f6ec72bab934db895a3bf}{\index{Camera@{Camera}!angle@{angle}}
+\index{angle@{angle}!Camera@{Camera}}
+\subsubsection[{angle}]{\setlength{\rightskip}{0pt plus 5cm}int Camera\-::angle\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_af03876fc053f6ec72bab934db895a3bf}
+\hypertarget{class_camera_a42fec17d586950465bc8b04e72654462}{\index{Camera@{Camera}!brush@{brush}}
+\index{brush@{brush}!Camera@{Camera}}
+\subsubsection[{brush}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Brush Camera\-::brush\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_a42fec17d586950465bc8b04e72654462}
+\hypertarget{class_camera_afe62e86c4583ff405bf04251b56d38d0}{\index{Camera@{Camera}!camera\-Graphics\-Item@{camera\-Graphics\-Item}}
+\index{camera\-Graphics\-Item@{camera\-Graphics\-Item}!Camera@{Camera}}
+\subsubsection[{camera\-Graphics\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Graphics\-Ellipse\-Item$\ast$ Camera\-::camera\-Graphics\-Item\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_afe62e86c4583ff405bf04251b56d38d0}
+\hypertarget{class_camera_a26c98856bed4d250d0b042f71881b42c}{\index{Camera@{Camera}!counter@{counter}}
+\index{counter@{counter}!Camera@{Camera}}
+\subsubsection[{counter}]{\setlength{\rightskip}{0pt plus 5cm}int Camera\-::counter = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{class_camera_a26c98856bed4d250d0b042f71881b42c}
+\hypertarget{class_camera_a4777e12d1a1138468a2d9023d8bff4ec}{\index{Camera@{Camera}!id@{id}}
+\index{id@{id}!Camera@{Camera}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int Camera\-::id\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_a4777e12d1a1138468a2d9023d8bff4ec}
+\hypertarget{class_camera_ae95d988bf5dfede5627543ee14eae612}{\index{Camera@{Camera}!last\-Check@{last\-Check}}
+\index{last\-Check@{last\-Check}!Camera@{Camera}}
+\subsubsection[{last\-Check}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Time Camera\-::last\-Check\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_ae95d988bf5dfede5627543ee14eae612}
+\hypertarget{class_camera_a0c4a7357bafc01ddcd838bc17738131b}{\index{Camera@{Camera}!pen@{pen}}
+\index{pen@{pen}!Camera@{Camera}}
+\subsubsection[{pen}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Pen Camera\-::pen\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_a0c4a7357bafc01ddcd838bc17738131b}
+\hypertarget{class_camera_aa4b50520b479a3051294e9c1355c597e}{\index{Camera@{Camera}!range@{range}}
+\index{range@{range}!Camera@{Camera}}
+\subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}double Camera\-::range\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_aa4b50520b479a3051294e9c1355c597e}
+\hypertarget{class_camera_a7e1604c078852fe16c23bf0578d2530b}{\index{Camera@{Camera}!scene@{scene}}
+\index{scene@{scene}!Camera@{Camera}}
+\subsubsection[{scene}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene}$\ast$ Camera\-::scene\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_a7e1604c078852fe16c23bf0578d2530b}
+\hypertarget{class_camera_ab18e82e118c2f58109a04ea1def3355c}{\index{Camera@{Camera}!text\-Pos@{text\-Pos}}
+\index{text\-Pos@{text\-Pos}!Camera@{Camera}}
+\subsubsection[{text\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Point\-F Camera\-::text\-Pos\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_ab18e82e118c2f58109a04ea1def3355c}
+\hypertarget{class_camera_a837aff0494c895ffbb77bc9feb8f19b4}{\index{Camera@{Camera}!view\-Angle@{view\-Angle}}
+\index{view\-Angle@{view\-Angle}!Camera@{Camera}}
+\subsubsection[{view\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}int Camera\-::view\-Angle\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_a837aff0494c895ffbb77bc9feb8f19b4}
+\hypertarget{class_camera_aebcfa32751541de5c3523a18bb70c0eb}{\index{Camera@{Camera}!x@{x}}
+\index{x@{x}!Camera@{Camera}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}double Camera\-::x\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_aebcfa32751541de5c3523a18bb70c0eb}
+\hypertarget{class_camera_ab1cd623bebcb4d23871b8b49231f808a}{\index{Camera@{Camera}!y@{y}}
+\index{y@{y}!Camera@{Camera}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}double Camera\-::y\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_ab1cd623bebcb4d23871b8b49231f808a}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_camera_8h}{Camera.\-h}\item 
+src/\hyperlink{_camera_8cpp}{Camera.\-cpp}\end{DoxyCompactItemize}

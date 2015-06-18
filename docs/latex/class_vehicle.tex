@@ -1,0 +1,453 @@
+\hypertarget{class_vehicle}{\section{Dokumentacja klasy Vehicle}
+\label{class_vehicle}\index{Vehicle@{Vehicle}}
+}
+
+
+Klasa odpowiadająca za pojazdy, ich poruszanie się po planszy, komunikację ze skrzyżowaniami, Spawnami, trasę przejazdu.  
+
+
+
+
+{\ttfamily \#include $<$Vehicle.\-h$>$}
+
+Diagram dziedziczenia dla Vehicle\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vehicle}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vehicle_acf02f2a9fb11d57389e3cc9f799293f7}{Vehicle} (int, string, int, string, float, float, float, int destination\-I\-D\-\_\-=-\/1)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_vehicle_a91c55b0a0ffc22c4f759452332b9ecd0}{draw} (\hyperlink{class_scene}{Scene} $\ast$)
+\item 
+virtual void \hyperlink{class_vehicle_ad5a55c6646313b8105b6dbb95b8eb89c}{calculate\-Position} ()
+\begin{DoxyCompactList}\small\item\em Obliczanie kolejnej pozycji pojazdu. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_a3e1a25a1506590ff2eaafdf6a7c85b65}{init} (\hyperlink{class_scene}{Scene} $\ast$)
+\begin{DoxyCompactList}\small\item\em Inicjowanie pojazdu, ustawianie pozycji i kierunku początkowego. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_a9ebd11c19fb0db693d4e3d6f5b45b5c2}{update\-Q\-Item\-On\-Scene} ()
+\begin{DoxyCompactList}\small\item\em Odświeża obiekt q\-Item na scenie. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_aa73d614ac4d0e4cf44aa0168cb89fb50}{check\-Collisions} (\hyperlink{class_scene}{Scene} $\ast$)
+\begin{DoxyCompactList}\small\item\em Sprawdzanie kolizji i zapisywanie ich do wektora. \end{DoxyCompactList}\item 
+bool \hyperlink{class_vehicle_aa0bcf3409ace641a42c87609a83e0ad8}{is\-Not\-Active} () const 
+\begin{DoxyCompactList}\small\item\em Sprawdzanie czy obiekt jest aktywny, czy też powinniśmy go usunąć. \end{DoxyCompactList}\item 
+double \hyperlink{class_vehicle_adf0dea6131864a4c28bb6bc79f78e44b}{get\-Length} () const 
+\begin{DoxyCompactList}\small\item\em Pobieranie długości pojazdu. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_ac880cb0a7eb1dac30267341e8034a86a}{set\-Lane} (int lane\-\_\-)
+\begin{DoxyCompactList}\small\item\em Ustawianie pasa, po którym będzie się przemieszczał pojazd. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_a90d48dc21a8c5d82149b35bed4caf84d}{set\-Path} (vector$<$ int $>$)
+\begin{DoxyCompactList}\small\item\em Ustawianie drogi, po której pojazd będzie się poruszał. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_vehicle_a61ab140c755b8e0e824d54117cf4546f}{$\sim$\-Vehicle} ()
+\end{DoxyCompactItemize}
+\subsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_vehicle_aac21c89accf234d2c1c0229ff559dc25}{calculate\-Braking} () const 
+\begin{DoxyCompactList}\small\item\em Oblicza drogę hamowania. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_a518c4f4a17509fdb6e2031657894c346}{set\-Collision\-Item} ()
+\begin{DoxyCompactList}\small\item\em Ustawia niewidoczny prostokąt służący do detekcji kolizji. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_a8097bb51ec44c96d946a8cd1b963ab16}{check\-Collisions} ()
+\begin{DoxyCompactList}\small\item\em Detekuje kolizje i zapewnia ich obsługę. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_afb293273961ddcaa3367a9c4c1de4972}{check\-Collisions\-Vehicles} ()
+\begin{DoxyCompactList}\small\item\em Detekuje kolizje z innymi pojazdami i zapewnia ich obsługę. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_a3acdb31110e94042a96763100dccca2b}{calculate\-State} ()
+\begin{DoxyCompactList}\small\item\em Ustawia kolejny stan pojazdu. \end{DoxyCompactList}\item 
+bool \hyperlink{class_vehicle_a5944e3c99e136e780b488c8247c45554}{check\-Out\-Of\-Cross} ()
+\begin{DoxyCompactList}\small\item\em Sprawdzanie czy pojazd jest już za skrzyżowaniem. \end{DoxyCompactList}\item 
+bool \hyperlink{class_vehicle_a5702d5eba1fae66c11d744f1d7bfc71d}{check\-On\-Cross} ()
+\begin{DoxyCompactList}\small\item\em Sprawdzanie czy pojazd wjechał na skrzyżowanie. \end{DoxyCompactList}\item 
+bool \hyperlink{class_vehicle_af82b6feefaf07705011aca15835c940f}{check\-On\-Spawn} (\hyperlink{class_spawn}{Spawn} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Sprawdzanie czy pojazd przejechał przez \hyperlink{class_spawn}{Spawn}. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_a3baf18e6b6b8f3c9a16a4d93ea16c46c}{position\-After\-Turn} ()
+\begin{DoxyCompactList}\small\item\em Ustawianie odpowiedniej pozycji po wyjściu z zakrętu. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_a85071a892f7e2b731e40d159897e21ec}{get\-Off\-Cross} ()
+\begin{DoxyCompactList}\small\item\em Instrukcje wykonywane po wyjechaniu ze skrzyżowania. \end{DoxyCompactList}\item 
+void \hyperlink{class_vehicle_af2e6c030a5be66b6fd669216fdb76b74}{move\-Forward} ()
+\item 
+void \hyperlink{class_vehicle_a862a647913e72fdfcbc5698486d4674d}{turn\-Left} ()
+\item 
+void \hyperlink{class_vehicle_a5a0f5be9d10f110b69d4f9680610403a}{turn\-Right} ()
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Graphics\-Rect\-Item $\ast$ \hyperlink{class_vehicle_a6de375e22bd723ba487c50489e569548}{q\-Item}
+\item 
+Q\-Graphics\-Rect\-Item $\ast$ \hyperlink{class_vehicle_a9bf00c3b511e214ab95d5da12e49633c}{q\-Collision\-Item}
+\item 
+double \hyperlink{class_vehicle_a675a8ef19fd15e2753bd963c19a4904c}{length}
+\item 
+int \hyperlink{class_vehicle_a7421a7a2d98b4ec6dfabd1041261aa03}{id}
+\item 
+int \hyperlink{class_vehicle_a4b941cb02036dc75ae4ad733e3493119}{start\-I\-D}
+\item 
+Q\-Color \hyperlink{class_vehicle_a290ebfd05412ee45125dbc282f724488}{color}
+\item 
+float \hyperlink{class_vehicle_a2742f50ec74d5b8ac0f81d3222842110}{reflex}
+\item 
+int \hyperlink{class_vehicle_a75d0148cd658133b6d6a550c27bfb936}{destination\-I\-D}
+\item 
+\hyperlink{_vehicle_state_8h_a75c52206c3c79acb62c0fddc66df3676}{Vehicle\-State} \hyperlink{class_vehicle_ab3541bd459598db80bb2748db1452feb}{state}
+\item 
+\hyperlink{class_cross}{Cross} $\ast$ \hyperlink{class_vehicle_a32fb5373b1808c23c25124ea2ce66b8c}{next\-Cross}
+\item 
+\hyperlink{class_cross}{Cross} $\ast$ \hyperlink{class_vehicle_af0dd745daa5f73c8e4b2f687effca686}{last\-Cross}
+\item 
+bool \hyperlink{class_vehicle_a7a5fe72aaf4d2f119a4dc58c4b35e36e}{on\-Cross}
+\item 
+vector$<$ int $>$ \hyperlink{class_vehicle_a8379932487731fc05e7c88bd0609c802}{path}
+\item 
+string \hyperlink{class_vehicle_a0aaf8072804d5034c24dc35772551b20}{driving\-Mode}
+\item 
+int \hyperlink{class_vehicle_a838acb6c559579924c5738e921886214}{lane}
+\item 
+double \hyperlink{class_vehicle_a4a1cd6d5bc788fa5e99ed463e6d104de}{dl}
+\item 
+vector$<$ \hyperlink{class_map_element}{Map\-Element} $\ast$ $>$ \hyperlink{class_vehicle_ade840ce20f05a39006a8a44a26ac42bf}{collides\-Map\-Elements}
+\item 
+bool \hyperlink{class_vehicle_a28f41cf00d7689c39e29bc951e3e0472}{collided\-Vehicles}
+\item 
+Q\-Point\-F \hyperlink{class_vehicle_ad04fb4832c299dd0508e3b335fa5ce20}{transform\-Origin\-Point\-To\-Set}
+\item 
+double \hyperlink{class_vehicle_a15bac66c5ee90f81529c9eb5ba2d7b3c}{rotation\-To\-Set}
+\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiadająca za pojazdy, ich poruszanie się po planszy, komunikację ze skrzyżowaniami, Spawnami, trasę przejazdu. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_vehicle_acf02f2a9fb11d57389e3cc9f799293f7}{\index{Vehicle@{Vehicle}!Vehicle@{Vehicle}}
+\index{Vehicle@{Vehicle}!Vehicle@{Vehicle}}
+\subsubsection[{Vehicle}]{\setlength{\rightskip}{0pt plus 5cm}Vehicle\-::\-Vehicle (
+\begin{DoxyParamCaption}
+\item[{int}]{id\-\_\-, }
+\item[{string}]{type\-\_\-, }
+\item[{int}]{start\-I\-D\-\_\-, }
+\item[{string}]{color\-\_\-, }
+\item[{float}]{max\-Speed\-\_\-, }
+\item[{float}]{acceleration\-\_\-, }
+\item[{float}]{reflex\-\_\-, }
+\item[{int}]{destination\-I\-D\-\_\- = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{class_vehicle_acf02f2a9fb11d57389e3cc9f799293f7}
+
+
+Konstruktor. 
+
+\hypertarget{class_vehicle_a61ab140c755b8e0e824d54117cf4546f}{\index{Vehicle@{Vehicle}!$\sim$\-Vehicle@{$\sim$\-Vehicle}}
+\index{$\sim$\-Vehicle@{$\sim$\-Vehicle}!Vehicle@{Vehicle}}
+\subsubsection[{$\sim$\-Vehicle}]{\setlength{\rightskip}{0pt plus 5cm}Vehicle\-::$\sim$\-Vehicle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_vehicle_a61ab140c755b8e0e824d54117cf4546f}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_vehicle_aac21c89accf234d2c1c0229ff559dc25}{\index{Vehicle@{Vehicle}!calculate\-Braking@{calculate\-Braking}}
+\index{calculate\-Braking@{calculate\-Braking}!Vehicle@{Vehicle}}
+\subsubsection[{calculate\-Braking}]{\setlength{\rightskip}{0pt plus 5cm}double Vehicle\-::calculate\-Braking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_aac21c89accf234d2c1c0229ff559dc25}
+
+
+Oblicza drogę hamowania. 
+
+\hypertarget{class_vehicle_ad5a55c6646313b8105b6dbb95b8eb89c}{\index{Vehicle@{Vehicle}!calculate\-Position@{calculate\-Position}}
+\index{calculate\-Position@{calculate\-Position}!Vehicle@{Vehicle}}
+\subsubsection[{calculate\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::calculate\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_vehicle_ad5a55c6646313b8105b6dbb95b8eb89c}
+
+
+Obliczanie kolejnej pozycji pojazdu. 
+
+
+
+Implementuje \hyperlink{class_moveable_a3e42cec7b55d6320553b1c40e2392cb9}{Moveable}.
+
+\hypertarget{class_vehicle_a3acdb31110e94042a96763100dccca2b}{\index{Vehicle@{Vehicle}!calculate\-State@{calculate\-State}}
+\index{calculate\-State@{calculate\-State}!Vehicle@{Vehicle}}
+\subsubsection[{calculate\-State}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::calculate\-State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a3acdb31110e94042a96763100dccca2b}
+
+
+Ustawia kolejny stan pojazdu. 
+
+\hypertarget{class_vehicle_a8097bb51ec44c96d946a8cd1b963ab16}{\index{Vehicle@{Vehicle}!check\-Collisions@{check\-Collisions}}
+\index{check\-Collisions@{check\-Collisions}!Vehicle@{Vehicle}}
+\subsubsection[{check\-Collisions}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::check\-Collisions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a8097bb51ec44c96d946a8cd1b963ab16}
+
+
+Detekuje kolizje i zapewnia ich obsługę. 
+
+\hypertarget{class_vehicle_aa73d614ac4d0e4cf44aa0168cb89fb50}{\index{Vehicle@{Vehicle}!check\-Collisions@{check\-Collisions}}
+\index{check\-Collisions@{check\-Collisions}!Vehicle@{Vehicle}}
+\subsubsection[{check\-Collisions}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::check\-Collisions (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_vehicle_aa73d614ac4d0e4cf44aa0168cb89fb50}
+
+
+Sprawdzanie kolizji i zapisywanie ich do wektora. 
+
+\hypertarget{class_vehicle_afb293273961ddcaa3367a9c4c1de4972}{\index{Vehicle@{Vehicle}!check\-Collisions\-Vehicles@{check\-Collisions\-Vehicles}}
+\index{check\-Collisions\-Vehicles@{check\-Collisions\-Vehicles}!Vehicle@{Vehicle}}
+\subsubsection[{check\-Collisions\-Vehicles}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::check\-Collisions\-Vehicles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_afb293273961ddcaa3367a9c4c1de4972}
+
+
+Detekuje kolizje z innymi pojazdami i zapewnia ich obsługę. 
+
+\hypertarget{class_vehicle_a5702d5eba1fae66c11d744f1d7bfc71d}{\index{Vehicle@{Vehicle}!check\-On\-Cross@{check\-On\-Cross}}
+\index{check\-On\-Cross@{check\-On\-Cross}!Vehicle@{Vehicle}}
+\subsubsection[{check\-On\-Cross}]{\setlength{\rightskip}{0pt plus 5cm}bool Vehicle\-::check\-On\-Cross (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a5702d5eba1fae66c11d744f1d7bfc71d}
+
+
+Sprawdzanie czy pojazd wjechał na skrzyżowanie. 
+
+\hypertarget{class_vehicle_af82b6feefaf07705011aca15835c940f}{\index{Vehicle@{Vehicle}!check\-On\-Spawn@{check\-On\-Spawn}}
+\index{check\-On\-Spawn@{check\-On\-Spawn}!Vehicle@{Vehicle}}
+\subsubsection[{check\-On\-Spawn}]{\setlength{\rightskip}{0pt plus 5cm}bool Vehicle\-::check\-On\-Spawn (
+\begin{DoxyParamCaption}
+\item[{{\bf Spawn} $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_af82b6feefaf07705011aca15835c940f}
+
+
+Sprawdzanie czy pojazd przejechał przez \hyperlink{class_spawn}{Spawn}. 
+
+\hypertarget{class_vehicle_a5944e3c99e136e780b488c8247c45554}{\index{Vehicle@{Vehicle}!check\-Out\-Of\-Cross@{check\-Out\-Of\-Cross}}
+\index{check\-Out\-Of\-Cross@{check\-Out\-Of\-Cross}!Vehicle@{Vehicle}}
+\subsubsection[{check\-Out\-Of\-Cross}]{\setlength{\rightskip}{0pt plus 5cm}bool Vehicle\-::check\-Out\-Of\-Cross (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a5944e3c99e136e780b488c8247c45554}
+
+
+Sprawdzanie czy pojazd jest już za skrzyżowaniem. 
+
+\hypertarget{class_vehicle_a91c55b0a0ffc22c4f759452332b9ecd0}{\index{Vehicle@{Vehicle}!draw@{draw}}
+\index{draw@{draw}!Vehicle@{Vehicle}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_vehicle_a91c55b0a0ffc22c4f759452332b9ecd0}
+
+
+Implementuje \hyperlink{class_drawable_a1e24b799e5b5f5494b25a42e2624692c}{Drawable}.
+
+\hypertarget{class_vehicle_adf0dea6131864a4c28bb6bc79f78e44b}{\index{Vehicle@{Vehicle}!get\-Length@{get\-Length}}
+\index{get\-Length@{get\-Length}!Vehicle@{Vehicle}}
+\subsubsection[{get\-Length}]{\setlength{\rightskip}{0pt plus 5cm}double Vehicle\-::get\-Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vehicle_adf0dea6131864a4c28bb6bc79f78e44b}
+
+
+Pobieranie długości pojazdu. 
+
+\hypertarget{class_vehicle_a85071a892f7e2b731e40d159897e21ec}{\index{Vehicle@{Vehicle}!get\-Off\-Cross@{get\-Off\-Cross}}
+\index{get\-Off\-Cross@{get\-Off\-Cross}!Vehicle@{Vehicle}}
+\subsubsection[{get\-Off\-Cross}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::get\-Off\-Cross (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a85071a892f7e2b731e40d159897e21ec}
+
+
+Instrukcje wykonywane po wyjechaniu ze skrzyżowania. 
+
+\hypertarget{class_vehicle_a3e1a25a1506590ff2eaafdf6a7c85b65}{\index{Vehicle@{Vehicle}!init@{init}}
+\index{init@{init}!Vehicle@{Vehicle}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::init (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_vehicle_a3e1a25a1506590ff2eaafdf6a7c85b65}
+
+
+Inicjowanie pojazdu, ustawianie pozycji i kierunku początkowego. 
+
+\hypertarget{class_vehicle_aa0bcf3409ace641a42c87609a83e0ad8}{\index{Vehicle@{Vehicle}!is\-Not\-Active@{is\-Not\-Active}}
+\index{is\-Not\-Active@{is\-Not\-Active}!Vehicle@{Vehicle}}
+\subsubsection[{is\-Not\-Active}]{\setlength{\rightskip}{0pt plus 5cm}bool Vehicle\-::is\-Not\-Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vehicle_aa0bcf3409ace641a42c87609a83e0ad8}
+
+
+Sprawdzanie czy obiekt jest aktywny, czy też powinniśmy go usunąć. 
+
+\hypertarget{class_vehicle_af2e6c030a5be66b6fd669216fdb76b74}{\index{Vehicle@{Vehicle}!move\-Forward@{move\-Forward}}
+\index{move\-Forward@{move\-Forward}!Vehicle@{Vehicle}}
+\subsubsection[{move\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::move\-Forward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_af2e6c030a5be66b6fd669216fdb76b74}
+\hypertarget{class_vehicle_a3baf18e6b6b8f3c9a16a4d93ea16c46c}{\index{Vehicle@{Vehicle}!position\-After\-Turn@{position\-After\-Turn}}
+\index{position\-After\-Turn@{position\-After\-Turn}!Vehicle@{Vehicle}}
+\subsubsection[{position\-After\-Turn}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::position\-After\-Turn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a3baf18e6b6b8f3c9a16a4d93ea16c46c}
+
+
+Ustawianie odpowiedniej pozycji po wyjściu z zakrętu. 
+
+\hypertarget{class_vehicle_a518c4f4a17509fdb6e2031657894c346}{\index{Vehicle@{Vehicle}!set\-Collision\-Item@{set\-Collision\-Item}}
+\index{set\-Collision\-Item@{set\-Collision\-Item}!Vehicle@{Vehicle}}
+\subsubsection[{set\-Collision\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::set\-Collision\-Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a518c4f4a17509fdb6e2031657894c346}
+
+
+Ustawia niewidoczny prostokąt służący do detekcji kolizji. 
+
+\hypertarget{class_vehicle_ac880cb0a7eb1dac30267341e8034a86a}{\index{Vehicle@{Vehicle}!set\-Lane@{set\-Lane}}
+\index{set\-Lane@{set\-Lane}!Vehicle@{Vehicle}}
+\subsubsection[{set\-Lane}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::set\-Lane (
+\begin{DoxyParamCaption}
+\item[{int}]{lane\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_vehicle_ac880cb0a7eb1dac30267341e8034a86a}
+
+
+Ustawianie pasa, po którym będzie się przemieszczał pojazd. 
+
+\hypertarget{class_vehicle_a90d48dc21a8c5d82149b35bed4caf84d}{\index{Vehicle@{Vehicle}!set\-Path@{set\-Path}}
+\index{set\-Path@{set\-Path}!Vehicle@{Vehicle}}
+\subsubsection[{set\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::set\-Path (
+\begin{DoxyParamCaption}
+\item[{vector$<$ int $>$}]{path\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_vehicle_a90d48dc21a8c5d82149b35bed4caf84d}
+
+
+Ustawianie drogi, po której pojazd będzie się poruszał. 
+
+\hypertarget{class_vehicle_a862a647913e72fdfcbc5698486d4674d}{\index{Vehicle@{Vehicle}!turn\-Left@{turn\-Left}}
+\index{turn\-Left@{turn\-Left}!Vehicle@{Vehicle}}
+\subsubsection[{turn\-Left}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::turn\-Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a862a647913e72fdfcbc5698486d4674d}
+\hypertarget{class_vehicle_a5a0f5be9d10f110b69d4f9680610403a}{\index{Vehicle@{Vehicle}!turn\-Right@{turn\-Right}}
+\index{turn\-Right@{turn\-Right}!Vehicle@{Vehicle}}
+\subsubsection[{turn\-Right}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::turn\-Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a5a0f5be9d10f110b69d4f9680610403a}
+\hypertarget{class_vehicle_a9ebd11c19fb0db693d4e3d6f5b45b5c2}{\index{Vehicle@{Vehicle}!update\-Q\-Item\-On\-Scene@{update\-Q\-Item\-On\-Scene}}
+\index{update\-Q\-Item\-On\-Scene@{update\-Q\-Item\-On\-Scene}!Vehicle@{Vehicle}}
+\subsubsection[{update\-Q\-Item\-On\-Scene}]{\setlength{\rightskip}{0pt plus 5cm}void Vehicle\-::update\-Q\-Item\-On\-Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_vehicle_a9ebd11c19fb0db693d4e3d6f5b45b5c2}
+
+
+Odświeża obiekt q\-Item na scenie. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_vehicle_a28f41cf00d7689c39e29bc951e3e0472}{\index{Vehicle@{Vehicle}!collided\-Vehicles@{collided\-Vehicles}}
+\index{collided\-Vehicles@{collided\-Vehicles}!Vehicle@{Vehicle}}
+\subsubsection[{collided\-Vehicles}]{\setlength{\rightskip}{0pt plus 5cm}bool Vehicle\-::collided\-Vehicles\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a28f41cf00d7689c39e29bc951e3e0472}
+\hypertarget{class_vehicle_ade840ce20f05a39006a8a44a26ac42bf}{\index{Vehicle@{Vehicle}!collides\-Map\-Elements@{collides\-Map\-Elements}}
+\index{collides\-Map\-Elements@{collides\-Map\-Elements}!Vehicle@{Vehicle}}
+\subsubsection[{collides\-Map\-Elements}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Map\-Element}$\ast$$>$ Vehicle\-::collides\-Map\-Elements\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_ade840ce20f05a39006a8a44a26ac42bf}
+\hypertarget{class_vehicle_a290ebfd05412ee45125dbc282f724488}{\index{Vehicle@{Vehicle}!color@{color}}
+\index{color@{color}!Vehicle@{Vehicle}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Color Vehicle\-::color\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a290ebfd05412ee45125dbc282f724488}
+\hypertarget{class_vehicle_a75d0148cd658133b6d6a550c27bfb936}{\index{Vehicle@{Vehicle}!destination\-I\-D@{destination\-I\-D}}
+\index{destination\-I\-D@{destination\-I\-D}!Vehicle@{Vehicle}}
+\subsubsection[{destination\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Vehicle\-::destination\-I\-D\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a75d0148cd658133b6d6a550c27bfb936}
+\hypertarget{class_vehicle_a4a1cd6d5bc788fa5e99ed463e6d104de}{\index{Vehicle@{Vehicle}!dl@{dl}}
+\index{dl@{dl}!Vehicle@{Vehicle}}
+\subsubsection[{dl}]{\setlength{\rightskip}{0pt plus 5cm}double Vehicle\-::dl\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a4a1cd6d5bc788fa5e99ed463e6d104de}
+\hypertarget{class_vehicle_a0aaf8072804d5034c24dc35772551b20}{\index{Vehicle@{Vehicle}!driving\-Mode@{driving\-Mode}}
+\index{driving\-Mode@{driving\-Mode}!Vehicle@{Vehicle}}
+\subsubsection[{driving\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}string Vehicle\-::driving\-Mode\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a0aaf8072804d5034c24dc35772551b20}
+\hypertarget{class_vehicle_a7421a7a2d98b4ec6dfabd1041261aa03}{\index{Vehicle@{Vehicle}!id@{id}}
+\index{id@{id}!Vehicle@{Vehicle}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int Vehicle\-::id\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a7421a7a2d98b4ec6dfabd1041261aa03}
+\hypertarget{class_vehicle_a838acb6c559579924c5738e921886214}{\index{Vehicle@{Vehicle}!lane@{lane}}
+\index{lane@{lane}!Vehicle@{Vehicle}}
+\subsubsection[{lane}]{\setlength{\rightskip}{0pt plus 5cm}int Vehicle\-::lane\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a838acb6c559579924c5738e921886214}
+\hypertarget{class_vehicle_af0dd745daa5f73c8e4b2f687effca686}{\index{Vehicle@{Vehicle}!last\-Cross@{last\-Cross}}
+\index{last\-Cross@{last\-Cross}!Vehicle@{Vehicle}}
+\subsubsection[{last\-Cross}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cross}$\ast$ Vehicle\-::last\-Cross\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_af0dd745daa5f73c8e4b2f687effca686}
+\hypertarget{class_vehicle_a675a8ef19fd15e2753bd963c19a4904c}{\index{Vehicle@{Vehicle}!length@{length}}
+\index{length@{length}!Vehicle@{Vehicle}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}double Vehicle\-::length\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a675a8ef19fd15e2753bd963c19a4904c}
+\hypertarget{class_vehicle_a32fb5373b1808c23c25124ea2ce66b8c}{\index{Vehicle@{Vehicle}!next\-Cross@{next\-Cross}}
+\index{next\-Cross@{next\-Cross}!Vehicle@{Vehicle}}
+\subsubsection[{next\-Cross}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cross}$\ast$ Vehicle\-::next\-Cross\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a32fb5373b1808c23c25124ea2ce66b8c}
+\hypertarget{class_vehicle_a7a5fe72aaf4d2f119a4dc58c4b35e36e}{\index{Vehicle@{Vehicle}!on\-Cross@{on\-Cross}}
+\index{on\-Cross@{on\-Cross}!Vehicle@{Vehicle}}
+\subsubsection[{on\-Cross}]{\setlength{\rightskip}{0pt plus 5cm}bool Vehicle\-::on\-Cross\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a7a5fe72aaf4d2f119a4dc58c4b35e36e}
+\hypertarget{class_vehicle_a8379932487731fc05e7c88bd0609c802}{\index{Vehicle@{Vehicle}!path@{path}}
+\index{path@{path}!Vehicle@{Vehicle}}
+\subsubsection[{path}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ Vehicle\-::path\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a8379932487731fc05e7c88bd0609c802}
+\hypertarget{class_vehicle_a9bf00c3b511e214ab95d5da12e49633c}{\index{Vehicle@{Vehicle}!q\-Collision\-Item@{q\-Collision\-Item}}
+\index{q\-Collision\-Item@{q\-Collision\-Item}!Vehicle@{Vehicle}}
+\subsubsection[{q\-Collision\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Graphics\-Rect\-Item$\ast$ Vehicle\-::q\-Collision\-Item\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a9bf00c3b511e214ab95d5da12e49633c}
+\hypertarget{class_vehicle_a6de375e22bd723ba487c50489e569548}{\index{Vehicle@{Vehicle}!q\-Item@{q\-Item}}
+\index{q\-Item@{q\-Item}!Vehicle@{Vehicle}}
+\subsubsection[{q\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Graphics\-Rect\-Item$\ast$ Vehicle\-::q\-Item\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a6de375e22bd723ba487c50489e569548}
+\hypertarget{class_vehicle_a2742f50ec74d5b8ac0f81d3222842110}{\index{Vehicle@{Vehicle}!reflex@{reflex}}
+\index{reflex@{reflex}!Vehicle@{Vehicle}}
+\subsubsection[{reflex}]{\setlength{\rightskip}{0pt plus 5cm}float Vehicle\-::reflex\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a2742f50ec74d5b8ac0f81d3222842110}
+\hypertarget{class_vehicle_a15bac66c5ee90f81529c9eb5ba2d7b3c}{\index{Vehicle@{Vehicle}!rotation\-To\-Set@{rotation\-To\-Set}}
+\index{rotation\-To\-Set@{rotation\-To\-Set}!Vehicle@{Vehicle}}
+\subsubsection[{rotation\-To\-Set}]{\setlength{\rightskip}{0pt plus 5cm}double Vehicle\-::rotation\-To\-Set\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a15bac66c5ee90f81529c9eb5ba2d7b3c}
+\hypertarget{class_vehicle_a4b941cb02036dc75ae4ad733e3493119}{\index{Vehicle@{Vehicle}!start\-I\-D@{start\-I\-D}}
+\index{start\-I\-D@{start\-I\-D}!Vehicle@{Vehicle}}
+\subsubsection[{start\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Vehicle\-::start\-I\-D\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_a4b941cb02036dc75ae4ad733e3493119}
+\hypertarget{class_vehicle_ab3541bd459598db80bb2748db1452feb}{\index{Vehicle@{Vehicle}!state@{state}}
+\index{state@{state}!Vehicle@{Vehicle}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vehicle\-State} Vehicle\-::state\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_ab3541bd459598db80bb2748db1452feb}
+\hypertarget{class_vehicle_ad04fb4832c299dd0508e3b335fa5ce20}{\index{Vehicle@{Vehicle}!transform\-Origin\-Point\-To\-Set@{transform\-Origin\-Point\-To\-Set}}
+\index{transform\-Origin\-Point\-To\-Set@{transform\-Origin\-Point\-To\-Set}!Vehicle@{Vehicle}}
+\subsubsection[{transform\-Origin\-Point\-To\-Set}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Point\-F Vehicle\-::transform\-Origin\-Point\-To\-Set\hspace{0.3cm}{\ttfamily [private]}}}\label{class_vehicle_ad04fb4832c299dd0508e3b335fa5ce20}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_vehicle_8h}{Vehicle.\-h}\item 
+src/\hyperlink{_vehicle_8cpp}{Vehicle.\-cpp}\end{DoxyCompactItemize}

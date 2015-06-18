@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Plik źródłowy src/Simulator.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Simulator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_simulator_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SIMULATOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SIMULATOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">class </span><a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="class_animation.html" title="Klasa odpowiadająca za trzy podstawowe wątki animacji: aktualizacja położenia pojazdów i pieszych...">Animation</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">class </span><a class="code" href="class_spawning_vehicles_runnable.html" title="Klasa obsługujaca powstawanie pojazdów na planszy w odpowiednich punktach Spawn.">SpawningVehiclesRunnable</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="class_spawning_pedestrians_runnable.html" title="Klasa obsługująca powstawanie pieszych na planszy.">SpawningPedestriansRunnable</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_types_8h.html">Types.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QtCore&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QThread&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="class_simulator.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_simulator.html" title="Jedna z głównych klas aplikacji, odpowiada za zarządzanie wątkami oraz sterowanie animacją...">Simulator</a> : <span class="keyword">public</span> QObject {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_simulator.html#abdd826ea1db1c69cc087d24fe69ca272">   22</a></span>&#160;    <a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>* <a class="code" href="class_simulator.html#abdd826ea1db1c69cc087d24fe69ca272">scene</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="class_simulator.html#a131c2140d1870c403c4b9618ee376007">   23</a></span>&#160;    <a class="code" href="class_spawning_vehicles_runnable.html" title="Klasa obsługujaca powstawanie pojazdów na planszy w odpowiednich punktach Spawn.">SpawningVehiclesRunnable</a>*    <a class="code" href="class_simulator.html#a131c2140d1870c403c4b9618ee376007">vRunnable</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="class_simulator.html#a81dbad2542cad2e24995c90e01df4563">   24</a></span>&#160;    <a class="code" href="class_spawning_pedestrians_runnable.html" title="Klasa obsługująca powstawanie pieszych na planszy.">SpawningPedestriansRunnable</a>* <a class="code" href="class_simulator.html#a81dbad2542cad2e24995c90e01df4563">pRunnable</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="class_simulator.html#adc7182b7aa6d573820b41cebab938518">   26</a></span>&#160;    QMutex <a class="code" href="class_simulator.html#adc7182b7aa6d573820b41cebab938518">vMutex</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="class_simulator.html#a9b12b4ecb21b9fa0a6e8b43de0683b6c">   27</a></span>&#160;    QMutex <a class="code" href="class_simulator.html#a9b12b4ecb21b9fa0a6e8b43de0683b6c">pMutex</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="class_simulator.html#afa279a763fb0f744606c7d343ee9843d">   30</a></span>&#160;    <a class="code" href="class_animation.html" title="Klasa odpowiadająca za trzy podstawowe wątki animacji: aktualizacja położenia pojazdów i pieszych...">Animation</a>* <a class="code" href="class_simulator.html#afa279a763fb0f744606c7d343ee9843d">animation</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_simulator.html#a777790f7422ca543634ed4ac80862f6a" title="Konstruktor.">Simulator</a>(<a class="code" href="class_scene.html" title="Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po QGraphicsScene i rysuje poszcze...">Scene</a>*, QObject* = 0 );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_simulator.html#a0f49aa04f42060a785adf77346b9de9f">~Simulator</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulator.html#a7c1fedfeee2955be5805acb2f9ad74a4" title="Rozpoczynanie symulacji.">startSimulation</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulator.html#a2a296c0672d3093a491fd0c399fa1e44" title="Zatrzymywanie symulacji.">stopSimulation</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulator.html#ac3c8dfab9bf1ccbc61bad82e369851bc" title="Dodawanie pojazdu do symulacji.">addVehicle</a>(<a class="code" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulator.html#a63e6b1e0b6cde8d6430fa4a4c1c35308" title="Dodawanie pieszego do symulacji.">addPedestrian</a>(<a class="code" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;Q_SIGNALS:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulator.html#a4c5b5d48f4f40984cdd5e540ade4d776" title="Sygnał potrzebny do dodawania pojazdu do animacji (ponieważ jest to oddzielny wątek)">addVehicleToAnimate</a>(<a class="code" href="_types_8h.html#a564207d327881e8bcfa0843e1a874756">PVehicle</a>, <a class="code" href="class_animation.html" title="Klasa odpowiadająca za trzy podstawowe wątki animacji: aktualizacja położenia pojazdów i pieszych...">Animation</a>*, QMutex*);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_simulator.html#a2553d83940167fe5ecc36fb19e382126" title="Analogicznie jak addVehicleToAnimate, ale dla pieszego.">addPedestrianToAnimate</a>(<a class="code" href="_types_8h.html#a6ca5cb67bb3df872d4650820dbc647b8">PPedestrian</a>, <a class="code" href="class_animation.html" title="Klasa odpowiadająca za trzy podstawowe wątki animacji: aktualizacja położenia pojazdów i pieszych...">Animation</a>*, QMutex*);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif // SIMULATOR_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:29 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

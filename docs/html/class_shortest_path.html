@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Traffic Simulator: Dokumentacja klasy ShortestPath</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ikonka.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Traffic Simulator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_shortest_path-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy ShortestPath</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa odpowiadająca za wyznaczanie najkrótszej ścieżki pomiędzy elementami o podanych ID.  
+ <a href="class_shortest_path.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_shortest_path_8h_source.html">ShortestPath.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a25347cb0bbdb5caaad9f3ca9e0ef0d25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shortest_path.html#a25347cb0bbdb5caaad9f3ca9e0ef0d25">ShortestPath</a> (<a class="el" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">Graph</a> *)</td></tr>
+<tr class="memitem:ad9c6dccde6b27fa1d7c1db57d9e67bfd"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shortest_path.html#ad9c6dccde6b27fa1d7c1db57d9e67bfd">getPath</a> (int from_, int to_)</td></tr>
+<tr class="memdesc:ad9c6dccde6b27fa1d7c1db57d9e67bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca wektor z numerami ID kolejnych skrzyżowań na najkrótszej ścieżce.  <a href="#ad9c6dccde6b27fa1d7c1db57d9e67bfd"></a><br/></td></tr>
+<tr class="memitem:a5538d38c856b9836b4ab6b6881b2fca7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shortest_path.html#a5538d38c856b9836b4ab6b6881b2fca7">~ShortestPath</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:a4b137fbbd761ff28873a1b00c6b5055e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shortest_path.html#a4b137fbbd761ff28873a1b00c6b5055e">getId</a> (<a class="el" href="_map_factory_8cpp.html#ae6603b1d73e6c4cf70f33b356e8d591c">VertexIterator</a>)</td></tr>
+<tr class="memitem:af25f1dff91ed0fa22e5d6c3cd4653085"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shortest_path.html#af25f1dff91ed0fa22e5d6c3cd4653085">getId</a> (<a class="el" href="_types_8h.html#a8c93f604acf57e6a9bae1f91c379ac98">Vertex</a>)</td></tr>
+<tr class="memitem:a80f9815e7c4e13f7b125d93955c0538c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8h.html#a8c93f604acf57e6a9bae1f91c379ac98">Vertex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shortest_path.html#a80f9815e7c4e13f7b125d93955c0538c">findVertex</a> (int)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a368d0008b535477ef2831958c8338bf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">Graph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shortest_path.html#a368d0008b535477ef2831958c8338bf1">g</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa odpowiadająca za wyznaczanie najkrótszej ścieżki pomiędzy elementami o podanych ID. </p>
+</div><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a25347cb0bbdb5caaad9f3ca9e0ef0d25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ShortestPath::ShortestPath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">Graph</a> *&#160;</td>
+          <td class="paramname"><em>g_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5538d38c856b9836b4ab6b6881b2fca7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ShortestPath::~ShortestPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a80f9815e7c4e13f7b125d93955c0538c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8h.html#a8c93f604acf57e6a9bae1f91c379ac98">Vertex</a> ShortestPath::findVertex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4b137fbbd761ff28873a1b00c6b5055e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ShortestPath::getId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_map_factory_8cpp.html#ae6603b1d73e6c4cf70f33b356e8d591c">VertexIterator</a>&#160;</td>
+          <td class="paramname"><em>it</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af25f1dff91ed0fa22e5d6c3cd4653085"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ShortestPath::getId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8h.html#a8c93f604acf57e6a9bae1f91c379ac98">Vertex</a>&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad9c6dccde6b27fa1d7c1db57d9e67bfd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; int &gt; ShortestPath::getPath </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>from_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>to_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zwraca wektor z numerami ID kolejnych skrzyżowań na najkrótszej ścieżce. </p>
+
+</div>
+</div>
+<h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a368d0008b535477ef2831958c8338bf1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8h.html#adb8cbccb1bf63dda03515e30e185c388">Graph</a>* ShortestPath::g</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/<a class="el" href="_shortest_path_8h_source.html">ShortestPath.h</a></li>
+<li>src/<a class="el" href="_shortest_path_8cpp.html">ShortestPath.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Wt, 15 sty 2013 23:50:31 dla Traffic Simulator programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* 
+ * Nale¿y u¿ywaæ poprawnych numerów ID elementów mapy (zgadzaj¹cych siê z plikiem map.json)
+ * Nale¿y przestrzegaæ struktury pliku (pamiêtaæ o przecinkach i cudzys³owach)
+ */
+
+
+{
+	[
+		"type": "normal", 			// typ pojazdu ("normal" | "truck")
+		"id": 0,					// nr ID pojazdu
+		"startID" : 5,				// nr ID pola Spawn, z którego startuje dany pojazd
+		"driveMode" : "random",		// tryb w jakim pojazd siê przemieszcza ("random" | "destination")
+		"destinationID" : 0,		// jeœli tryb z okreœlonym celem, to podajemy nr ID elementu docelowego
+		"color": "blue",			// kolor pojazdu
+		"maxSpeed": 120,			// maksymalna prêdkoœæ
+		"acceleration": 15,			// przyspieszenie i opóŸnienie
+		"reflex": 2					// reflex
+	]
+}

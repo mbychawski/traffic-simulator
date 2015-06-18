@@ -1,0 +1,316 @@
+\hypertarget{class_scene}{\section{Dokumentacja klasy Scene}
+\label{class_scene}\index{Scene@{Scene}}
+}
+
+
+Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po Q\-Graphics\-Scene i rysuje poszczególne elementy.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\-h$>$}
+
+\subsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_scene_a184c9be4892411819742a9fd70e8333b}{add\-Item\-Slot} (Q\-Graphics\-Item $\ast$, Q\-Wait\-Condition $\ast$)
+\item 
+void \hyperlink{class_scene_ad35ef97681da43e764a5303e77e3844d}{add\-Vehicle\-To\-Animation\-Slot} (\hyperlink{_types_8h_a564207d327881e8bcfa0843e1a874756}{P\-Vehicle}, \hyperlink{class_animation}{Animation} $\ast$, Q\-Mutex $\ast$)
+\item 
+void \hyperlink{class_scene_a8b99a0335933b1ac07b032c349952788}{add\-Pedestrian\-To\-Animation\-Slot} (\hyperlink{_types_8h_a6ca5cb67bb3df872d4650820dbc647b8}{P\-Pedestrian}, \hyperlink{class_animation}{Animation} $\ast$, Q\-Mutex $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_scene_a15683b9f4afcdc10bde922fab5f4a951}{mouse\-Pressed} (Q\-Graphics\-Scene\-Mouse\-Event $\ast$mouse\-Event)
+\item 
+void \hyperlink{class_scene_a4c6c8254c928419b74aa95fa3bb1c534}{mouse\-Moved} (Q\-Graphics\-Scene\-Mouse\-Event $\ast$mouse\-Event)
+\item 
+void \hyperlink{class_scene_a9d8b2c7b7d91f001421e95734934be06}{mouse\-Released} (Q\-Graphics\-Scene\-Mouse\-Event $\ast$mouse\-Event)
+\item 
+void \hyperlink{class_scene_a7e2a3ec20454137ea1c0512afd56a639}{add\-Item\-Signal} (Q\-Graphics\-Item $\ast$, Q\-Wait\-Condition $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene_a4b30c21fd0065d816fdf1e51fe67a4fd}{Scene} (Q\-Object $\ast$parent=0)
+\item 
+\hyperlink{class_scene_a3b8cec2e32546713915f8c6303c951f1}{$\sim$\-Scene} ()
+\item 
+void \hyperlink{class_scene_ac0e3d2c98ba6063a086467fb2c19142f}{draw} ()
+\begin{DoxyCompactList}\small\item\em Metoda rysująca wszystkie obiekty \hyperlink{class_map_element}{Map\-Element}. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_a848776d5d67d321587b102c3a6f10a11}{init} (const string \&)
+\begin{DoxyCompactList}\small\item\em Metoda inicjująca \hyperlink{class_scene}{Scene}. Argumentem jest ścieżka do pliku mapy (format\-: J\-S\-O\-N). \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} $>$ \& \hyperlink{class_scene_a00b47fa58618a2144393413935f65561}{get\-Map\-Elements} ()
+\begin{DoxyCompactList}\small\item\em Metoda zwraca wszystkie obiekty Map\-Elements. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{class_scene_a14e5edf4c038b83e77f0980f0c77b849}{get\-Shortest\-Path} (int, int)
+\begin{DoxyCompactList}\small\item\em Metoda służy do wyznaczenia najkrótszej ścieżki pomiędzy dwoma wierzchołkami grafu. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{class_map_element}{Map\-Element} $\ast$ $>$ \hyperlink{class_scene_a4f6fb72b97821a0542e0da2f68e807b3}{colliding\-Map\-Elements} (Q\-Graphics\-Item $\ast$)
+\begin{DoxyCompactList}\small\item\em Metoda zwraca elementy mapy kolidujące z podanym. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{class_vehicle}{Vehicle} $\ast$ $>$ \hyperlink{class_scene_a560c19dc6d85da16487c4d60db3578e8}{colliding\-Vehicles} (Q\-Graphics\-Item $\ast$)
+\begin{DoxyCompactList}\small\item\em Metoda zwraca pojazdy kolidujące z podanym. \end{DoxyCompactList}\item 
+bool \hyperlink{class_scene_abd71e84fa122bce0104dbcf701b9edd8}{colliding\-Vehicles} (Q\-Graphics\-Item $\ast$, \hyperlink{class_vehicle}{Vehicle} $\ast$)
+\begin{DoxyCompactList}\small\item\em Metoda określa czy podany element koliduje z innymi pojazdami. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_a82b551d4fd83aaeb36ba341365963105}{update\-View\-Port} ()
+\begin{DoxyCompactList}\small\item\em Metoda służąca do odświeżania widoku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_scene_a6ad4dcff66d55c4f1a7cd2c5364459ef}{mouse\-Press\-Event} (Q\-Graphics\-Scene\-Mouse\-Event $\ast$)
+\item 
+virtual void \hyperlink{class_scene_ae046b7a5d0dc99d01c059961fff16d95}{mouse\-Move\-Event} (Q\-Graphics\-Scene\-Mouse\-Event $\ast$)
+\item 
+virtual void \hyperlink{class_scene_adffea18c1ebe0abd3291ac48b0f83211}{mouse\-Release\-Event} (Q\-Graphics\-Scene\-Mouse\-Event $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{_types_8h_a4260a5280323637f8a1fa28e89b6ef14}{P\-Map\-Element} $>$ \hyperlink{class_scene_a209cfc1d4f90fb58093a3db2fad23e08}{map\-Elements}
+\item 
+\hyperlink{class_shortest_path}{Shortest\-Path} $\ast$ \hyperlink{class_scene_a279299a043594536431e538c2bdd76e7}{shortest\-Path}
+\item 
+const Q\-Brush \hyperlink{class_scene_a61809011ee96172d42280dd9aa1c0846}{asphalt\-Brush}
+\item 
+const Q\-Brush \hyperlink{class_scene_a3cc532bd0e9e328041509d829d58f50d}{lanes\-Brush}
+\item 
+const Q\-Brush \hyperlink{class_scene_aa07495f36b834636c73de85b6f8143f9}{pavement\-Brush}
+\item 
+const Q\-Pen \hyperlink{class_scene_a310ffbaf94652c71e44c3576caa2bd99}{no\-Pen}
+\end{DoxyCompactItemize}
+\subsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_scene_a1fbbe65f53589c2d26f43a3635f2f8a3}{Road}
+\item 
+class \hyperlink{class_scene_ace3ec366f47be67a97ce4c94dfa569fd}{Cross}
+\item 
+class \hyperlink{class_scene_a6c5d0923647f9e8875e27eb17f8ea8a5}{Spawn}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiadająca za graficzną prezentację symulacji, dziedziczy po Q\-Graphics\-Scene i rysuje poszczególne elementy. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_scene_a4b30c21fd0065d816fdf1e51fe67a4fd}{\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\subsubsection[{Scene}]{\setlength{\rightskip}{0pt plus 5cm}Scene\-::\-Scene (
+\begin{DoxyParamCaption}
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_scene_a4b30c21fd0065d816fdf1e51fe67a4fd}
+\hypertarget{class_scene_a3b8cec2e32546713915f8c6303c951f1}{\index{Scene@{Scene}!$\sim$\-Scene@{$\sim$\-Scene}}
+\index{$\sim$\-Scene@{$\sim$\-Scene}!Scene@{Scene}}
+\subsubsection[{$\sim$\-Scene}]{\setlength{\rightskip}{0pt plus 5cm}Scene\-::$\sim$\-Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_scene_a3b8cec2e32546713915f8c6303c951f1}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_scene_a7e2a3ec20454137ea1c0512afd56a639}{\index{Scene@{Scene}!add\-Item\-Signal@{add\-Item\-Signal}}
+\index{add\-Item\-Signal@{add\-Item\-Signal}!Scene@{Scene}}
+\subsubsection[{add\-Item\-Signal}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::add\-Item\-Signal (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Item $\ast$}]{, }
+\item[{Q\-Wait\-Condition $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_scene_a7e2a3ec20454137ea1c0512afd56a639}
+\hypertarget{class_scene_a184c9be4892411819742a9fd70e8333b}{\index{Scene@{Scene}!add\-Item\-Slot@{add\-Item\-Slot}}
+\index{add\-Item\-Slot@{add\-Item\-Slot}!Scene@{Scene}}
+\subsubsection[{add\-Item\-Slot}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::add\-Item\-Slot (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Item $\ast$}]{item, }
+\item[{Q\-Wait\-Condition $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_scene_a184c9be4892411819742a9fd70e8333b}
+\hypertarget{class_scene_a8b99a0335933b1ac07b032c349952788}{\index{Scene@{Scene}!add\-Pedestrian\-To\-Animation\-Slot@{add\-Pedestrian\-To\-Animation\-Slot}}
+\index{add\-Pedestrian\-To\-Animation\-Slot@{add\-Pedestrian\-To\-Animation\-Slot}!Scene@{Scene}}
+\subsubsection[{add\-Pedestrian\-To\-Animation\-Slot}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::add\-Pedestrian\-To\-Animation\-Slot (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-Pedestrian}}]{p\-\_\-, }
+\item[{{\bf Animation} $\ast$}]{animation\-\_\-, }
+\item[{Q\-Mutex $\ast$}]{mutex\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_scene_a8b99a0335933b1ac07b032c349952788}
+\hypertarget{class_scene_ad35ef97681da43e764a5303e77e3844d}{\index{Scene@{Scene}!add\-Vehicle\-To\-Animation\-Slot@{add\-Vehicle\-To\-Animation\-Slot}}
+\index{add\-Vehicle\-To\-Animation\-Slot@{add\-Vehicle\-To\-Animation\-Slot}!Scene@{Scene}}
+\subsubsection[{add\-Vehicle\-To\-Animation\-Slot}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::add\-Vehicle\-To\-Animation\-Slot (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-Vehicle}}]{v\-\_\-, }
+\item[{{\bf Animation} $\ast$}]{animation\-\_\-, }
+\item[{Q\-Mutex $\ast$}]{mutex\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_scene_ad35ef97681da43e764a5303e77e3844d}
+\hypertarget{class_scene_a4f6fb72b97821a0542e0da2f68e807b3}{\index{Scene@{Scene}!colliding\-Map\-Elements@{colliding\-Map\-Elements}}
+\index{colliding\-Map\-Elements@{colliding\-Map\-Elements}!Scene@{Scene}}
+\subsubsection[{colliding\-Map\-Elements}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Map\-Element} $\ast$ $>$ Scene\-::colliding\-Map\-Elements (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Item $\ast$}]{item\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_scene_a4f6fb72b97821a0542e0da2f68e807b3}
+
+
+Metoda zwraca elementy mapy kolidujące z podanym. 
+
+\hypertarget{class_scene_a560c19dc6d85da16487c4d60db3578e8}{\index{Scene@{Scene}!colliding\-Vehicles@{colliding\-Vehicles}}
+\index{colliding\-Vehicles@{colliding\-Vehicles}!Scene@{Scene}}
+\subsubsection[{colliding\-Vehicles}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Vehicle} $\ast$ $>$ Scene\-::colliding\-Vehicles (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Item $\ast$}]{item\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_scene_a560c19dc6d85da16487c4d60db3578e8}
+
+
+Metoda zwraca pojazdy kolidujące z podanym. 
+
+\hypertarget{class_scene_abd71e84fa122bce0104dbcf701b9edd8}{\index{Scene@{Scene}!colliding\-Vehicles@{colliding\-Vehicles}}
+\index{colliding\-Vehicles@{colliding\-Vehicles}!Scene@{Scene}}
+\subsubsection[{colliding\-Vehicles}]{\setlength{\rightskip}{0pt plus 5cm}bool Scene\-::colliding\-Vehicles (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Item $\ast$}]{item\-\_\-, }
+\item[{{\bf Vehicle} $\ast$}]{v\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_scene_abd71e84fa122bce0104dbcf701b9edd8}
+
+
+Metoda określa czy podany element koliduje z innymi pojazdami. 
+
+\hypertarget{class_scene_ac0e3d2c98ba6063a086467fb2c19142f}{\index{Scene@{Scene}!draw@{draw}}
+\index{draw@{draw}!Scene@{Scene}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_scene_ac0e3d2c98ba6063a086467fb2c19142f}
+
+
+Metoda rysująca wszystkie obiekty \hyperlink{class_map_element}{Map\-Element}. 
+
+\hypertarget{class_scene_a00b47fa58618a2144393413935f65561}{\index{Scene@{Scene}!get\-Map\-Elements@{get\-Map\-Elements}}
+\index{get\-Map\-Elements@{get\-Map\-Elements}!Scene@{Scene}}
+\subsubsection[{get\-Map\-Elements}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf P\-Map\-Element} $>$ \& Scene\-::get\-Map\-Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_scene_a00b47fa58618a2144393413935f65561}
+
+
+Metoda zwraca wszystkie obiekty Map\-Elements. 
+
+\hypertarget{class_scene_a14e5edf4c038b83e77f0980f0c77b849}{\index{Scene@{Scene}!get\-Shortest\-Path@{get\-Shortest\-Path}}
+\index{get\-Shortest\-Path@{get\-Shortest\-Path}!Scene@{Scene}}
+\subsubsection[{get\-Shortest\-Path}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ Scene\-::get\-Shortest\-Path (
+\begin{DoxyParamCaption}
+\item[{int}]{from\-\_\-, }
+\item[{int}]{to\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_scene_a14e5edf4c038b83e77f0980f0c77b849}
+
+
+Metoda służy do wyznaczenia najkrótszej ścieżki pomiędzy dwoma wierzchołkami grafu. 
+
+\hypertarget{class_scene_a848776d5d67d321587b102c3a6f10a11}{\index{Scene@{Scene}!init@{init}}
+\index{init@{init}!Scene@{Scene}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::init (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_scene_a848776d5d67d321587b102c3a6f10a11}
+
+
+Metoda inicjująca \hyperlink{class_scene}{Scene}. Argumentem jest ścieżka do pliku mapy (format\-: J\-S\-O\-N). 
+
+\hypertarget{class_scene_a4c6c8254c928419b74aa95fa3bb1c534}{\index{Scene@{Scene}!mouse\-Moved@{mouse\-Moved}}
+\index{mouse\-Moved@{mouse\-Moved}!Scene@{Scene}}
+\subsubsection[{mouse\-Moved}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::mouse\-Moved (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Scene\-Mouse\-Event $\ast$}]{mouse\-Event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_scene_a4c6c8254c928419b74aa95fa3bb1c534}
+\hypertarget{class_scene_ae046b7a5d0dc99d01c059961fff16d95}{\index{Scene@{Scene}!mouse\-Move\-Event@{mouse\-Move\-Event}}
+\index{mouse\-Move\-Event@{mouse\-Move\-Event}!Scene@{Scene}}
+\subsubsection[{mouse\-Move\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::mouse\-Move\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Scene\-Mouse\-Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_scene_ae046b7a5d0dc99d01c059961fff16d95}
+\hypertarget{class_scene_a15683b9f4afcdc10bde922fab5f4a951}{\index{Scene@{Scene}!mouse\-Pressed@{mouse\-Pressed}}
+\index{mouse\-Pressed@{mouse\-Pressed}!Scene@{Scene}}
+\subsubsection[{mouse\-Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::mouse\-Pressed (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Scene\-Mouse\-Event $\ast$}]{mouse\-Event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_scene_a15683b9f4afcdc10bde922fab5f4a951}
+\hypertarget{class_scene_a6ad4dcff66d55c4f1a7cd2c5364459ef}{\index{Scene@{Scene}!mouse\-Press\-Event@{mouse\-Press\-Event}}
+\index{mouse\-Press\-Event@{mouse\-Press\-Event}!Scene@{Scene}}
+\subsubsection[{mouse\-Press\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::mouse\-Press\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Scene\-Mouse\-Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_scene_a6ad4dcff66d55c4f1a7cd2c5364459ef}
+\hypertarget{class_scene_a9d8b2c7b7d91f001421e95734934be06}{\index{Scene@{Scene}!mouse\-Released@{mouse\-Released}}
+\index{mouse\-Released@{mouse\-Released}!Scene@{Scene}}
+\subsubsection[{mouse\-Released}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::mouse\-Released (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Scene\-Mouse\-Event $\ast$}]{mouse\-Event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_scene_a9d8b2c7b7d91f001421e95734934be06}
+\hypertarget{class_scene_adffea18c1ebe0abd3291ac48b0f83211}{\index{Scene@{Scene}!mouse\-Release\-Event@{mouse\-Release\-Event}}
+\index{mouse\-Release\-Event@{mouse\-Release\-Event}!Scene@{Scene}}
+\subsubsection[{mouse\-Release\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::mouse\-Release\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Scene\-Mouse\-Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_scene_adffea18c1ebe0abd3291ac48b0f83211}
+\hypertarget{class_scene_a82b551d4fd83aaeb36ba341365963105}{\index{Scene@{Scene}!update\-View\-Port@{update\-View\-Port}}
+\index{update\-View\-Port@{update\-View\-Port}!Scene@{Scene}}
+\subsubsection[{update\-View\-Port}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\-::update\-View\-Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_scene_a82b551d4fd83aaeb36ba341365963105}
+
+
+Metoda służąca do odświeżania widoku. 
+
+
+
+\subsection{Dokumentacja przyjaciół i funkcji związanych}
+\hypertarget{class_scene_ace3ec366f47be67a97ce4c94dfa569fd}{\index{Scene@{Scene}!Cross@{Cross}}
+\index{Cross@{Cross}!Scene@{Scene}}
+\subsubsection[{Cross}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Cross}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_scene_ace3ec366f47be67a97ce4c94dfa569fd}
+\hypertarget{class_scene_a1fbbe65f53589c2d26f43a3635f2f8a3}{\index{Scene@{Scene}!Road@{Road}}
+\index{Road@{Road}!Scene@{Scene}}
+\subsubsection[{Road}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Road}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_scene_a1fbbe65f53589c2d26f43a3635f2f8a3}
+\hypertarget{class_scene_a6c5d0923647f9e8875e27eb17f8ea8a5}{\index{Scene@{Scene}!Spawn@{Spawn}}
+\index{Spawn@{Spawn}!Scene@{Scene}}
+\subsubsection[{Spawn}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Spawn}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_scene_a6c5d0923647f9e8875e27eb17f8ea8a5}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_scene_a61809011ee96172d42280dd9aa1c0846}{\index{Scene@{Scene}!asphalt\-Brush@{asphalt\-Brush}}
+\index{asphalt\-Brush@{asphalt\-Brush}!Scene@{Scene}}
+\subsubsection[{asphalt\-Brush}]{\setlength{\rightskip}{0pt plus 5cm}const Q\-Brush Scene\-::asphalt\-Brush\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scene_a61809011ee96172d42280dd9aa1c0846}
+\hypertarget{class_scene_a3cc532bd0e9e328041509d829d58f50d}{\index{Scene@{Scene}!lanes\-Brush@{lanes\-Brush}}
+\index{lanes\-Brush@{lanes\-Brush}!Scene@{Scene}}
+\subsubsection[{lanes\-Brush}]{\setlength{\rightskip}{0pt plus 5cm}const Q\-Brush Scene\-::lanes\-Brush\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scene_a3cc532bd0e9e328041509d829d58f50d}
+\hypertarget{class_scene_a209cfc1d4f90fb58093a3db2fad23e08}{\index{Scene@{Scene}!map\-Elements@{map\-Elements}}
+\index{map\-Elements@{map\-Elements}!Scene@{Scene}}
+\subsubsection[{map\-Elements}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf P\-Map\-Element}$>$ Scene\-::map\-Elements\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scene_a209cfc1d4f90fb58093a3db2fad23e08}
+\hypertarget{class_scene_a310ffbaf94652c71e44c3576caa2bd99}{\index{Scene@{Scene}!no\-Pen@{no\-Pen}}
+\index{no\-Pen@{no\-Pen}!Scene@{Scene}}
+\subsubsection[{no\-Pen}]{\setlength{\rightskip}{0pt plus 5cm}const Q\-Pen Scene\-::no\-Pen\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scene_a310ffbaf94652c71e44c3576caa2bd99}
+\hypertarget{class_scene_aa07495f36b834636c73de85b6f8143f9}{\index{Scene@{Scene}!pavement\-Brush@{pavement\-Brush}}
+\index{pavement\-Brush@{pavement\-Brush}!Scene@{Scene}}
+\subsubsection[{pavement\-Brush}]{\setlength{\rightskip}{0pt plus 5cm}const Q\-Brush Scene\-::pavement\-Brush\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scene_aa07495f36b834636c73de85b6f8143f9}
+\hypertarget{class_scene_a279299a043594536431e538c2bdd76e7}{\index{Scene@{Scene}!shortest\-Path@{shortest\-Path}}
+\index{shortest\-Path@{shortest\-Path}!Scene@{Scene}}
+\subsubsection[{shortest\-Path}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shortest\-Path}$\ast$ Scene\-::shortest\-Path\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_scene_a279299a043594536431e538c2bdd76e7}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_scene_8h}{Scene.\-h}\item 
+src/\hyperlink{_scene_8cpp}{Scene.\-cpp}\end{DoxyCompactItemize}

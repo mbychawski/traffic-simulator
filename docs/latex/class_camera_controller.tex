@@ -1,0 +1,99 @@
+\hypertarget{class_camera_controller}{\section{Dokumentacja klasy Camera\-Controller}
+\label{class_camera_controller}\index{Camera\-Controller@{Camera\-Controller}}
+}
+
+
+Klasa odpowiadająca za tworzenie kamer.  
+
+
+
+
+{\ttfamily \#include $<$Camera\-Controller.\-h$>$}
+
+\subsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_camera_controller_a6c34f4a104a39e56c6c5aa9d11511a71}{mouse\-Pressed} (Q\-Graphics\-Scene\-Mouse\-Event $\ast$)
+\begin{DoxyCompactList}\small\item\em Slot odbierający zdarzenie naciśnięcia myszy. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_controller_aba3e7ac1af93e3b693a0e16c36da5762}{mouse\-Released} (Q\-Graphics\-Scene\-Mouse\-Event $\ast$)
+\begin{DoxyCompactList}\small\item\em Slot odbierający zdarzenie zwolnienia myszy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_camera_controller_af3adb99b13661e6cba643be610ac9e5c}{Camera\-Controller} (\hyperlink{class_scene}{Scene} $\ast$scene\-\_\-, Q\-Object $\ast$parent\-\_\-=0)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{_types_8h_afe843f318b77c769d92d3858a28dfd9f}{P\-Camera} $>$ \hyperlink{class_camera_controller_a6d21a2335946e594c0042a9276664947}{cameras}
+\item 
+\hyperlink{class_scene}{Scene} $\ast$ \hyperlink{class_camera_controller_a9213699a725a3085bad9b6689b1b8917}{scene}
+\item 
+Q\-Point\-F \hyperlink{class_camera_controller_ad8ca257426868d312798b902a8c12cb7}{start\-Point}
+\item 
+Q\-Mutex \hyperlink{class_camera_controller_aec489f25af8a257b11335df3203a0ed9}{mutex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa odpowiadająca za tworzenie kamer. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_camera_controller_af3adb99b13661e6cba643be610ac9e5c}{\index{Camera\-Controller@{Camera\-Controller}!Camera\-Controller@{Camera\-Controller}}
+\index{Camera\-Controller@{Camera\-Controller}!CameraController@{Camera\-Controller}}
+\subsubsection[{Camera\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}Camera\-Controller\-::\-Camera\-Controller (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene} $\ast$}]{scene\-\_\-, }
+\item[{Q\-Object $\ast$}]{parent\-\_\- = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_camera_controller_af3adb99b13661e6cba643be610ac9e5c}
+
+
+Konstruktor. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_camera_controller_a6c34f4a104a39e56c6c5aa9d11511a71}{\index{Camera\-Controller@{Camera\-Controller}!mouse\-Pressed@{mouse\-Pressed}}
+\index{mouse\-Pressed@{mouse\-Pressed}!CameraController@{Camera\-Controller}}
+\subsubsection[{mouse\-Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-Controller\-::mouse\-Pressed (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Scene\-Mouse\-Event $\ast$}]{mouse\-Event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_camera_controller_a6c34f4a104a39e56c6c5aa9d11511a71}
+
+
+Slot odbierający zdarzenie naciśnięcia myszy. 
+
+\hypertarget{class_camera_controller_aba3e7ac1af93e3b693a0e16c36da5762}{\index{Camera\-Controller@{Camera\-Controller}!mouse\-Released@{mouse\-Released}}
+\index{mouse\-Released@{mouse\-Released}!CameraController@{Camera\-Controller}}
+\subsubsection[{mouse\-Released}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-Controller\-::mouse\-Released (
+\begin{DoxyParamCaption}
+\item[{Q\-Graphics\-Scene\-Mouse\-Event $\ast$}]{mouse\-Event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_camera_controller_aba3e7ac1af93e3b693a0e16c36da5762}
+
+
+Slot odbierający zdarzenie zwolnienia myszy. 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_camera_controller_a6d21a2335946e594c0042a9276664947}{\index{Camera\-Controller@{Camera\-Controller}!cameras@{cameras}}
+\index{cameras@{cameras}!CameraController@{Camera\-Controller}}
+\subsubsection[{cameras}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf P\-Camera}$>$ Camera\-Controller\-::cameras\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_controller_a6d21a2335946e594c0042a9276664947}
+\hypertarget{class_camera_controller_aec489f25af8a257b11335df3203a0ed9}{\index{Camera\-Controller@{Camera\-Controller}!mutex@{mutex}}
+\index{mutex@{mutex}!CameraController@{Camera\-Controller}}
+\subsubsection[{mutex}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Mutex Camera\-Controller\-::mutex\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_controller_aec489f25af8a257b11335df3203a0ed9}
+\hypertarget{class_camera_controller_a9213699a725a3085bad9b6689b1b8917}{\index{Camera\-Controller@{Camera\-Controller}!scene@{scene}}
+\index{scene@{scene}!CameraController@{Camera\-Controller}}
+\subsubsection[{scene}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene}$\ast$ Camera\-Controller\-::scene\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_controller_a9213699a725a3085bad9b6689b1b8917}
+\hypertarget{class_camera_controller_ad8ca257426868d312798b902a8c12cb7}{\index{Camera\-Controller@{Camera\-Controller}!start\-Point@{start\-Point}}
+\index{start\-Point@{start\-Point}!CameraController@{Camera\-Controller}}
+\subsubsection[{start\-Point}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Point\-F Camera\-Controller\-::start\-Point\hspace{0.3cm}{\ttfamily [private]}}}\label{class_camera_controller_ad8ca257426868d312798b902a8c12cb7}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_camera_controller_8h}{Camera\-Controller.\-h}\item 
+src/\hyperlink{_camera_controller_8cpp}{Camera\-Controller.\-cpp}\end{DoxyCompactItemize}
